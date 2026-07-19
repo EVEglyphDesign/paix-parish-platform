@@ -235,3 +235,137 @@
   font-weight: 600;
 }
 .caisse-callout .btn-primary:hover { background: #6a5230; }
+
+/* Caisse hero — top-of-landing prominent block, above the parish grid */
+.caisse-hero {
+  margin: 2.5rem 0 3rem;
+  padding: 2.25rem 2.25rem 2rem;
+  background: linear-gradient(180deg, #fbf7ee 0%, #f5efe0 100%);
+  border: 1px solid #d9c99d;
+  border-left: 6px solid #b08a3e;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(74, 56, 32, 0.08);
+}
+.caisse-hero-badge {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  margin-bottom: 1rem;
+  background: #4a3820;
+  color: #fbf7ee;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+.caisse-hero h2 {
+  margin: 0 0 0.75rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #3a2a10;
+  line-height: 1.15;
+}
+.caisse-hero-lead {
+  font-size: 1.08rem;
+  color: #3a2a10;
+  margin-bottom: 1.5rem;
+  line-height: 1.55;
+}
+.caisse-hero-plain {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 4px;
+  padding: 1.1rem 1.4rem 1.1rem 1.4rem;
+  margin: 1rem 0 1.25rem;
+}
+.caisse-hero-plain p:first-child {
+  margin-top: 0;
+  color: #4a3820;
+}
+.caisse-hero-plain ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+.caisse-hero-plain li {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+  color: #3a2a10;
+}
+.caisse-hero-plain li:last-child {
+  margin-bottom: 0;
+}
+.caisse-hero-lineage {
+  font-style: italic;
+  color: #5a4630;
+  margin: 1.25rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid #b08a3e;
+  background: rgba(255, 255, 255, 0.4);
+}
+.caisse-hero-lineage strong {
+  font-style: normal;
+  color: #3a2a10;
+}
+.caisse-hero-cta {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  align-items: center;
+}
+.caisse-hero-cta .btn-primary {
+  display: inline-block;
+  padding: 0.7rem 1.35rem;
+  background: #4a3820;
+  color: #fbf7ee;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+.caisse-hero-cta .btn-primary:hover {
+  background: #6a5230;
+}
+.caisse-hero-cta .btn-secondary {
+  display: inline-block;
+  padding: 0.7rem 1.25rem;
+  background: transparent;
+  color: #4a3820;
+  border: 1px solid #b08a3e;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+.caisse-hero-cta .btn-secondary:hover {
+  background: rgba(176, 138, 62, 0.1);
+}
+
+.parish-grid-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: #3a2a10;
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
+}
+
+.caisse-crossref {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e5dcc2;
+  font-size: 0.95rem;
+  color: #5a4630;
+  font-style: italic;
+}
+.caisse-crossref a { color: #4a3820; font-weight: 600; }
+
+@media (max-width: 640px) {
+  .caisse-hero { padding: 1.5rem 1.25rem; margin: 1.5rem 0 2rem; }
+  .caisse-hero h2 { font-size: 1.55rem; }
+  .caisse-hero-lead { font-size: 1rem; }
+  .caisse-hero-plain { padding: 0.9rem 1rem; }
+  .caisse-hero-cta { flex-direction: column; align-items: stretch; }
+  .caisse-hero-cta .btn-primary,
+  .caisse-hero-cta .btn-secondary { text-align: center; }
+}
