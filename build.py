@@ -107,6 +107,28 @@ PARISHES = [
         "portal_blurb": "Home of the Franciscans of Halifax. West End Halifax since 1948.",
     },
     {
+        "slug": "saint-mary-basilica",
+        "name": "Saint Mary's Cathedral Basilica",
+        "short": "St. Mary's Cathedral Basilica",
+        "city": "Halifax, Nova Scotia",
+        "founded": "1820",
+        "lang": "en-CA",
+        "official_url": "https://stmcathedral.com",
+        "address": "5221 Spring Garden Road, Halifax, NS B3J 1Z3",
+        "phone": "(902) 429-9800",
+        "email": "cathedral@halifaxyarmouth.org",
+        "tagline": "Mother church of the Archdiocese of Halifax-Yarmouth \u2014 Gothic Revival, National Historic Site",
+        "diocese": "Archdiocese of Halifax-Yarmouth",
+        "schedule": [
+            ("Sunday", "8:00 AM \u00b7 10:30 AM \u00b7 5:00 PM"),
+            ("Monday & Wednesday", "7:30 AM & 12:15 PM"),
+            ("Tuesday", "12:15 PM & 6:30 PM"),
+            ("Thursday \u2013 Saturday", "12:15 PM"),
+        ],
+        "crest_style": "cathedral",
+        "portal_blurb": "Mother church of the Archdiocese of Halifax-Yarmouth. Gothic Revival, National Historic Site of Canada.",
+    },
+    {
         "slug": "holy-trinity",
         "name": "Holy Trinity Catholic Parish",
         "short": "Holy Trinity — Lenexa",
@@ -266,6 +288,11 @@ def crest_svg(style: str) -> str:
     elif style == "franciscan":
         motif = '''<path d="M35 72 L 65 72 M 50 62 L 50 82" stroke="#f5efe1" stroke-width="2.4" stroke-linecap="round"/>
   <circle cx="50" cy="72" r="3.5" fill="#d4a94a"/>'''
+    elif style == "cathedral":
+        # Twin gothic spires with a central cross — for St. Mary's Basilica
+        motif = '''<path d="M38 82 L 38 70 L 34 70 L 42 60 L 42 82 Z" fill="#f5efe1" opacity="0.92"/>
+  <path d="M62 82 L 62 70 L 58 70 L 66 60 L 66 82 Z" fill="#f5efe1" opacity="0.92"/>
+  <path d="M50 62 L 50 78 M 44 68 L 56 68" stroke="#d4a94a" stroke-width="2" stroke-linecap="round"/>'''
     else:  # trinity
         motif = '''<circle cx="50" cy="70" r="4" fill="none" stroke="#f5efe1" stroke-width="2"/>
   <circle cx="42" cy="78" r="4" fill="none" stroke="#f5efe1" stroke-width="2"/>
