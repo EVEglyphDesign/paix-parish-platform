@@ -21,7 +21,32 @@ PARISHES_DIR = ROOT / "parishes"
 # Parish data
 # ---------------------------------------------------------------------------
 
+# Order matters: this is the on-portal display order.
+# Holy Trinity Lenexa is placed first — that's where the Knights of Columbus
+# and the Kansas City audience land first. Maritimes parishes follow.
 PARISHES = [
+    {
+        "slug": "holy-trinity",
+        "name": "Holy Trinity Catholic Parish",
+        "short": "Holy Trinity \u2014 Lenexa",
+        "city": "Lenexa, Kansas",
+        "founded": "1979",
+        "lang": "en-US",
+        "official_url": "https://htlenexa.org",
+        "address": "13615 W 92nd Street, Lenexa, KS 66215",
+        "phone": "(913) 888-2770",
+        "email": "info@htlenexa.org",
+        "tagline": "Parish, school & early education center \u2014 Archdiocese of Kansas City in Kansas",
+        "diocese": "Archdiocese of Kansas City in Kansas \u00b7 Knights of Columbus Council of Palms #6673",
+        "schedule": [
+            ("Saturday Vigil", "4:00 PM"),
+            ("Sunday", "7:30 AM \u00b7 9:30 AM \u00b7 11:30 AM"),
+            ("Monday \u2013 Friday", "6:45 AM & 8:15 AM"),
+            ("Saturday", "8:00 AM"),
+        ],
+        "crest_style": "trinity",
+        "portal_blurb": "Home parish of Knights of Columbus Council of Palms #6673.",
+    },
     {
         "slug": "sainte-anne",
         "name": "Paroisse Sainte-Anne-des-Pays-Bas",
@@ -127,28 +152,6 @@ PARISHES = [
         ],
         "crest_style": "cathedral",
         "portal_blurb": "Mother church of the Archdiocese of Halifax-Yarmouth. Gothic Revival, National Historic Site of Canada.",
-    },
-    {
-        "slug": "holy-trinity",
-        "name": "Holy Trinity Catholic Parish",
-        "short": "Holy Trinity — Lenexa",
-        "city": "Lenexa, Kansas",
-        "founded": "1979",
-        "lang": "en-US",
-        "official_url": "https://htlenexa.org",
-        "address": "13615 W 92nd Street, Lenexa, KS 66215",
-        "phone": "(913) 888-2770",
-        "email": "info@htlenexa.org",
-        "tagline": "Parish, school & early education center — Archdiocese of Kansas City in Kansas",
-        "diocese": "Archdiocese of Kansas City in Kansas · Knights of Columbus Council of Palms #6673",
-        "schedule": [
-            ("Saturday Vigil", "4:00 PM"),
-            ("Sunday", "7:30 AM · 9:30 AM · 11:30 AM"),
-            ("Monday – Friday", "6:45 AM & 8:15 AM"),
-            ("Saturday", "8:00 AM"),
-        ],
-        "crest_style": "trinity",
-        "portal_blurb": "Home parish of Knights of Columbus Council of Palms #6673.",
     },
 ]
 
@@ -408,6 +411,9 @@ def page_index(parish) -> str:
         h1 = s["welcome"]
 
     body = f'''<main>
+  <figure class="hero-photo">
+    <img src="assets/hero.jpg" alt="{html.escape(parish['name'])} \u2014 {html.escape(parish['city'])}" loading="eager">
+  </figure>
   <div class="container">
     <h1>{h1}</h1>
     <p class="lead">{s["welcome_lead"]}</p>
@@ -517,8 +523,12 @@ def page_contact(parish) -> str:
 def portal() -> str:
     cards = []
     for p in PARISHES:
-        cards.append(f'''      <a class="parish-card" href="parishes/{p['slug']}/index.html">
-        <div class="parish-card-crest"><img src="parishes/{p['slug']}/assets/crest.svg" alt=""></div>
+        featured_cls = ' parish-card-featured' if p['slug'] == 'holy-trinity' else ''
+        cards.append(f'''      <a class="parish-card{featured_cls}" href="parishes/{p['slug']}/index.html">
+        <div class="parish-card-photo">
+          <img src="parishes/{p['slug']}/assets/thumb.jpg" alt="{html.escape(p['name'])}" loading="lazy">
+          <div class="parish-card-crest-overlay"><img src="parishes/{p['slug']}/assets/crest.svg" alt=""></div>
+        </div>
         <div class="parish-card-body">
           <h3>{html.escape(p['short'])}</h3>
           <p class="parish-card-city">{html.escape(p['city'])}</p>
@@ -672,6 +682,28 @@ def portal() -> str:
 # ---------------------------------------------------------------------------
 
 PORTAL_CSS = '''/* Portal-specific extensions to the EVE Glyph canon */
+
+/* Hero photograph on individual parish pages */
+.hero-photo {
+  margin: 0 0 2.2rem;
+  padding: 0;
+  max-height: 480px;
+  overflow: hidden;
+  position: relative;
+}
+.hero-photo::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(11,59,92,0) 55%, rgba(11,59,92,0.22) 100%);
+  pointer-events: none;
+}
+.hero-photo img {
+  width: 100%; height: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
 .portal-body main { background: var(--white); padding: 2.5rem 0 4rem; }
 .portal-header .site-title h1 { font-size: 1.85rem; }
 .portal-hero { max-width: 780px; }
@@ -691,21 +723,62 @@ PORTAL_CSS = '''/* Portal-specific extensions to the EVE Glyph canon */
   background: var(--parchment);
   border: 1px solid var(--rule);
   border-left: 4px solid var(--stella-gold);
-  padding: 1.4rem 1.4rem 1.2rem;
   text-decoration: none;
   color: var(--ink);
+  overflow: hidden;
   transition: transform 0.15s, box-shadow 0.15s, border-left-color 0.15s;
 }
 .parish-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(11, 59, 92, 0.12);
+  box-shadow: 0 6px 22px rgba(11, 59, 92, 0.15);
   border-left-color: var(--marine);
   color: var(--ink);
 }
-.parish-card-crest {
-  width: 54px; height: 54px; margin-bottom: 0.9rem;
+.parish-card-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--marine-deep);
 }
-.parish-card-crest img { width: 100%; height: 100%; display: block; }
+.parish-card-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.parish-card:hover .parish-card-photo img { transform: scale(1.03); }
+.parish-card-crest-overlay {
+  position: absolute;
+  left: 0.9rem; bottom: 0.9rem;
+  width: 46px; height: 46px;
+  background: rgba(11, 59, 92, 0.92);
+  padding: 5px;
+  border: 1px solid rgba(212, 169, 74, 0.85);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.parish-card-crest-overlay img { width: 100%; height: 100%; display: block; }
+.parish-card-body { padding: 1.2rem 1.4rem 1.4rem; display: flex; flex-direction: column; flex: 1; }
+/* Featured card: Holy Trinity Lenexa — the Knights land here first */
+.parish-card-featured {
+  border-left-color: var(--marine);
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(300px, 1.2fr) 1fr;
+  align-items: stretch;
+}
+.parish-card-featured .parish-card-photo {
+  aspect-ratio: auto;
+  height: 100%;
+  min-height: 300px;
+}
+.parish-card-featured .parish-card-body { padding: 2rem 2rem 2rem; justify-content: center; }
+.parish-card-featured h3 { font-size: 1.7rem; }
+.parish-card-featured .parish-card-blurb { font-size: 1.05rem; }
+@media (max-width: 720px) {
+  .parish-card-featured { grid-template-columns: 1fr; }
+  .parish-card-featured .parish-card-photo { min-height: 220px; }
+}
 .parish-card h3 {
   font-size: 1.35rem;
   color: var(--marine-deep);

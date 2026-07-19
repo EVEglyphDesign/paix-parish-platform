@@ -1,4 +1,26 @@
 /* Portal-specific extensions to the EVE Glyph canon */
+
+/* Hero photograph on individual parish pages */
+.hero-photo {
+  margin: 0 0 2.2rem;
+  padding: 0;
+  max-height: 480px;
+  overflow: hidden;
+  position: relative;
+}
+.hero-photo::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(11,59,92,0) 55%, rgba(11,59,92,0.22) 100%);
+  pointer-events: none;
+}
+.hero-photo img {
+  width: 100%; height: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
 .portal-body main { background: var(--white); padding: 2.5rem 0 4rem; }
 .portal-header .site-title h1 { font-size: 1.85rem; }
 .portal-hero { max-width: 780px; }
@@ -18,21 +40,62 @@
   background: var(--parchment);
   border: 1px solid var(--rule);
   border-left: 4px solid var(--stella-gold);
-  padding: 1.4rem 1.4rem 1.2rem;
   text-decoration: none;
   color: var(--ink);
+  overflow: hidden;
   transition: transform 0.15s, box-shadow 0.15s, border-left-color 0.15s;
 }
 .parish-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(11, 59, 92, 0.12);
+  box-shadow: 0 6px 22px rgba(11, 59, 92, 0.15);
   border-left-color: var(--marine);
   color: var(--ink);
 }
-.parish-card-crest {
-  width: 54px; height: 54px; margin-bottom: 0.9rem;
+.parish-card-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--marine-deep);
 }
-.parish-card-crest img { width: 100%; height: 100%; display: block; }
+.parish-card-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.parish-card:hover .parish-card-photo img { transform: scale(1.03); }
+.parish-card-crest-overlay {
+  position: absolute;
+  left: 0.9rem; bottom: 0.9rem;
+  width: 46px; height: 46px;
+  background: rgba(11, 59, 92, 0.92);
+  padding: 5px;
+  border: 1px solid rgba(212, 169, 74, 0.85);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.parish-card-crest-overlay img { width: 100%; height: 100%; display: block; }
+.parish-card-body { padding: 1.2rem 1.4rem 1.4rem; display: flex; flex-direction: column; flex: 1; }
+/* Featured card: Holy Trinity Lenexa — the Knights land here first */
+.parish-card-featured {
+  border-left-color: var(--marine);
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(300px, 1.2fr) 1fr;
+  align-items: stretch;
+}
+.parish-card-featured .parish-card-photo {
+  aspect-ratio: auto;
+  height: 100%;
+  min-height: 300px;
+}
+.parish-card-featured .parish-card-body { padding: 2rem 2rem 2rem; justify-content: center; }
+.parish-card-featured h3 { font-size: 1.7rem; }
+.parish-card-featured .parish-card-blurb { font-size: 1.05rem; }
+@media (max-width: 720px) {
+  .parish-card-featured { grid-template-columns: 1fr; }
+  .parish-card-featured .parish-card-photo { min-height: 220px; }
+}
 .parish-card h3 {
   font-size: 1.35rem;
   color: var(--marine-deep);
