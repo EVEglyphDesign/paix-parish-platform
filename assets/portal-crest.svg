@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="PAIX Parish Platform">
+  <defs>
+    <linearGradient id="marine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a5578"/>
+      <stop offset="1" stop-color="#0b3b5c"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer ring -->
+  <circle cx="50" cy="50" r="44" fill="url(#marine)" stroke="#b8892b" stroke-width="1.5"/>
+  <!-- Central cross -->
+  <path d="M50 24 L 50 76 M 30 50 L 70 50" stroke="#d4a94a" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Four cardinal dots + one center = five parishes -->
+  <circle cx="50" cy="24" r="4" fill="#f5efe1"/>
+  <circle cx="50" cy="76" r="4" fill="#f5efe1"/>
+  <circle cx="30" cy="50" r="4" fill="#f5efe1"/>
+  <circle cx="70" cy="50" r="4" fill="#f5efe1"/>
+  <circle cx="50" cy="50" r="5" fill="#d4a94a" stroke="#0b3b5c" stroke-width="1"/>
+</svg>

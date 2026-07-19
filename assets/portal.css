@@ -1,0 +1,142 @@
+/* Portal-specific extensions to the EVE Glyph canon */
+.portal-body main { background: var(--white); padding: 2.5rem 0 4rem; }
+.portal-header .site-title h1 { font-size: 1.85rem; }
+.portal-hero { max-width: 780px; }
+.portal-hero h1 { font-size: 2.7rem; margin-bottom: 0.6rem; }
+.portal-hero .lead { font-size: 1.3rem; margin-bottom: 1.2rem; }
+
+.parish-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.4rem;
+  max-width: 1100px;
+  margin: 2.5rem auto 3rem;
+}
+.parish-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--parchment);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--stella-gold);
+  padding: 1.4rem 1.4rem 1.2rem;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.15s, box-shadow 0.15s, border-left-color 0.15s;
+}
+.parish-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(11, 59, 92, 0.12);
+  border-left-color: var(--marine);
+  color: var(--ink);
+}
+.parish-card-crest {
+  width: 54px; height: 54px; margin-bottom: 0.9rem;
+}
+.parish-card-crest img { width: 100%; height: 100%; display: block; }
+.parish-card h3 {
+  font-size: 1.35rem;
+  color: var(--marine-deep);
+  margin: 0 0 0.2rem;
+}
+.parish-card-city {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 0.7rem;
+  font-size: 1.02rem;
+}
+.parish-card-blurb {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin: 0 0 0.8rem;
+  line-height: 1.55;
+}
+.parish-card-founded {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--marine);
+  margin: auto 0 0;
+  padding-top: 0.6rem;
+  border-top: 1px dotted var(--rule);
+}
+
+.portal-section {
+  max-width: 900px;
+  margin-top: 3rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid var(--rule);
+}
+.portal-section h2 {
+  font-size: 2rem;
+  color: var(--marine-deep);
+  margin-bottom: 0.4em;
+}
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+  margin-top: 1.4rem;
+}
+.pillar {
+  background: var(--parchment);
+  border-left: 3px solid var(--stella-gold);
+  padding: 1rem 1.2rem;
+}
+.pillar h4 {
+  color: var(--marine);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.15rem;
+  margin: 0 0 0.35em;
+}
+.pillar p { font-size: 0.94rem; margin: 0; color: var(--ink-soft); }
+
+.kofc-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.4rem 0;
+}
+.kofc-list li {
+  padding: 0.8rem 0 0.9rem 1.2rem;
+  border-top: 1px solid var(--rule);
+  position: relative;
+}
+.kofc-list li:last-child { border-bottom: 1px solid var(--rule); }
+.kofc-list li::before {
+  content: "◆";
+  color: var(--stella-gold);
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  font-size: 0.85rem;
+}
+.kofc-list li strong { color: var(--marine-deep); }
+.kofc-note {
+  font-style: italic;
+  color: var(--marine);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.05rem;
+  margin-top: 0.8rem;
+}
+
+.doctrine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.6rem;
+  margin-top: 1.4rem;
+}
+.doctrine-grid h4 {
+  color: var(--marine-deep);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.2rem;
+  margin: 0 0 0.35em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--rule);
+}
+.doctrine-grid p { color: var(--ink-soft); font-size: 0.95rem; }
+
+@media (max-width: 600px) {
+  .portal-hero h1 { font-size: 2rem; }
+  .portal-hero .lead { font-size: 1.1rem; }
+  .portal-section h2 { font-size: 1.6rem; }
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Crest">
+  <defs>
+    <linearGradient id="marine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a5578"/>
+      <stop offset="1" stop-color="#0b3b5c"/>
+    </linearGradient>
+  </defs>
+  <path d="M50 6 C 74 6 88 12 88 12 L 88 46 C 88 70 68 88 50 94 C 32 88 12 70 12 46 L 12 12 C 12 12 26 6 50 6 Z"
+        fill="url(#marine)" stroke="#b8892b" stroke-width="1.5"/>
+  <g transform="translate(50 42)">
+    <polygon points="0,-16 4.7,-4.9 16.2,-4.9 6.7,1.9 10.6,13 0,6.2 -10.6,13 -6.7,1.9 -16.2,-4.9 -4.7,-4.9"
+             fill="#d4a94a"/>
+  </g>
+  <path d="M18 68 Q 30 60, 42 68 T 66 68 T 82 66" fill="none" stroke="#f5efe1" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M18 76 Q 30 68, 42 76 T 66 76 T 82 74" fill="none" stroke="#d4a94a" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+</svg>
