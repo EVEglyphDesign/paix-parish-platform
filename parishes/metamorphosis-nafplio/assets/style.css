@@ -434,47 +434,77 @@ main .container { max-width: 780px; }
    Latin therefore carries a mark of its own; it is not just another option.
    --------------------------------------------------------------------------- */
 .lang-bar {
-  background: #f3eee2;
+  background: #fffdf7;
+  border-top: 3px solid var(--stella-gold);
   border-bottom: 1px solid #ddd3bd;
+  box-shadow: 0 2px 6px rgba(20, 40, 70, 0.07);
+  position: sticky;
+  top: 0;
+  z-index: 60;
 }
 .lang-bar .container {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.15rem 0.9rem;
-  padding-top: 0.55rem;
-  padding-bottom: 0.55rem;
+  align-items: center;
+  gap: 0.4rem 0.45rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
 }
 .lang-bar-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: #8a7f6b;
-  margin-right: 0.3rem;
+  color: #6b6252;
+  margin-right: 0.55rem;
+}
+.lang-bar-label::before {
+  content: "";
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: 0 0 auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8892b' stroke-width='1.7'%3E%3Ccircle cx='12' cy='12' r='9.2'/%3E%3Cpath d='M2.8 12h18.4M12 2.8c2.6 2.7 3.9 6 3.9 9.2s-1.3 6.5-3.9 9.2c-2.6-2.7-3.9-6-3.9-9.2S9.4 5.5 12 2.8z'/%3E%3C/svg%3E");
 }
 .lang-bar a {
   font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 0.83rem;
-  color: #5d5445;
+  font-size: 0.95rem;
+  line-height: 1;
+  color: #3d3728;
   text-decoration: none;
-  padding: 0.12rem 0.1rem;
-  border-bottom: 2px solid transparent;
+  padding: 0.42rem 0.72rem;
+  border: 1px solid #d8cdb5;
+  border-radius: 999px;
+  background: #fff;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
 }
-.lang-bar a:hover { color: var(--stella-gold); border-bottom-color: #ddd3bd; }
-.lang-bar a.active {
+.lang-bar a:hover,
+.lang-bar a:focus-visible {
   color: var(--ink);
-  font-weight: 600;
-  border-bottom-color: var(--stella-gold);
+  background: #fdf6e4;
+  border-color: var(--stella-gold);
+}
+.lang-bar a.active {
+  color: #12314f;
+  font-weight: 700;
+  background: #fdf1d5;
+  border-color: var(--stella-gold);
+  box-shadow: inset 0 0 0 1px var(--stella-gold);
 }
 .lang-bar a[data-pivot] { font-variant: small-caps; letter-spacing: 0.03em; }
 .lang-bar a[data-pivot]::after {
   content: "\00b7 pivot";
   font-variant: normal;
-  font-size: 0.62rem;
+  font-size: 0.66rem;
   letter-spacing: 0.06em;
   color: #a3987f;
-  margin-left: 0.28rem;
+  margin-left: 0.3rem;
 }
 
 /* The nine-language grid in the portal's language section */
@@ -500,6 +530,7 @@ main .container { max-width: 780px; }
 .lang-grid a:hover { border-color: var(--stella-gold); background: #fffdf7; }
 
 @media (max-width: 640px) {
-  .lang-bar .container { gap: 0.1rem 0.7rem; }
-  .lang-bar a { font-size: 0.78rem; }
+  .lang-bar .container { gap: 0.35rem 0.35rem; }
+  .lang-bar a { font-size: 0.88rem; padding: 0.4rem 0.6rem; }
+  .lang-bar-label { width: 100%; margin-right: 0; }
 }
