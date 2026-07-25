@@ -4,7 +4,7 @@
 
 > pour le bien-être du peuple
 
-**Version 3 — 25 July 2026.** Supersedes v2 of the same date. Adds *Les deux Acadies / The Two Acadies*, on the seigneurial class and the habitant class. See *Corrections* at the end.
+**Version 4 — 25 July 2026.** Supersedes v3 of the same date. Adds *Deux croix / Two Crosses*: the measured cross of the Acadian refuges, and the V drawn from Holy Trinity, Lenexa, between St. Andrew's Cathedral in Victoria, British Columbia and Église Saint-Augustin in Paquetville. See *Corrections* at the end.
 
 ---
 
@@ -151,6 +151,135 @@ We are not theorising about data sovereignty. We are continuing a practice.
 
 ---
 
+## Deux croix / Two Crosses
+
+![Deux croix — la croix héritée des refuges acadiens, le V tracé depuis Holy Trinity, et le bras prolongé jusqu'au lac Victoria](img/deux-croix.png)
+
+---
+
+## FR — Deux croix
+
+### I · La croix héritée — **[R]**
+
+Cinq églises. Aucune n'a été placée par un plan : chacune marque l'endroit où un groupe d'Acadiens s'est arrêté et a bâti. Mesurées depuis l'église Saint-Augustin de Paquetville (47,6689 N ; 65,0992 O) :
+
+| Église | Distance | Azimut |
+|---|---|---|
+| Église de Saint-Bonaventure, Gaspésie — tête | 51,2 km | 325,1° |
+| Église Saint-Basile, Madawaska — bras ouest | 240,0 km | 262,6° |
+| Église Saint-Pierre-de-La Vernière, Îles-de-la-Madeleine — bras est | 244,0 km | 96,3° |
+| Église-souvenir de Grand-Pré — pied | 291,1 km | 167,7° |
+
+Les deux bras diffèrent de **4 km sur 240**. La traverse Saint-Basile ↔ La Vernière porte 87,2°, soit à 3° de l'est vrai ; Paquetville se tient à 28,8 km de cette ligne. Le montant Bonaventure → Grand-Pré porte 164,1° ; Paquetville en est à 16,9 km. Proportions de croix latine : tête courte, bras égaux, pied long, l'ensemble incliné d'environ 16° à l'est du sud vrai.
+
+**Ce que chaque point est — [R].** Bonaventure : fondée en 1760 par des exilés de Beaubassin, Grand-Pré et Port-Royal ; 92 Acadiens y sont réfugiés entre 1760 et 1763 après Ristigouche ([Patrimoine culturel du Québec](https://www.patrimoine-culturel.gouv.qc.ca/rpcq/detail.do?methode=consulter&id=93374&type=bien), [UQTR](https://depot-e.uqtr.ca/id/eprint/8497/1/032072632.pdf)). Saint-Basile : paroisse érigée le 12 novembre 1792, berceau du Madawaska, fondée par des Acadiens remontés depuis Sainte-Anne-des-Pays-Bas ([Diocèse d'Edmundston](https://www.diocese-edmundston.ca/fr/zp_st-basile.html)) ; 31 croix y honorent les familles fondatrices depuis le 9 août 1961 ([Acadiensis](https://www.erudit.org/fr/revues/acadiensis/2016-v45-n2-acad_45_2/acad45_2rn03/)). La Vernière : environ 250 Acadiens réfugiés à Saint-Pierre-et-Miquelon gagnent les Îles sous l'abbé Jean-Baptiste Allain au début des années 1790 ([Musée acadien du Québec](https://museeacadien.com/iles-de-la-madeleine/)) ; église de 1872-1881, classée le 13 mars 1992 ([Lieux patrimoniaux](https://www.historicplaces.ca/fr/rep-reg/place-lieu.aspx?id=11999&pid=0)). Grand-Pré : église-souvenir bâtie en 1922 avec des fonds levés auprès des Acadiens de toute l'Amérique du Nord ([Parcs Canada](https://parcs.canada.ca/lhn-nhs/ns/grandpre/culture/eglise-church)). Paquetville : desservie en mission de 1873 à 1886, premier curé résident en 1886, église de pierre en 1920 ([CEAAC, Université de Moncton](https://www.umoncton.ca/umcm-ceaac/files/umcm-ceaac/wf/wf/pdf4/f1582-1archreli.pdf)).
+
+### II · Ce qui n'est pas sur la croix — **[R]**
+
+Saint-Martin-de-Tours à St. Martinville, en Louisiane — l'église-mère des Acadiens, fondée en 1765 ([saintmartindetours.org](https://saintmartindetours.org/about-us)) — se trouve à 2 999,2 km de Paquetville, azimut 239,1°. Elle manque le montant prolongé de **2 868,2 km**. La Louisiane n'est pas sur cette croix. Le dire est une correction, pas un jugement : la déportation a dispersé au-delà de toute figure.
+
+### III · Le V — **[A] dessin de l'auteur**
+
+Ceci n'est pas une découverte. C'est un tracé. Centre : Holy Trinity, Lenexa, Kansas.
+
+| Bras | Distance | Azimut |
+|---|---|---|
+| Cathédrale St. Andrew's, Victoria, Colombie-Britannique | 2 508,6 km | 304,1° |
+| Église Saint-Augustin, Paquetville, Nouveau-Brunswick | 2 564,6 km | 58,2° |
+
+Ce qui est **mesuré** : les deux bras diffèrent de **55,9 km sur une moyenne de 2 537 km — 2,2 %**. L'angle qu'ils ouvrent est de **114,2°**. Sa bissectrice porte **1,14° du nord vrai**. La figure est donc symétrique autour du méridien, à un degré près.
+
+Ce qui est **choisi** : les deux extrémités. Personne ne les a placées pour former cette figure.
+
+**Pourquoi ces deux-là — [R] sur les faits, [A] sur la lecture.** St. Andrew's a été dessinée par les architectes montréalais Maurice Perrault et Albert Mesnard, d'après les plans d'une église paroissiale québécoise ; la soumission retenue fut celle d'Aeneas McDonald, 81 052 $ ; l'évêque Jean-Nicolas Lemmens l'a bénie le 30 octobre 1892 ([St. Andrew's Cathedral](https://www.standrewscathedral.com/history-of-the-cathedral), [thejesusquestion, notice historique](https://thejesusquestion.org/wp-content/uploads/2013/04/st-andrews-cathedral-art-victoria-bc.pdf)). Elle est lieu historique national depuis 1990 ([Parcs Canada](https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=104)). Dans la crypte repose Mgr Modeste Demers, né à Saint-Nicolas-de-Lévis en 1809, sacré premier évêque de l'île de Vancouver le 30 novembre 1847, mort à Victoria en 1871 — architecte, arpenteur, charpentier, maçon, orfèvre, imprimeur et éditeur de son propre aveu ([Dictionnaire biographique du Canada](http://www.biographi.ca/fr/bio/demers_modeste_10E.html), [CCHA 1953](https://cchahistory.ca/journal/CCHA1953/Hill.pdf)). L'autel actuel a été taillé par l'artiste salish du littoral Charles Elliott, le lutrin par Roy Henry Vickers ([St. Andrew's Cathedral](https://standrewscathedral.com/about.html)).
+
+Un plan québécois, une soumission portée par un nom des îles, des mains salish à l'autel. Trois traditions dans un seul bâtiment, sur la côte ouest. **[A]** C'est cela que je place au bout du bras ouest : non pas une conquête, un chantier partagé.
+
+### IV · Le bras prolongé — **[R]**
+
+Le bras est, continué au-delà de Paquetville, ne s'arrête pas.
+
+- Holy Trinity → Paquetville : 2 564,6 km
+- Paquetville → Bukoba, sur le lac Victoria : 10 634,2 km
+- **Somme : 13 198,7 km. Ligne directe Holy Trinity → Bukoba : 13 178,2 km.**
+- Écart : **20,5 km sur 13 178 — 0,156 %.**
+
+Les trois points tiennent sur un même grand cercle. Paquetville est à 340 km de la ligne directe, sur une portée de plus de treize mille kilomètres.
+
+Aux deux extrémités de cette portée, un même nom écrit deux fois : Victoria en Colombie-Britannique, et le lac Victoria en Afrique de l'Est — les deux nommés d'après la même reine. **[R]** pour le nom. **[A]** pour ce que j'en fais.
+
+### V · Ce qui n'est pas démontré — **[R]**
+
+Je le pose avant qu'on me le reproche.
+
+1. Le V **n'est pas une croix**. 114,2°, pas 180°. Je ne prétends pas le contraire.
+2. Holy Trinity **n'est pas sur la ligne** Victoria–Paquetville : elle en est à 1 431 km, soit 33,9 % de la portée. Ce n'est pas un point d'une droite, c'est le sommet d'un angle.
+3. Bukoba est **choisie, non vécue**. Je n'y suis jamais allé. Aucune expérience familiale ne l'appuie. Elle entre ici comme intention, pas comme mémoire.
+4. Les coordonnées sont celles des villages et des paroisses, à environ 1 km près. Ce ne sont pas des portes d'église relevées au théodolite. Les distances sont des grands cercles, R = 6 371 km.
+
+### VI · Pourquoi je trace ceci — **[A]**
+
+La première croix, je ne l'ai pas faite. Elle est le dessin qu'ont laissé des gens qui fuyaient et qui, chaque fois qu'ils s'arrêtaient, bâtissaient une église avant de bâtir autre chose. Elle est exacte à quatre kilomètres près et personne ne l'a voulue. C'est l'Ancien Monde qui l'a imposée par la déportation, et le Nouveau qui l'a refermée par la construction.
+
+La seconde, je la trace. Deux bras égaux depuis la paroisse où je me tiens aujourd'hui : à l'ouest les bâtisseurs, à l'est le village fondateur. Un V, pas une croix — et le V est le signe. Victoria, victoire, **PAIX** : le même mot dit trois fois. La victoire n'est pas une conquête ; c'est le moment où des gens choisissent la paix librement, sans représailles.
+
+Ma mère venait du côté des maîtres artisans. Mon père du côté de l'administration et de l'intendance. Deux mondes qui se sont rencontrés et qui en ont fait un troisième. Je ne suis pas le premier à porter cette figure, je suis celui à qui elle est échue. Et si ma fille Ève se tient un jour au sommet de cet angle et rejoint la côte ouest au village fondateur, ce n'est pas moi qui aurai fermé la ligne.
+
+Je le livre dans un jeu pour enfants. C'est délibéré. Ce qu'on veut voir tenir trois cents ans, on ne le met pas dans un contrat.
+
+---
+
+## EN — Two Crosses
+
+### I · The inherited cross — **[R]**
+
+Five churches, none of them sited by any plan. Each marks where a group of Acadians stopped and built. Measured from Église Saint-Augustin, Paquetville: Bonaventure 51.2 km at 325.1° (head), Saint-Basile 240.0 km at 262.6° (west arm), La Vernière 244.0 km at 96.3° (east arm), Grand-Pré 291.1 km at 167.7° (foot).
+
+The two arms differ by **4 km in 240**. The crossbar bears 87.2° — within 3° of true east — and Paquetville sits 28.8 km off it. The upright bears 164.1°; Paquetville sits 16.9 km off it. Latin-cross proportions, leaning about 16° east of true south. Nobody designed this. Refuge did.
+
+### II · What is not on it — **[R]**
+
+St. Martin of Tours, St. Martinville, Louisiana — Mother Church of the Acadians, founded 1765 — lies 2,999.2 km from Paquetville at 239.1°, and misses the extended upright by **2,868.2 km**. Louisiana is not on this cross. Saying so is a correction, not a verdict. The deportation scattered people past the reach of any figure.
+
+### III · The V — **[A] the author's drawing**
+
+Not a discovery. A drawing. Centre: Holy Trinity, Lenexa, Kansas.
+
+- **St. Andrew's Cathedral, Victoria, British Columbia** — 2,508.6 km at 304.1°
+- **Église Saint-Augustin, Paquetville, New Brunswick** — 2,564.6 km at 58.2°
+
+**Measured:** the arms differ by **55.9 km against a mean of 2,537 km — 2.2%**. The included angle is **114.2°**. Its bisector runs **1.14° off true north**, so the figure is symmetric about the meridian to within a degree.
+
+**Chosen:** the two endpoints. No one placed them to make this shape.
+
+St. Andrew's was drawn by Montreal architects Maurice Perrault and Albert Mesnard from a Quebec parish plan, built on the winning tender of Aeneas McDonald at $81,052, and blessed by Bishop Jean-Nicolas Lemmens on 30 October 1892; National Historic Site since 1990. In the crypt lies Bishop Modeste Demers — first Bishop of Vancouver Island, consecrated 30 November 1847, died Victoria 1871 — recorded as architect, surveyor, carpenter, mason, silversmith, printer and editor. The present altar was carved by Coast Salish artist Charles Elliott, the lectern by Roy Henry Vickers. A Quebec drawing, an islander's contract, Salish hands at the altar. **[A]** That is what I put at the end of the west arm: not a conquest, a shared worksite.
+
+### IV · The arm extended — **[R]**
+
+Holy Trinity → Paquetville, 2,564.6 km. Paquetville → Bukoba on Lake Victoria, 10,634.2 km. Sum 13,198.7 km against a direct line of 13,178.2 km — an excess of **20.5 km in 13,178, or 0.156%**. The three points sit on one great circle; Paquetville is 340 km off the direct line across a reach of more than thirteen thousand kilometres.
+
+At either end of that reach, the same name written twice: Victoria in British Columbia, Lake Victoria in East Africa, both named for the same queen. **[R]** for the name. **[A]** for what I make of it.
+
+### V · What is not proven — **[R]**
+
+1. The V **is not a cross**. 114.2°, not 180°.
+2. Holy Trinity **is not on the line** between Victoria and Paquetville. It is 1,431 km off it — 33.9% of the span. It is the apex of an angle, not a point on a straight line.
+3. Bukoba is **chosen, not lived**. I have never been to Tanzania. No family experience supports it. It enters as intent, not as memory.
+4. Coordinates are village and parish points, good to about 1 km — not surveyed church doors. Distances are great-circle, R = 6,371 km.
+
+### VI · Why I draw this — **[A]**
+
+The first cross I did not make. It is the figure left by people who ran, and who each time they stopped built a church before they built anything else. It is accurate to four kilometres and nobody intended it. The Old World imposed it by deportation; the New World closed it by building.
+
+The second I draw. Two equal arms from the parish where I stand today: the builders to the west, the founding village to the east. A V, not a cross — and the V is the sign. Victoria, victory, **PAIX**: the same word said three times. Victory is not conquest. It is the moment people choose peace freely, with no retribution.
+
+My mother's side were master craftsmen. My father's side were stewards and administrators. Two worlds met and made a third. I am not the first to carry this figure; I am the one it fell to. And if my daughter Eve one day stands at the apex of that angle and joins the west coast to the founding village, it will not have been me who closed the line.
+
+I am delivering it in a children's game. That is deliberate. What you want to last three hundred years, you do not put in a contract.
+
+
+---
+
 ## Corrections
 
 **v1 → v2, 25 July 2026.**
@@ -167,13 +296,21 @@ We are not theorising about data sovereignty. We are continuing a practice.
 7. **New marker [A] introduced.** The Old World / New World framing is the author's interpretation. It is set apart in a quoted block, signed, and explicitly not presented as history. Earlier drafts risked letting interpretation sit unmarked beside record.
 8. **One claim declined.** It is sometimes said in the family that d'Aulnay's class sold the Acadians to the English. D'Aulnay died in 1650, one hundred and five years before the Deportation, and no document supports a sale. What the record does support is abandonment: a succession quarrel that left the colony undefended in 1654, and a treaty in 1713 that kept the fortress and let go of the people. The stronger claim is the documented one.
 
+**v3 → v4, 25 July 2026.**
+
+9. **Two Crosses added.** Both figures are given with their measurements and both are marked. The Acadian refuge cross is **[R]** — computed from published parish and heritage records, not designed by anyone. The V from Holy Trinity is **[A]** — the author's drawing, with only two facts about it marked **[R]**: that the arms are equal to 2.2 % and that the bisector runs 1.14 degrees off true north.
+10. **Louisiana shown to be off the cross.** St. Martinville misses the extended upright by 2 868.2 km. An earlier working draft had assumed the Louisiana church belonged to the figure. It does not. It is recorded here so the assumption does not return.
+11. **Victoria disambiguated.** Two different places carry the name in this work. **Victoria, British Columbia** is the west arm of the V, chosen for St. Andrew's Cathedral and the builders' record attached to it. **Lake Victoria / Bukoba, Tanzania** is not an arm; it is the eastern arm continued, and it is marked as intent rather than memory because the author has never been there.
+12. **One claim declined.** An earlier draft proposed a four-armed cross centred on Holy Trinity. It does not exist. Victoria and Paquetville stand 114.2° apart, not 180°, and Holy Trinity lies 1 431 km off the great circle joining them. The figure is an angle, and it is published as an angle.
+13. **Bishop Demers' trades.** Listed as recorded by the Canadian Catholic Historical Association in 1953 — architect, surveyor, carpenter, mason, silversmith, printer, editor. Included because it is documented, not because it is convenient.
+
 Anyone may challenge a claim on this page. A claim that cannot be marked **[R]** or defended as **[I]** comes off it. A claim marked **[A]** is one man's reading and is labelled as such.
 
 ---
 
 ## Sources
 
-[Canadian-American Center, University of Maine — Champlain and the Settlement of Acadia 1604-1607](https://umaine.edu/canam/champlain-and-the-settlement-of-acadia-1604-1607/) · [Sentier Acadie historique — Registres](https://sentieracadie.ca/fr/ancetres-acadiens/registres) · [Nova Scotia Archives — An Acadian Parish Remembered: the Registers of St. Jean-Baptiste, Annapolis Royal, 1702-1755](https://archives.novascotia.ca/acadian/background/) · [Centre acadien, Université Sainte-Anne — Registres de Saint-Jean-Baptiste de Port-Royal](https://www.usainteanne.ca/centre-acadien/a-consulter-en-ligne/registres-de-saint-jean-baptiste-de-port-royal) · [Matteo Binasco, The Troubled Activity of the Roman Catholic Missionaries in Acadia, Saint Mary's University](https://www.smu.ca/webfiles/binasco-catholicmissionariesinacadia-2007.pdf) · [Stephen A. White on surviving registers, via Acadian-Cajun Genealogy](https://freepages.rootsweb.com/~acadiancajun/genealogy/religion.htm) · [Bona Arsenault account, Terriot Acadian Family](https://terriau.org/arsenaul.htm) · [Acadian Historical Timeline — the Saint-Jehan, 1636](https://www.acadian.org/history/acadian-historical-timeline/) · [1671 Port-Royal census transcription](https://www.wikitree.com/wiki/Th%C3%A9riot-99) · [Parks Canada — History of Grand-Pré](https://parks.canada.ca/lhn-nhs/ns/grandpre/culture/histoire-history) · [UNESCO WHC — Landscape of Grand Pré, ID 1404](https://whc.unesco.org/en/list/1404/) · [Diocese of Baton Rouge — St. Gabriel the Archangel](https://diobr.org/st-gabriel-the-archangel-st-gabriel) · [Library of Congress HABS — Old St. Gabriel Church](https://www.loc.gov/pictures/item/la0339/) · [St. Martin de Tours — parish history](https://saintmartindetours.org/full-history) · [Chemins de la francophonie — St. Gabriel](https://acadie.cheminsdelafrancophonie.org/en/st-gabriel/) · [Parks Canada — Fort La Tour National Historic Site](https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=201) · [Guerre civile acadienne](https://fr.wikipedia.org/wiki/Guerre_civile_acadienne) · [Historical Marker Database — La Tour and d'Aulnay](https://www.hmdb.org/m.asp?m=141988) · [Peace of Utrecht](https://en.wikipedia.org/wiki/Peace_of_Utrecht) · [Centre d'études acadiennes, Université de Moncton](http://cfml.ci.umoncton.ca/cea/documts/notices/htm.cfm?ret=ed3&ident=T0065) · [BCcampus — Canadian History: Pre-Confederation, Acadia 1713-1755](https://opentextbc.ca/preconfederation/chapter/6-10-acadia-1713-1755/)
+[Canadian-American Center, University of Maine — Champlain and the Settlement of Acadia 1604-1607](https://umaine.edu/canam/champlain-and-the-settlement-of-acadia-1604-1607/) · [Sentier Acadie historique — Registres](https://sentieracadie.ca/fr/ancetres-acadiens/registres) · [Nova Scotia Archives — An Acadian Parish Remembered: the Registers of St. Jean-Baptiste, Annapolis Royal, 1702-1755](https://archives.novascotia.ca/acadian/background/) · [Centre acadien, Université Sainte-Anne — Registres de Saint-Jean-Baptiste de Port-Royal](https://www.usainteanne.ca/centre-acadien/a-consulter-en-ligne/registres-de-saint-jean-baptiste-de-port-royal) · [Matteo Binasco, The Troubled Activity of the Roman Catholic Missionaries in Acadia, Saint Mary's University](https://www.smu.ca/webfiles/binasco-catholicmissionariesinacadia-2007.pdf) · [Stephen A. White on surviving registers, via Acadian-Cajun Genealogy](https://freepages.rootsweb.com/~acadiancajun/genealogy/religion.htm) · [Bona Arsenault account, Terriot Acadian Family](https://terriau.org/arsenaul.htm) · [Acadian Historical Timeline — the Saint-Jehan, 1636](https://www.acadian.org/history/acadian-historical-timeline/) · [1671 Port-Royal census transcription](https://www.wikitree.com/wiki/Th%C3%A9riot-99) · [Parks Canada — History of Grand-Pré](https://parks.canada.ca/lhn-nhs/ns/grandpre/culture/histoire-history) · [UNESCO WHC — Landscape of Grand Pré, ID 1404](https://whc.unesco.org/en/list/1404/) · [Diocese of Baton Rouge — St. Gabriel the Archangel](https://diobr.org/st-gabriel-the-archangel-st-gabriel) · [Library of Congress HABS — Old St. Gabriel Church](https://www.loc.gov/pictures/item/la0339/) · [St. Martin de Tours — parish history](https://saintmartindetours.org/full-history) · [Chemins de la francophonie — St. Gabriel](https://acadie.cheminsdelafrancophonie.org/en/st-gabriel/) · [Parks Canada — Fort La Tour National Historic Site](https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=201) · [Guerre civile acadienne](https://fr.wikipedia.org/wiki/Guerre_civile_acadienne) · [Historical Marker Database — La Tour and d'Aulnay](https://www.hmdb.org/m.asp?m=141988) · [Peace of Utrecht](https://en.wikipedia.org/wiki/Peace_of_Utrecht) · [Centre d'études acadiennes, Université de Moncton](http://cfml.ci.umoncton.ca/cea/documts/notices/htm.cfm?ret=ed3&ident=T0065) · [BCcampus — Canadian History: Pre-Confederation, Acadia 1713-1755](https://opentextbc.ca/preconfederation/chapter/6-10-acadia-1713-1755/) · [Église de Saint-Bonaventure — Patrimoine culturel du Québec](https://www.patrimoine-culturel.gouv.qc.ca/rpcq/detail.do?methode=consulter&id=93374&type=bien) · [Diocèse d'Edmundston — Saint-Basile](https://www.diocese-edmundston.ca/fr/zp_st-basile.html) · [Acadiensis — les 31 croix de Saint-Basile](https://www.erudit.org/fr/revues/acadiensis/2016-v45-n2-acad_45_2/acad45_2rn03/) · [Musée acadien du Québec — Îles-de-la-Madeleine](https://museeacadien.com/iles-de-la-madeleine/) · [Lieux patrimoniaux — Église Saint-Pierre-de-La Vernière](https://www.historicplaces.ca/fr/rep-reg/place-lieu.aspx?id=11999&pid=0) · [Parcs Canada — l'Église-souvenir de Grand-Pré](https://parcs.canada.ca/lhn-nhs/ns/grandpre/culture/eglise-church) · [CEAAC, Université de Moncton — archives religieuses](https://www.umoncton.ca/umcm-ceaac/files/umcm-ceaac/wf/wf/pdf4/f1582-1archreli.pdf) · [UQTR — les Acadiens réfugiés en Gaspésie](https://depot-e.uqtr.ca/id/eprint/8497/1/032072632.pdf) · [St. Martin de Tours — about](https://saintmartindetours.org/about-us) · [St. Andrew's Cathedral, Victoria — history](https://www.standrewscathedral.com/history-of-the-cathedral) · [St. Andrew's Cathedral — history, altar and windows](https://thejesusquestion.org/wp-content/uploads/2013/04/st-andrews-cathedral-art-victoria-bc.pdf) · [Parks Canada — St. Andrew's Roman Catholic Cathedral National Historic Site](https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=104) · [HistoricPlaces.ca — St. Andrew's Cathedral](https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=1472) · [Dictionnaire biographique du Canada — Modeste Demers](http://www.biographi.ca/fr/bio/demers_modeste_10E.html) · [CCHA 1953 — The Most Reverend Modeste Demers, First Bishop of Vancouver Island](https://cchahistory.ca/journal/CCHA1953/Hill.pdf) · [Diocese of Victoria in Canada](https://en.wikipedia.org/wiki/Diocese_of_Victoria_in_Canada)
 
 ---
 
