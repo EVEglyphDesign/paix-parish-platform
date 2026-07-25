@@ -672,7 +672,7 @@ def footer(parish, t) -> str:
       <p style="margin-top:0.8rem; font-size:0.78rem;">{html.escape(t("ui.no_tracking"))} <em>{html.escape(t("ui.for_people"))}</em></p>
     </div>
     {photo_credit_block(parish)}
-    <div class="ark-footer">
+    <div id="authorship" class="ark-footer">
       <p>{html.escape(ARK_FOOTER)}</p>
     </div>
   </div>
@@ -1153,7 +1153,7 @@ def portal(t, prefix="", url_of=None) -> str:
     <div class="photo-credit">
       <p>{html.escape(t("portal.foot_photos"))} {photo_credits_line()}</p>
     </div>
-    <div class="ark-footer">
+    <div id="authorship" class="ark-footer">
       <p>{html.escape(ARK_FOOTER)}</p>
     </div>
   </div>
