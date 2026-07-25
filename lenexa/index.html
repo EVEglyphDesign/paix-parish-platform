@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARK Stewardship Dashboard — for the Lenexa Police Department, School Resource Unit</title>
+<meta name="description" content="A copyright and stewardship framework for school-outreach curriculum, prepared for the Lenexa Police Department School Resource Unit. No profiling of individuals, ever.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  body { background: var(--parchment); }
+  .lx-wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.4rem; }
+
+  .lx-top { background: var(--marine-deep); color: #eef4f8; padding: 2.6rem 0 2.9rem; border-bottom: 4px solid var(--stella-gold); }
+  .lx-eyebrow { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--stella-gold-light); margin: 0 0 0.9rem; }
+  .lx-top h1 { font-size: clamp(2rem, 4.4vw, 3.15rem); line-height: 1.12; color: #fff; margin: 0 0 1rem; max-width: 21ch; }
+  .lx-lede { font-size: 1.12rem; line-height: 1.6; max-width: 60ch; color: #d3e0ea; margin: 0; }
+  .lx-addressed { margin-top: 1.9rem; padding: 1rem 1.2rem; border-left: 3px solid var(--stella-gold); background: rgba(255,255,255,0.06); max-width: 66ch; font-size: 0.97rem; color: #dce7ef; }
+  .lx-addressed strong { color: #fff; }
+
+  .lx-sec { padding: 3.1rem 0 0.6rem; }
+  .lx-sec h2 { font-size: clamp(1.55rem, 2.7vw, 2.1rem); margin: 0 0 0.3rem; }
+  .lx-sec > .lx-wrap > p.lx-sub { color: var(--ink-soft); max-width: 72ch; margin: 0 0 1.6rem; }
+  .lx-rule { height: 2px; background: linear-gradient(to right, var(--stella-gold), rgba(184,137,43,0)); margin: 0.55rem 0 1.5rem; }
+
+  .lx-quote { border-left: 4px solid var(--stella-gold); background: var(--white); padding: 1.25rem 1.5rem; margin: 0 0 1.6rem; max-width: 78ch; }
+  .lx-quote p { margin: 0 0 0.6rem; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.24rem; line-height: 1.5; color: var(--marine-deep); }
+  .lx-quote cite { font-style: normal; font-size: 0.85rem; color: #6b6252; }
+
+  .lx-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(232px, 1fr)); gap: 1rem; margin-bottom: 1.4rem; }
+  .lx-stat { background: var(--white); border: 1px solid var(--rule); border-top: 3px solid var(--marine); padding: 1.1rem 1.15rem; }
+  .lx-stat .n { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.25rem; line-height: 1; color: var(--marine-deep); display: block; margin-bottom: 0.35rem; }
+  .lx-stat .k { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--stella-gold); display: block; margin-bottom: 0.5rem; }
+  .lx-stat p { margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--ink-soft); }
+  .lx-stat a { color: #8a6416; }
+
+  .lx-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; margin-bottom: 1.5rem; }
+  .lx-card { background: var(--white); border: 1px solid var(--rule); padding: 1.35rem 1.45rem; }
+  .lx-card h3 { font-size: 1.28rem; margin: 0 0 0.55rem; }
+  .lx-card p, .lx-card li { font-size: 0.945rem; line-height: 1.62; color: var(--ink-soft); }
+  .lx-card p { margin: 0 0 0.7rem; }
+  .lx-card ul { margin: 0; padding-left: 1.15rem; }
+  .lx-card li { margin-bottom: 0.5rem; }
+  .lx-card a { color: #8a6416; }
+  .lx-card.granted { border-top: 3px solid #2f7a4f; }
+  .lx-card.reserved { border-top: 3px solid var(--stella-gold); }
+
+  .lx-doctrine { background: var(--marine); color: #eaf1f6; padding: 2.4rem 0 2.6rem; margin-top: 2.6rem; }
+  .lx-doctrine h2 { color: #fff; margin-bottom: 0.2rem; }
+  .lx-doctrine .lx-rule { background: linear-gradient(to right, var(--stella-gold-light), rgba(212,169,74,0)); }
+  .lx-doctrine .d { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.1rem; margin-top: 1.4rem; }
+  .lx-doctrine .d > div { background: rgba(255,255,255,0.07); border-left: 3px solid var(--stella-gold-light); padding: 1.1rem 1.2rem; }
+  .lx-doctrine .d h3 { color: #fff; font-size: 1.2rem; margin: 0 0 0.45rem; }
+  .lx-doctrine .d p { margin: 0; font-size: 0.93rem; line-height: 1.6; color: #cddbe6; }
+
+  .lx-law { border-collapse: collapse; width: 100%; background: var(--white); border: 1px solid var(--rule); font-size: 0.92rem; }
+  .lx-law th, .lx-law td { text-align: left; padding: 0.72rem 0.9rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .lx-law th { background: var(--marine-deep); color: #fff; font-size: 0.73rem; letter-spacing: 0.11em; text-transform: uppercase; font-weight: 700; border-bottom: none; }
+  .lx-law tr:last-child td { border-bottom: none; }
+  .lx-law td:first-child { font-weight: 600; color: var(--marine-deep); white-space: nowrap; }
+  .lx-law a { color: #8a6416; }
+
+  .lx-gaps { background: #fbf3e2; border: 1px solid #e4d2a8; border-left: 4px solid var(--stella-gold); padding: 1.4rem 1.55rem; }
+  .lx-gaps h3 { margin: 0 0 0.6rem; font-size: 1.3rem; }
+  .lx-gaps ol { margin: 0; padding-left: 1.25rem; }
+  .lx-gaps li { font-size: 0.94rem; line-height: 1.6; color: var(--ink-soft); margin-bottom: 0.55rem; }
+  .lx-gaps a { color: #8a6416; }
+
+  .lx-surfaces a.s { display: block; background: var(--white); border: 1px solid var(--rule); border-left: 3px solid var(--marine); padding: 1.1rem 1.2rem; text-decoration: none; transition: border-color 0.14s, transform 0.14s; }
+  .lx-surfaces a.s:hover { border-left-color: var(--stella-gold); transform: translateY(-2px); }
+  .lx-surfaces a.s strong { display: block; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; color: var(--marine-deep); margin-bottom: 0.3rem; }
+  .lx-surfaces a.s span { display: block; font-size: 0.9rem; line-height: 1.55; color: var(--ink-soft); }
+  .lx-surfaces a.s em { font-style: normal; color: #8a6416; font-weight: 600; font-size: 0.86rem; }
+
+  .lx-contact { background: var(--white); border: 1px solid var(--rule); border-top: 3px solid var(--stella-gold); padding: 1.6rem 1.7rem; margin-top: 1rem; }
+  .lx-contact h3 { margin: 0 0 0.5rem; }
+  .lx-contact p { margin: 0 0 0.6rem; font-size: 0.96rem; color: var(--ink-soft); }
+
+  .lx-foot { background: var(--marine-deep); color: #b9c9d6; padding: 2.2rem 0 2.6rem; margin-top: 3rem; font-size: 0.86rem; line-height: 1.65; }
+  .lx-foot a { color: var(--stella-gold-light); }
+  .lx-foot .ark { margin-top: 1.3rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.16); color: #97a9b8; font-size: 0.8rem; max-width: 82ch; }
+
+  @media (max-width: 760px) {
+    .lx-cols { grid-template-columns: 1fr; }
+    .lx-law, .lx-law tbody, .lx-law tr, .lx-law td { display: block; width: 100%; }
+    .lx-law thead { display: none; }
+    .lx-law tr { border-bottom: 1px solid var(--rule); padding: 0.4rem 0 0.9rem; }
+    .lx-law tr:last-child { border-bottom: none; }
+    .lx-law td { border-bottom: none; padding: 0.35rem 1rem; }
+    .lx-law td:first-child { white-space: normal; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; padding-top: 0.9rem; }
+    .lx-law td:nth-child(2)::before { content: 'What it governs'; }
+    .lx-law td:nth-child(3)::before { content: 'Why the no-profiling rule matters here'; }
+    .lx-law td:nth-child(2)::before, .lx-law td:nth-child(3)::before { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stella-gold); margin: 0.5rem 0 0.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="lx-top">
+  <div class="lx-wrap">
+    <p class="lx-eyebrow">Prepared for the Lenexa Police Department · School Resource Unit</p>
+    <h1>Curriculum you can teach. A copyright that protects the students in the room.</h1>
+    <p class="lx-lede">Lenexa's own description of the School Resource Officer role names three functions. The third one is <strong>guest teacher</strong>. This page is about that third function, and about who owns, governs and answers for the material an officer stands up and teaches.</p>
+    <div class="lx-addressed">
+      <strong>Why you specifically.</strong> Every Lenexa SRO is NASRO-certified, and during the school year SROs are assigned full-time into their buildings — then run the summer Youth Police Academy. That makes the School Resource Unit the one part of the department that is already, formally, in the education business. A stewardship framework for teaching material belongs with you, not with a procurement office.
+    </div>
+  </div>
+</header>
+
+<section class="lx-sec">
+  <div class="lx-wrap">
+    <h2>Where this lands in your job</h2>
+    <div class="lx-rule"></div>
+    <div class="lx-quote">
+      <p>SROs “fulfill three basic functions in their school assignments”: law enforcement officer, informal counselor, and <strong>guest teacher</strong> — for instruction in law-related education, violence prevention and de-escalation, internet safety, bullying, alcohol and drug prevention, and crime prevention.</p>
+      <cite>Lenexa Police Department, <a href="https://www.lenexa.com/Government/Departments-Divisions/Police/Police-Department-Structure">Police Department Structure</a></cite>
+    </div>
+    <p class="lx-sub">Internet safety and bullying prevention are already on that list. Both are subjects where the teaching material itself collects, or is tempted to collect, information about the children being taught. That is the exact point where a copyright and stewardship framework stops being paperwork and starts being a safeguard.</p>
+
+    <div class="lx-grid">
+      <div class="lx-stat">
+        <span class="k">School Resource Unit</span>
+        <span class="n">6</span>
+        <p>Full-time SROs, inside the Special Operations Division. Note: the department's <a href="https://www.lenexa.com/Government/Departments-Divisions/Police/Police-School-Resource-Officers">SRO contact page</a> says four while the <a href="https://www.lenexa.com/Government/Departments-Divisions/Police/Police-Department-Structure">structure page</a> says six. Six matches the published contact list.</p>
+      </div>
+      <div class="lx-stat">
+        <span class="k">Certification</span>
+        <span class="n">100%</span>
+        <p>“All of our SROs are certified by the National Association of School Resource Officers.” — <a href="https://www.lenexa.com/Government/Departments-Divisions/Police/Police-School-Resource-Officers">Lenexa PD</a></p>
+      </div>
+      <div class="lx-stat">
+        <span class="k">Districts served</span>
+        <span class="n">3</span>
+        <p>Shawnee Mission USD 512, De Soto USD 232, Olathe USD 233 — per the <a href="https://www.lenexa.org/convention-and-visitors-bureau/relocation-guide/">Lenexa Chamber of Commerce</a>. Cross-district deployment is confirmed: an SRO is posted at <a href="https://mcms.usd232.org/students/school-resource-officer">Mill Creek Middle School</a> in USD 232.</p>
+      </div>
+      <div class="lx-stat">
+        <span class="k">Youth Police Academy</span>
+        <span class="n">13–17</span>
+        <p>One week, twice each summer, free, lunch included — run by the SRO unit when school is out. <a href="https://www.lenexa.com/City-Services/Public-Safety/Police-Programs-Training/Youth-Police-Academy">Programme page</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lx-sec">
+  <div class="lx-wrap">
+    <h2>What ARK actually is</h2>
+    <div class="lx-rule"></div>
+    <p class="lx-sub">ARK is the authorship and stewardship block that sits at the foot of every page of every EVE Glyph Design surface — 660 pages across thirteen parishes and nine languages today. It is one paragraph, and it is deliberately short enough that a department's counsel can read it in under a minute. It does two things: it reserves the design work, and it names who holds the right to assign that work to a large public institution.</p>
+    <div class="lx-cols">
+      <div class="lx-card reserved">
+        <h3>Reserved by the author</h3>
+        <ul>
+          <li>The EVE “digital stem cell” glyph and the glyph-based design principles behind it. All rights reserved.</li>
+          <li>Founder credit to Donat Omer Thériault, EVE Glyph Design. Stated on the surface as <strong>irrevocable</strong>.</li>
+          <li>The right to be identified as the origin of the method, not merely a vendor of files.</li>
+        </ul>
+      </div>
+      <div class="lx-card granted">
+        <h3>What an institution receives</h3>
+        <ul>
+          <li>A <strong>governance receipt</strong> — a written record of what the institution was granted and on what terms.</li>
+          <li><strong>Exit at any time, with a full export</strong> of its own content. No hostage data, no migration penalty.</li>
+          <li>Material it can teach and publish under its own name, with the authorship line intact at the foot of the page.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="lx-sub">Stewardship of rights of use and assignment <em>for large public and institutional usage</em> rests with the <strong>Pacific Utilities Design Council</strong>. For a municipal department that is the operative sentence: it identifies a standing body as the counterparty for any assignment at institutional scale, rather than leaving a city to contract with one individual and hope for continuity.</p>
+  </div>
+</section>
+
+<section class="lx-doctrine">
+  <div class="lx-wrap">
+    <h2>The doctrine, before the pitch</h2>
+    <div class="lx-rule"></div>
+    <div class="d">
+      <div>
+        <h3>No profiling of individuals</h3>
+        <p>No person is counted, categorised or targeted by this platform. Ever. On a school surface that means no student analytics, no engagement scoring, no behavioural flags, no cohort segmentation — nothing that produces a record about a named child.</p>
+      </div>
+      <div>
+        <h3>Safety first, betterment second</h3>
+        <p>The safety of content and identity comes before growth, engagement or profit. Where the two conflict, safety wins and the feature does not ship. Revenue ranks below both.</p>
+      </div>
+      <div>
+        <h3>Institutional sovereignty</h3>
+        <p>The institution binds the platform, not the other way round. It receives a governance receipt and may leave at any time with everything it put in.</p>
+      </div>
+      <div>
+        <h3>No tracking on the surfaces</h3>
+        <p>The live parish surfaces carry no cookies, no analytics and no third-party scripts other than a web font. That is verifiable by viewing source, not a promise in a privacy policy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lx-sec">
+  <div class="lx-wrap">
+    <h2>How it sits against the law you already work inside</h2>
+    <div class="lx-rule"></div>
+    <p class="lx-sub">This is orientation, not legal advice, and the city's own counsel should check every line of it. Sources are linked so they can.</p>
+    <table class="lx-law">
+      <thead><tr><th>Authority</th><th>What it governs</th><th>Why the no-profiling rule matters here</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>FERPA<br>20 U.S.C. §1232g</td>
+          <td>Records held by a school. Law-enforcement-unit records are carved out, but an SRO only reaches actual education records without consent if formally designated a school official under the Department of Education's criteria (<a href="https://studentprivacy.ed.gov/frequently-asked-questions">ED guidance</a>).</td>
+          <td>Material that generates no student record cannot drag an officer across that line by accident.</td>
+        </tr>
+        <tr>
+          <td>PPRA<br>20 U.S.C. §1232h</td>
+          <td>Parental rights over instructional material, and consent for surveys touching sensitive subjects (<a href="https://studentprivacy.ed.gov/">ED</a>).</td>
+          <td>Curriculum with a public, readable licence and no embedded survey instrument is straightforward to show a parent.</td>
+        </tr>
+        <tr>
+          <td>COPPA</td>
+          <td>Children under 13. A school may consent for an ed-tech vendor only inside a narrow educational context — never for commercial or profiling use (<a href="https://www.ftc.gov/business-guidance/resources/complying-coppa-frequently-asked-questions">FTC FAQ</a>).</td>
+          <td>Collecting nothing removes the question rather than answering it.</td>
+        </tr>
+        <tr>
+          <td>Kansas juvenile records<br>K.S.A. 38-2309 <span style="white-space:normal">&amp;</span> 38-2310</td>
+          <td>Access to juvenile records, with restrictions for children under 14 and carve-outs letting educators see what is necessary for campus safety (<a href="https://ksrevisor.gov/statutes/chapters/ch38/038_023_0010.html">Kansas Revisor</a>).</td>
+          <td>A programme that creates no juvenile record creates no juvenile record to fight over.</td>
+        </tr>
+        <tr>
+          <td>KORA<br>K.S.A. 45-215 et seq.</td>
+          <td>Kansas Open Records Act. Police records are presumptively open, with enumerated exemptions (<a href="https://www.lenexa.com/City-Services/Public-Safety/Police-Services/Police-Records/Request-Police-Kansas-Open-Records">Lenexa PD request process</a>).</td>
+          <td>Curriculum the department holds is not automatically shielded from a records request. Material that is already public by design has nothing to disclose under pressure.</td>
+        </tr>
+        <tr>
+          <td>Copyright<br>17 U.S.C. §105</td>
+          <td>Federal works are public domain; state and municipal works generally are <em>not</em>, and remain copyrightable (<a href="https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf">Copyright Office Compendium</a>; <em>Georgia v. Public.Resource.Org</em>, 2020).</td>
+          <td>A city can hold and use licensed material without the authorship being erased into the public domain. Both sides keep what is theirs.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="lx-sec">
+  <div class="lx-wrap">
+    <h2>Why a framework adopted in Lenexa travels</h2>
+    <div class="lx-rule"></div>
+    <p class="lx-sub">American policing is not ten thousand unconnected departments. It is ten thousand departments wired to the same small set of standards bodies — which is precisely why a governance framework proven in one city is legible in the next one.</p>
+    <div class="lx-grid">
+      <div class="lx-stat"><span class="k">Standards</span><span class="n">NASRO</span><p>Certifies every Lenexa SRO. Its own curriculum is fully copyrighted, all rights reserved — so a designer retaining copyright while licensing to a department is the norm in this field, not an unusual ask.</p></div>
+      <div class="lx-stat"><span class="k">Leadership</span><span class="n">IACP</span><p>Chief Eric Schmitz is a member (<a href="https://www.lenexa.com/News/2025/Eric-Schmitz-named-new-Lenexa-chief-of-police">city announcement</a>). Lenexa's former chief Ellen Hanson served on its executive board.</p></div>
+      <div class="lx-stat"><span class="k">Reporting</span><span class="n">NIBRS</span><p>The FBI's incident-based standard, plus the CJIS Security Policy, already impose a common data discipline across agencies.</p></div>
+      <div class="lx-stat"><span class="k">Accreditation</span><span class="n">CALEA</span><p>The national accreditation route. Lenexa's Fire Department publicises its CFAI accreditation; no CALEA or KLEAP status is published for the police department — stated here as an open question, not a criticism.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="lx-sec lx-surfaces">
+  <div class="lx-wrap">
+    <h2>What already exists, running, today</h2>
+    <div class="lx-rule"></div>
+    <p class="lx-sub">None of this is a mock-up. These are live surfaces you can open, read and view-source right now.</p>
+    <div class="lx-grid">
+      <a class="s" href="../index.html"><strong>PAIX Parish Platform</strong><span>Thirteen parishes across four countries, one design canon, nine languages, locally hosted. No tracking, no advertising, no third-party predators.</span><em>Open the portal →</em></a>
+      <a class="s" href="../parishes/holy-trinity/index.html"><strong>Holy Trinity, Lenexa</strong><span>A working instance in your own city — 13615 West 92nd Street. The same canon, applied to one local institution.</span><em>Open the Lenexa parish →</em></a>
+      <a class="s" href="../index.html#doctrine"><strong>The doctrine, in full</strong><span>No profiling. Safety first, betterment second. Founder credit. Sovereignty and exit rights, stated publicly rather than buried in terms.</span><em>Read the doctrine →</em></a>
+      <a class="s" href="../index.html#authorship"><strong>The ARK authorship block</strong><span>The copyright and stewardship paragraph itself, carried verbatim at the foot of all 660 pages.</span><em>Read the ARK block →</em></a>
+    </div>
+  </div>
+</section>
+
+<section class="lx-sec">
+  <div class="lx-wrap">
+    <h2>What is not yet settled</h2>
+    <div class="lx-rule"></div>
+    <div class="lx-gaps">
+      <h3>Open questions, stated up front</h3>
+      <ol>
+        <li><strong>No precedent was found</strong> for a named private designer licensing curriculum to a United States municipal police department while retaining copyright. This would be new ground for both sides, and should be treated as such rather than presented as routine.</li>
+        <li><strong>Lenexa PD publishes no youth- or student-specific data policy.</strong> Nothing on lenexa.com addresses juvenile records handling, school data-sharing agreements or redaction practice for minors. That is a documented absence, not an allegation — and it is the gap a no-profiling framework is designed to fill.</li>
+        <li><strong>The SRO headcount is inconsistent</strong> between two official city pages, four against six. Worth correcting regardless of anything on this page.</li>
+        <li><strong>No department-level CALEA or KLEAP accreditation is published.</strong> NASRO certification of the SROs is the one standards affiliation stated plainly by the department.</li>
+        <li><strong>The city's own intellectual-property and procurement policy has not been reviewed here.</strong> Whatever is proposed has to survive it.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="lx-sec">
+  <div class="lx-wrap">
+    <h2>The ask</h2>
+    <div class="lx-rule"></div>
+    <div class="lx-contact">
+      <h3>One conversation, no obligation</h3>
+      <p>Not a purchase and not a pilot agreement. A reading of the ARK block by whoever in the city would have to live with it, and an honest answer on whether a designer-retained, institution-licensed model for school outreach material is something Lenexa could use — or whether it is not a fit. A clear no is a useful outcome.</p>
+      <p>Dany Theriault · EVE Glyph Design · Lenexa, Kansas · <a href="mailto:dany@eveglyphdesign.org">dany@eveglyphdesign.org</a></p>
+      <p style="font-size:0.88rem;color:#6b6252;margin-bottom:0;">Repository and full commit history: <a href="https://github.com/EVEglyphDesign/paix-parish-platform">github.com/EVEglyphDesign/paix-parish-platform</a> · Umbrella copyright notice: <a href="https://github.com/EVEglyphDesign/paix-parish-platform/blob/main/LICENSE-NOTICE.md">LICENSE-NOTICE.md</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="lx-foot">
+  <div class="lx-wrap">
+    <p style="margin:0 0 0.7rem;">This page was prepared on 25 July 2026 for the Lenexa Police Department School Resource Unit. Every factual claim about the department is sourced to lenexa.com, a school district site, or a named publication, and is linked inline. Where something is not published, this page says so rather than filling the gap.</p>
+    <p style="margin:0;">The parish platform is published in nine languages — Latina, English, Français, Español, Italiano, Português, Română, Ελληνικά and Kiswahili — with Latin as the translation pivot. This briefing page is English only, by choice, because its reader is here.</p>
+    <div class="ark">
+      <p style="margin:0;">© 2026 Dany Theriault. EVE “digital stem cell” glyph and glyph-based design principles — all rights reserved. Stewardship of rights of use and assignment for large public and institutional usage rests with the Pacific Utilities Design Council. Published as a time-stamped record of authorship and intent.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
