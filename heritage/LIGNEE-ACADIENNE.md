@@ -4,7 +4,7 @@
 
 > pour le bien-être du peuple
 
-**Version 2 — 25 July 2026.** Supersedes v1 of the same date. v1 dated the family's arrival to 1637 by inferring it from a child's age in the 1671 census. That inference is not evidence and has been removed. See *Corrections* at the end.
+**Version 3 — 25 July 2026.** Supersedes v2 of the same date. Adds *Les deux Acadies / The Two Acadies*, on the seigneurial class and the habitant class. See *Corrections* at the end.
 
 ---
 
@@ -17,6 +17,7 @@ Every dated claim on this page carries one of three marks. Nothing is asserted w
 | **[R]** | **Record.** A surviving primary document says this. |
 | **[I]** | **Inference.** Reasoned from records, but no document states it. |
 | **[L]** | **Lore.** Family or community tradition. Held with respect, not cited as fact. |
+| **[A]** | **Author's reading.** An interpretation by the author of this page. Offered as his own, not as history. |
 
 ---
 
@@ -55,6 +56,12 @@ Les registres de Saint-Charles-des-Mines sont sauvés par les Acadiens, emporté
 
 ### automne 1755 · Sainte-Anne-des-Pays-Bas — **[R]**
 Les réfugiés remontent la rivière Saint-Jean jusqu'à Sainte-Anne. Fondateur du design de la paroisse : Donat Omer Thériault.
+
+### Les deux Acadies — **[R]**
+
+Il y eut deux Acadies. Celle des seigneurs, qui se disputaient les revenus de la fourrure et du bois, et qui pouvaient rentrer en France. Celle des habitants, qui endiguaient les marais et qui ne le pouvaient pas.
+
+Le recensement de 1671 dit lequel des deux nous étions. Le premier mot inscrit devant le nom de Jehan Terriau n'est ni sieur ni officier : **« Laboureur »**.
 
 ---
 
@@ -106,6 +113,32 @@ The Saint-Charles-des-Mines books went to Maryland, then to the Mississippi, and
 
 That is not a monument. That is a **records-continuity operation carried out by a dispossessed people under duress, and it worked.**
 
+### The Two Acadies
+
+There were two Acadies. The seigneurs, who fought each other over fur and timber revenue and who could go back to France. The habitants, who diked the marshes and could not.
+
+The 1671 census says which one we were. The first word entered against Jehan Terriau's name is not *sieur* and not *officier*. It is **Laboureur** — ploughman. Six cattle, one sheep, five arpents ([1671 Port-Royal census](https://www.wikitree.com/wiki/Th%C3%A9riot-99)).
+
+**1645 · Fort La Tour — [R].** Charles de Menou d'Aulnay and Charles de Saint-Étienne de La Tour had been ordered by the French court to share the colony's revenue. Instead they made war on each other for a decade ([Historical Marker Database](https://www.hmdb.org/m.asp?m=141988)). In April 1645 d'Aulnay besieged Fort La Tour and offered quarter to the garrison if Françoise-Marie Jacquelin would surrender it. She did. He then reneged and hanged the garrison, sparing one man on condition that he hang the others, and made her watch with a rope around her own neck. She was dead within three weeks. Parks Canada records that he "reneged on the conditions of surrender and executed the members of the garrison" ([Parks Canada, Fort La Tour NHS](https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=201)). The contemporary account is that of Nicolas Denys, who was in the colony at the time.
+
+Breaking quarter was a violation of the laws of war by the standards of d'Aulnay's own century. This is not a judgement applied in hindsight.
+
+**1650-1654 · the succession — [R].** D'Aulnay drowned in 1650 owing roughly 260,000 livres, chiefly to his creditor Emmanuel Le Borgne. In 1653 La Tour married d'Aulnay's widow, Jeanne Motin, merging the two houses; Le Borgne then pursued the estate against La Tour and Nicolas Denys ([Guerre civile acadienne](https://fr.wikipedia.org/wiki/Guerre_civile_acadienne)). That quarrel was still running when Robert Sedgwick's English force arrived in July 1654 and took the colony. Le Borgne signed the capitulation of Port-Royal on 16 August, and asked for his ship and merchandise back.
+
+The war that hanged a garrison was settled by a property marriage. The colony fell while its lords were litigating a dead man's balance sheet. Nobody who was hanged was un-hanged by the settlement.
+
+**1713 · Utrecht — [R].** France ceded mainland Acadia to Britain and kept Île Royale, where it began building Louisbourg, which became the most expensive military installation in North America ([Peace of Utrecht](https://en.wikipedia.org/wiki/Peace_of_Utrecht)). The Acadians, in the great majority, stayed on their land under British rule ([Centre d'études acadiennes, Université de Moncton](http://cfml.ci.umoncton.ca/cea/documts/notices/htm.cfm?ret=ed3&ident=T0065)). The Crown kept the fortress and the fishery and let go of the people.
+
+**1730-1755 · the Neutrals — [R].** The Acadians signed a conditional oath of allegiance carrying an exemption from bearing arms, attested by the priest Charles de la Goudalie and the notary Alexandre Bourg. They were thereafter known as the **French Neutrals**. Naomi Griffiths describes the span that followed as a golden age, with family sizes and life expectancy exceeding those of France, Canada and New England ([BCcampus, *Canadian History: Pre-Confederation*](https://opentextbc.ca/preconfederation/chapter/6-10-acadia-1713-1755/)).
+
+A people with no army and no lord, refusing both empires, outlived the subjects of both. Then were deported.
+
+> **[A] — the author's reading, offered as his own and not as history.**
+>
+> These are two worlds, not two factions. The Old World is where people harm each other and themselves to get things that do not matter, and where the ones at the top can always go home. The New World is where people strive to be better, and one day reach peace. Acadie held both at once. The seigneurs went back to France. We stayed, and were named for the pastoral paradise, and refused to take up arms against anyone — against the English, against the Mi'kmaq, against anyone — and we were deported for it anyway.
+>
+> I take the habitant side. That is a choice about which world to build in, not a claim about what the documents say. The documents are above. — *Dany Theriault*
+
 ### Why this is on a technology page
 
 Because it is the same problem.
@@ -128,13 +161,19 @@ We are not theorising about data sovereignty. We are continuing a practice.
 4. **Church registers.** Added. The absence of a pre-1702 record is not an absence of Church record-keeping; it is the destruction of one.
 5. **Rome.** Added, with the Molins case.
 
-Anyone may challenge a claim on this page. A claim that cannot be marked **[R]** or defended as **[I]** comes off it.
+**v2 → v3, 25 July 2026.**
+
+6. **The Two Acadies added.** The seigneurial class and the habitant class, with the 1645 Fort La Tour siege, the Le Borgne succession and the 1654 fall, the 1713 ledger at Utrecht, and the 1730-1755 neutrality, each marked **[R]** and sourced.
+7. **New marker [A] introduced.** The Old World / New World framing is the author's interpretation. It is set apart in a quoted block, signed, and explicitly not presented as history. Earlier drafts risked letting interpretation sit unmarked beside record.
+8. **One claim declined.** It is sometimes said in the family that d'Aulnay's class sold the Acadians to the English. D'Aulnay died in 1650, one hundred and five years before the Deportation, and no document supports a sale. What the record does support is abandonment: a succession quarrel that left the colony undefended in 1654, and a treaty in 1713 that kept the fortress and let go of the people. The stronger claim is the documented one.
+
+Anyone may challenge a claim on this page. A claim that cannot be marked **[R]** or defended as **[I]** comes off it. A claim marked **[A]** is one man's reading and is labelled as such.
 
 ---
 
 ## Sources
 
-[Canadian-American Center, University of Maine — Champlain and the Settlement of Acadia 1604-1607](https://umaine.edu/canam/champlain-and-the-settlement-of-acadia-1604-1607/) · [Sentier Acadie historique — Registres](https://sentieracadie.ca/fr/ancetres-acadiens/registres) · [Nova Scotia Archives — An Acadian Parish Remembered: the Registers of St. Jean-Baptiste, Annapolis Royal, 1702-1755](https://archives.novascotia.ca/acadian/background/) · [Centre acadien, Université Sainte-Anne — Registres de Saint-Jean-Baptiste de Port-Royal](https://www.usainteanne.ca/centre-acadien/a-consulter-en-ligne/registres-de-saint-jean-baptiste-de-port-royal) · [Matteo Binasco, The Troubled Activity of the Roman Catholic Missionaries in Acadia, Saint Mary's University](https://www.smu.ca/webfiles/binasco-catholicmissionariesinacadia-2007.pdf) · [Stephen A. White on surviving registers, via Acadian-Cajun Genealogy](https://freepages.rootsweb.com/~acadiancajun/genealogy/religion.htm) · [Bona Arsenault account, Terriot Acadian Family](https://terriau.org/arsenaul.htm) · [Acadian Historical Timeline — the Saint-Jehan, 1636](https://www.acadian.org/history/acadian-historical-timeline/) · [1671 Port-Royal census transcription](https://www.wikitree.com/wiki/Th%C3%A9riot-99) · [Parks Canada — History of Grand-Pré](https://parks.canada.ca/lhn-nhs/ns/grandpre/culture/histoire-history) · [UNESCO WHC — Landscape of Grand Pré, ID 1404](https://whc.unesco.org/en/list/1404/) · [Diocese of Baton Rouge — St. Gabriel the Archangel](https://diobr.org/st-gabriel-the-archangel-st-gabriel) · [Library of Congress HABS — Old St. Gabriel Church](https://www.loc.gov/pictures/item/la0339/) · [St. Martin de Tours — parish history](https://saintmartindetours.org/full-history) · [Chemins de la francophonie — St. Gabriel](https://acadie.cheminsdelafrancophonie.org/en/st-gabriel/)
+[Canadian-American Center, University of Maine — Champlain and the Settlement of Acadia 1604-1607](https://umaine.edu/canam/champlain-and-the-settlement-of-acadia-1604-1607/) · [Sentier Acadie historique — Registres](https://sentieracadie.ca/fr/ancetres-acadiens/registres) · [Nova Scotia Archives — An Acadian Parish Remembered: the Registers of St. Jean-Baptiste, Annapolis Royal, 1702-1755](https://archives.novascotia.ca/acadian/background/) · [Centre acadien, Université Sainte-Anne — Registres de Saint-Jean-Baptiste de Port-Royal](https://www.usainteanne.ca/centre-acadien/a-consulter-en-ligne/registres-de-saint-jean-baptiste-de-port-royal) · [Matteo Binasco, The Troubled Activity of the Roman Catholic Missionaries in Acadia, Saint Mary's University](https://www.smu.ca/webfiles/binasco-catholicmissionariesinacadia-2007.pdf) · [Stephen A. White on surviving registers, via Acadian-Cajun Genealogy](https://freepages.rootsweb.com/~acadiancajun/genealogy/religion.htm) · [Bona Arsenault account, Terriot Acadian Family](https://terriau.org/arsenaul.htm) · [Acadian Historical Timeline — the Saint-Jehan, 1636](https://www.acadian.org/history/acadian-historical-timeline/) · [1671 Port-Royal census transcription](https://www.wikitree.com/wiki/Th%C3%A9riot-99) · [Parks Canada — History of Grand-Pré](https://parks.canada.ca/lhn-nhs/ns/grandpre/culture/histoire-history) · [UNESCO WHC — Landscape of Grand Pré, ID 1404](https://whc.unesco.org/en/list/1404/) · [Diocese of Baton Rouge — St. Gabriel the Archangel](https://diobr.org/st-gabriel-the-archangel-st-gabriel) · [Library of Congress HABS — Old St. Gabriel Church](https://www.loc.gov/pictures/item/la0339/) · [St. Martin de Tours — parish history](https://saintmartindetours.org/full-history) · [Chemins de la francophonie — St. Gabriel](https://acadie.cheminsdelafrancophonie.org/en/st-gabriel/) · [Parks Canada — Fort La Tour National Historic Site](https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=201) · [Guerre civile acadienne](https://fr.wikipedia.org/wiki/Guerre_civile_acadienne) · [Historical Marker Database — La Tour and d'Aulnay](https://www.hmdb.org/m.asp?m=141988) · [Peace of Utrecht](https://en.wikipedia.org/wiki/Peace_of_Utrecht) · [Centre d'études acadiennes, Université de Moncton](http://cfml.ci.umoncton.ca/cea/documts/notices/htm.cfm?ret=ed3&ident=T0065) · [BCcampus — Canadian History: Pre-Confederation, Acadia 1713-1755](https://opentextbc.ca/preconfederation/chapter/6-10-acadia-1713-1755/)
 
 ---
 
