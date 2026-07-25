@@ -434,13 +434,18 @@ main .container { max-width: 780px; }
    Latin therefore carries a mark of its own; it is not just another option.
    --------------------------------------------------------------------------- */
 .lang-bar {
+  position: fixed;
+  top: 0.85rem;
+  right: 0.85rem;
+  left: auto;
+  width: auto;
+  max-width: min(94vw, 40rem);
   background: #fffdf7;
+  border: 1px solid #ddd3bd;
   border-top: 3px solid var(--stella-gold);
-  border-bottom: 1px solid #ddd3bd;
-  box-shadow: 0 2px 6px rgba(20, 40, 70, 0.07);
-  position: sticky;
-  top: 0;
-  z-index: 60;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(20, 40, 70, 0.14);
+  z-index: 200;
 }
 .lang-bar .container {
   display: flex;
@@ -449,14 +454,13 @@ main .container { max-width: 780px; }
   justify-content: flex-end;
   max-width: none;
   width: 100%;
-  padding-left: 1.4rem;
-  padding-right: 1.4rem;
-  gap: 0.4rem 0.45rem;
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  gap: 0.3rem 0.35rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 .lang-bar-label {
-  margin-right: auto;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
