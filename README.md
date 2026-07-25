@@ -8,13 +8,29 @@
 
 A Parish Sovereign Gateway reference build under the **EVE Glyph Design** doctrine.
 
-Front-page portal + five mirrored parish sites, all in one editorial canon:
+Front-page portal + **ten mirrored parish sites across four regions**, all in one editorial canon:
 
-- **Paroisse Sainte-Anne-des-Pays-Bas** — Fredericton, N.-B.
-- **Église Saint-Augustin de Paquetville** — Paquetville, N.-B.
-- **St. Dunstan's Basilica Parish** — Charlottetown, P.E.I.
-- **Saint Catherine of Siena Church** — Halifax, N.S.
+**United States**
 - **Holy Trinity Catholic Parish** — Lenexa, Kansas
+- **Cathedral Basilica of St. Augustine** — St. Augustine, Florida
+
+**Montréal**
+- **Oratoire Saint-Joseph du Mont-Royal** — Montréal, Québec
+
+**Atlantic Canada**
+- **Paroisse Sainte-Anne-des-Pays-Bas** — Fredericton, Nouveau-Brunswick
+- **Église Saint-Augustin de Paquetville** — Paquetville, Nouveau-Brunswick
+- **St. Dunstan's Basilica Parish** — Charlottetown, Prince Edward Island
+- **Saint Catherine of Siena Church** — Halifax, Nouvelle-Écosse
+- **Saint Mary's Cathedral Basilica** — Halifax, Nouvelle-Écosse
+
+**México**
+- **Cuasiparroquia de la Sagrada Familia** — Las Jarretaderas, Nayarit
+- **Parroquia de La Santa Cruz** — La Cruz de Huanacaxtle, Nayarit
+
+## Heritage
+
+[`heritage/LIGNEE-ACADIENNE.md`](heritage/LIGNEE-ACADIENNE.md) — **La lignée / The Line.** Bilingual FR/EN. Poitou → Port-Royal → Grand-Pré → l'exil → la Louisiane → Sainte-Anne-des-Pays-Bas. Every dated claim marked **[R]** record, **[I]** inference, or **[L]** lore. Carries the correction that the family does not claim the oldest Roman Catholic site in North America, and the claim that is actually ours: the parish register the people carried out of Grand-Pré through the deportation.
 
 ## What this is
 
