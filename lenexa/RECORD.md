@@ -70,3 +70,65 @@ instrument at
 © 2026 Dany Theriault. EVE "digital stem cell" glyph and glyph-based design principles — all rights reserved. Stewardship of rights of use and assignment for large public and institutional usage rests with the Pacific Utilities Design Council. Published as a time-stamped record of authorship and intent.
 
 Pour le bien-être du peuple.
+
+
+---
+
+## EGD-LNX-2026-0725-02 — ARK Extract, sealed
+
+| Field | Value |
+| --- | --- |
+| Record | `EGD-LNX-2026-0725-02` |
+| Key ID | `EVEGLYPH-LNX-2026-0725` |
+| Artifact | `ARK-EXTRACT-LENEXA-PD-2026-0725.pdf` |
+| Manifest | `ARK-EXTRACT-LENEXA-PD-2026-0725-manifest.txt` |
+| Form | Sealed extract + verification manifest — the form used for *Pour Ève — extrait scellé* |
+| Pages | 2, US Letter |
+| Bytes | 70244 |
+| SHA-256, extract | `bb165f871854c82046ee17a86cc68989f4be833e2fb9faa98d012b20c5bb2745` |
+| SHA-256, manifest | `5e26edacaa63ac81edeca050ae3d674e49832420f9e943c4ff70740eea7a1007` |
+| SHA-256, content payload | `dbe59c6c9a885f0575f64cd14f652469c5b1b80ea6bbc8f0d8c539b38aa84632` |
+| Author | Dany Theriault |
+| Steward | Pacific Utilities Design Council |
+| Issued | 25 July 2026, Lenexa, Kansas |
+| Prepared for | Lenexa Police Department — School Resource Unit, Special Operations Division |
+| Status | Watermarked extract. Extract, not integral. |
+
+### What this is, and how it differs from the brief
+
+`EGD-LNX-2026-0725-01` is the **brief** — the argument, three pages, written to persuade a
+reader who has not yet decided anything. This record is the **extract** — the instrument
+itself, lifted out of the corpus, watermarked, fingerprinted and published before it is
+transmitted. It carries the copyright paragraph verbatim, the reserved / assignable /
+granted split, the binding doctrine, the digest of every artifact in the lane, the
+verification procedure, and a three-party signature block. The institution's signature
+line is deliberately left blank: the extract does not presume who signs for the City.
+
+### Canon conformance
+
+| Point | How it is met |
+| --- | --- |
+| §1 Universal copyright footer | Verbatim in the closing band and in the running foot of both pages |
+| §2 Watermarks only | Visible diagonal plain-text watermark, "SEALED EXTRACT · EVEGLYPH-LNX-2026-0725". No steganography, no hidden metadata, no embedded proof payload. Proof lives here and in the manifest, outside the artifact |
+| §3 Public stays public | Committed to a public repository, reachable without an account |
+| §4 Tokenized history canonical | The commit, not the transmission, is the time stamp |
+| §5 No history rewrite | Appended below the previous entry. Nothing above this line was altered |
+| §6 Inheritor-operable | Verification is one `sha256sum` command; no tooling, no account, no dependency on us |
+| §7 No vendor lock-in | Open format, open fonts, open repository, open digest |
+| §9 Safety rank 1, betterment rank 2 | Stated as binding doctrine on the face of the extract |
+| Founder credit | Donat Omer Thériault, in the running foot of both pages |
+| TERM-INDEX | "Dany Theriault" unaccented in the copyright line; "Donat Omer Thériault" accented as design-founder name; "Pacific Utilities Design Council" in full |
+
+### Note on the digest table
+
+The digest table inside the extract covers the brief, the dashboard and the game
+wireframe. It deliberately does **not** cover `RECORD.md`: this ledger is append-only by
+design, so its digest is expected to change and hashing it inside a sealed artifact would
+publish a value guaranteed to go stale. The extract's own digest cannot appear inside
+itself and is published in the companion manifest and in the table above.
+
+---
+
+© 2026 Dany Theriault. EVE "digital stem cell" glyph and glyph-based design principles — all rights reserved. Stewardship of rights of use and assignment for large public and institutional usage rests with the Pacific Utilities Design Council. Published as a time-stamped record of authorship and intent.
+
+Pour le bien-être du peuple.

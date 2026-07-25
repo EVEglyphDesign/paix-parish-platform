@@ -1,0 +1,42 @@
+ARK EXTRACT — LENEXA POLICE DEPARTMENT / SEALED EXTRACT
+EVE Glyph Design
+
+Key ID                EVEGLYPH-LNX-2026-0725
+Issued                25 July 2026, Lenexa, Kansas
+Author                Dany Theriault
+Design founder        Donat Omer Thériault — credit irrevocable
+Steward               Pacific Utilities Design Council
+Prepared for          Lenexa Police Department — School Resource Unit
+Source                github.com/EVEglyphDesign/paix-parish-platform, lane lenexa/
+Status                Watermarked extract. Extract, not integral.
+
+FINGERPRINTS (SHA-256)
+  content payload                      dbe59c6c9a885f0575f64cd14f652469c5b1b80ea6bbc8f0d8c539b38aa84632
+  ARK-EXTRACT-LENEXA-PD-2026-0725.pdf  bb165f871854c82046ee17a86cc68989f4be833e2fb9faa98d012b20c5bb2745
+  ARK-Stewardship-Brief-Lenexa-PD-2026-07-25.pdf 32dd3676562f4916fe082c137ac82548af2ca23afcaef6ea0419271bc33ba393
+  index.html                           d9fea1ea85ac0f0ebf5f8f0dced15a4cf6aeb3aec557bcb4c1455f066159e528
+  game/index.html                      34ba8d8940c9730ba160b9b2ebadf756e43b16ac6ae41ad15fdbfa31936dad94
+
+VERIFICATION
+Any copy received by message can be verified by recomputing its SHA-256 and
+comparing it to the value above, published in the public repository:
+  github.com/EVEglyphDesign/paix-parish-platform
+  eveglyphdesign.github.io/paix-parish-platform/lenexa/
+A copy whose fingerprint differs is not this extract.
+
+  sha256sum ARK-EXTRACT-LENEXA-PD-2026-0725.pdf
+  certutil -hashfile ARK-EXTRACT-LENEXA-PD-2026-0725.pdf SHA256   (Windows)
+
+Publication precedes transmission. The commit is the time stamp. History in
+this repository is never rewritten and never force-pushed.
+
+No steganography, no embedded proof payload, no hidden metadata, no tracker,
+no beacon, no remote asset in any artifact listed above. The copyright footer
+is the only watermark and it is plain text.
+
+© 2026 Dany Theriault. EVE "digital stem cell" glyph and glyph-based design
+principles — all rights reserved. Stewardship of rights of use and assignment
+for large public and institutional usage rests with the Pacific Utilities
+Design Council. Published as a time-stamped record of authorship and intent.
+
+pour le bien-être du peuple
