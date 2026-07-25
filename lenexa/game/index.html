@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lantern Room — a PAIX educational wireframe</title>
+<meta name="description" content="The Lantern Room: a playable wireframe of a scenario-based internet safety and bullying prevention game for ages 11–14. Early prototype. No data collection of any kind.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+<style>
+  body { background: var(--parchment); }
+  .lx-wrap { max-width: 900px; margin: 0 auto; padding: 0 1.2rem; }
+  * { box-sizing: border-box; }
+  img, svg { max-width: 100%; }
+
+  /* ---- top bar ---- */
+  .g-bar { background: var(--marine-deep); color: #dce7ef; padding: 0.7rem 0; font-size: 0.88rem; }
+  .g-bar a { color: var(--stella-gold-light); text-decoration: none; border-bottom: 1px solid rgba(212,169,74,0.45); }
+  .g-bar a:hover { color: #fff; border-bottom-color: #fff; }
+
+  /* ---- masthead ---- */
+  .g-top { background: var(--marine); color: #eef4f8; padding: 2.1rem 0 2.3rem; border-bottom: 4px solid var(--stella-gold); }
+  .g-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--stella-gold-light); margin: 0 0 0.7rem; }
+  .g-top h1 { font-size: clamp(1.9rem, 6vw, 3rem); line-height: 1.1; color: #fff; margin: 0 0 0.7rem; }
+  .g-top p.lede { font-size: 1.05rem; line-height: 1.6; color: #d3e0ea; margin: 0; max-width: 58ch; }
+  .g-lantern { width: 34px; height: 34px; display: block; margin-bottom: 0.9rem; color: var(--stella-gold-light); }
+
+  /* ---- honest banner ---- */
+  .g-honest {
+    background: #fbf3e2; border: 1px solid #e4d2a8; border-left: 4px solid var(--stella-gold);
+    padding: 0.95rem 1.1rem; margin: 1.4rem 0; font-size: 0.93rem; line-height: 1.6; color: var(--ink-soft);
+  }
+  .g-honest strong { color: var(--marine-deep); }
+
+  /* ---- stage ---- */
+  .g-stage { padding: 1.8rem 0 1rem; }
+  .g-panel { background: var(--white); border: 1px solid var(--rule); border-top: 3px solid var(--marine); padding: 1.4rem 1.4rem 1.5rem; }
+  .g-panel h2 { font-size: clamp(1.4rem, 4vw, 1.95rem); margin: 0 0 0.5rem; }
+  .g-panel p { font-size: 1rem; line-height: 1.65; color: var(--ink-soft); }
+
+  .g-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; margin: 0 0 0.9rem; }
+  .g-step { font-size: 0.71rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--stella-gold); }
+  .g-dots { display: flex; gap: 6px; }
+  .g-dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--rule); display: block; }
+  .g-dots i.on { background: var(--stella-gold); }
+  .g-dots i.now { background: var(--marine); box-shadow: 0 0 0 3px rgba(11,59,92,0.16); }
+
+  .g-situation {
+    background: var(--parchment); border-left: 3px solid var(--marine-light);
+    padding: 1rem 1.1rem; margin: 0 0 1.2rem; font-size: 1.02rem; line-height: 1.65; color: var(--ink);
+  }
+  .g-situation .who { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: #6b6252; margin-bottom: 0.45rem; }
+  .g-situation q { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--marine-deep); }
+
+  .g-choices { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
+
+  /* ---- buttons ---- */
+  button { font-family: inherit; }
+  .g-choice {
+    display: block; width: 100%; text-align: left; cursor: pointer;
+    background: var(--white); border: 1px solid var(--rule); border-left: 3px solid var(--rule);
+    padding: 0.9rem 1rem; font-size: 0.98rem; line-height: 1.55; color: var(--ink);
+    transition: border-color 0.14s, background 0.14s, transform 0.14s;
+  }
+  .g-choice:hover { border-left-color: var(--stella-gold); background: #fffaf0; transform: translateX(2px); }
+  .g-choice .lbl { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--stella-gold); margin-bottom: 0.3rem; }
+
+  .g-btn {
+    display: inline-block; cursor: pointer; font-size: 0.92rem; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase; padding: 0.75rem 1.5rem;
+    background: var(--marine); color: #fff; border: 1px solid var(--marine);
+    transition: background 0.14s, color 0.14s;
+  }
+  .g-btn:hover { background: var(--stella-gold); border-color: var(--stella-gold); color: var(--marine-deep); }
+  .g-btn.ghost { background: transparent; color: var(--marine); }
+  .g-btn.ghost:hover { background: var(--marine); color: #fff; }
+  .g-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.3rem; }
+
+  :focus-visible { outline: 3px solid var(--stella-gold); outline-offset: 2px; }
+  .g-choice:focus-visible { border-left-color: var(--marine); }
+
+  /* ---- consequence ---- */
+  .g-outcome { border-top: 1px solid var(--rule); margin-top: 1.2rem; padding-top: 1.2rem; }
+  .g-outcome h3 { margin: 0 0 0.45rem; font-size: 1.25rem; }
+  .g-outcome p { margin: 0 0 0.9rem; }
+  .g-principle {
+    display: inline-block; background: var(--marine-deep); color: #fff;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase;
+    padding: 0.4rem 0.75rem; margin-bottom: 0.9rem;
+  }
+  .g-echo { font-size: 0.93rem; color: #6b6252; font-style: italic; margin: 0; }
+
+  /* ---- teacher view ---- */
+  .g-teach {
+    background: #eef3f7; border: 1px dashed var(--marine-light); border-left: 4px solid var(--marine-light);
+    padding: 1rem 1.1rem; margin-top: 1.2rem;
+  }
+  .g-teach h4 { margin: 0 0 0.5rem; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--marine); }
+  .g-teach ul { margin: 0; padding-left: 1.15rem; }
+  .g-teach li { font-size: 0.94rem; line-height: 1.6; color: #2c3a45; margin-bottom: 0.4rem; }
+  .g-teach li:last-child { margin-bottom: 0; }
+  .g-teach p { font-size: 0.94rem; line-height: 1.6; color: #2c3a45; margin: 0 0 0.6rem; }
+  [hidden] { display: none !important; }
+
+  .g-toggle { display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem; margin: 1.1rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); }
+  .g-toggle .hint { font-size: 0.86rem; color: #6b6252; margin: 0; }
+  .g-btn[aria-pressed="true"] { background: var(--stella-gold); border-color: var(--stella-gold); color: var(--marine-deep); }
+
+  /* ---- end screen ---- */
+  .g-path { list-style: none; margin: 1.1rem 0 0; padding: 0; display: grid; gap: 0.8rem; }
+  .g-path li { background: var(--parchment); border-left: 3px solid var(--stella-gold); padding: 0.85rem 1rem; }
+  .g-path .t { display: block; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; color: var(--marine-deep); margin-bottom: 0.25rem; }
+  .g-path .c { display: block; font-size: 0.95rem; line-height: 1.55; color: var(--ink-soft); }
+  .g-path .p { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8a6416; margin-top: 0.4rem; }
+
+  .g-vault {
+    background: var(--marine-deep); color: #eaf1f6; border-top: 4px solid var(--stella-gold);
+    padding: 1.6rem 1.4rem; margin: 1.6rem 0 0;
+  }
+  .g-vault h3 { color: #fff; font-size: clamp(1.35rem, 4.2vw, 1.85rem); margin: 0 0 0.6rem; }
+  .g-vault p { color: #cddbe6; font-size: 1rem; line-height: 1.65; margin: 0 0 0.8rem; }
+  .g-vault p.big { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.25rem, 4.4vw, 1.7rem); line-height: 1.4; color: #fff; }
+  .g-vault ul { margin: 0.6rem 0 0; padding-left: 1.15rem; }
+  .g-vault li { color: #cddbe6; font-size: 0.94rem; line-height: 1.6; margin-bottom: 0.35rem; }
+  .g-vault li strong { color: var(--stella-gold-light); }
+
+  /* ---- honest list ---- */
+  .g-sec { padding: 2.4rem 0 0; }
+  .g-sec h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin: 0 0 0.2rem; }
+  .g-rule { height: 2px; background: linear-gradient(to right, var(--stella-gold), rgba(184,137,43,0)); margin: 0.5rem 0 1.3rem; }
+  .g-two { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .g-card { background: var(--white); border: 1px solid var(--rule); padding: 1.2rem 1.3rem; }
+  .g-card.real { border-top: 3px solid #2f7a4f; }
+  .g-card.notyet { border-top: 3px solid var(--stella-gold); }
+  .g-card h3 { margin: 0 0 0.5rem; font-size: 1.22rem; }
+  .g-card ul { margin: 0; padding-left: 1.15rem; }
+  .g-card li { font-size: 0.94rem; line-height: 1.6; color: var(--ink-soft); margin-bottom: 0.45rem; }
+  .g-card p { font-size: 0.9rem; color: #6b6252; margin: 0.8rem 0 0; }
+  .g-card a { color: #8a6416; }
+
+  /* ---- footer ---- */
+  .g-foot { background: var(--marine-deep); color: #b9c9d6; padding: 2rem 0 2.4rem; margin-top: 2.6rem; font-size: 0.86rem; line-height: 1.65; }
+  .g-foot a { color: var(--stella-gold-light); }
+  .g-foot .founder { color: #dce7ef; margin: 0 0 0.9rem; }
+  .g-foot .ark { margin-top: 1.2rem; padding-top: 1.1rem; border-top: 1px solid rgba(255,255,255,0.16); color: #9fb1c0; font-size: 0.8rem; max-width: 82ch; }
+
+  @media (max-width: 700px) {
+    .g-two { grid-template-columns: 1fr; }
+    .g-panel { padding: 1.15rem 1rem 1.2rem; }
+    .g-vault { padding: 1.3rem 1.05rem; }
+    .g-btn { width: 100%; text-align: center; }
+    .g-actions { gap: 0.55rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="g-bar">
+  <div class="lx-wrap"><a href="../index.html">← Back to the ARK dashboard</a></div>
+</div>
+
+<header class="g-top">
+  <div class="lx-wrap">
+    <svg class="g-lantern" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+      <path d="M12 4h8M16 4v3"/>
+      <rect x="8.5" y="7" width="15" height="18" rx="1.5"/>
+      <path d="M6.5 25h19M16 12v8M12.5 16h7"/>
+    </svg>
+    <p class="g-eyebrow">PAIX · Educational wireframe · Internet safety &amp; bullying prevention</p>
+    <h1>The Lantern Room</h1>
+    <p class="lede">Five situations. Three ways through each one. Nothing you decide is written down anywhere — that is the point of the room.</p>
+  </div>
+</header>
+
+<div class="lx-wrap">
+  <div class="g-honest">
+    <strong>Wireframe — early prototype.</strong> Art, audio and the full scenario set are not built yet. What you are looking at is the decision loop, the reflective tone, the teacher view and the no-data guarantee, built far enough to actually play. Everything else is deliberately unfinished so it can be shaped by the officer and the classroom before a line of production work is done.
+  </div>
+</div>
+
+<main class="g-stage">
+  <div class="lx-wrap">
+
+    <!-- TITLE -->
+    <section class="g-panel" id="screen-title">
+      <h2>Begin in the Lantern Room</h2>
+      <p>A short, playable scenario game for ages 11–14, built to be run by a guest teacher in front of a class — or played alone, quietly, by one student. Each situation is one a middle-schooler already recognises: a message from a stranger, a group chat turning on someone, a request for a photo, a password that got out, a friend left outside the circle.</p>
+      <p>There is no score, no timer and no buzzer for a wrong answer. Every choice gets an honest consequence and a name for the principle it exercised. A class can argue about it afterwards. That argument is the lesson.</p>
+      <div class="g-actions">
+        <button class="g-btn" id="btn-begin" type="button">Begin</button>
+        <button class="g-btn ghost" id="btn-teach-title" type="button" aria-pressed="false">Teacher view: off</button>
+      </div>
+      <div class="g-teach" id="teach-title" hidden>
+        <h4>Teacher view — running this in a classroom</h4>
+        <p>Suggested format: project the screen, read the situation aloud, take a show of hands on all three choices <em>before</em> revealing any consequence, then click the one the room chose. The discussion prompt for each scenario appears in this same panel while Teacher view is on.</p>
+        <ul>
+          <li>Running time: roughly 12–18 minutes for the five scenarios, plus discussion.</li>
+          <li>Nothing here produces a record about any student — no sign-in, no names typed, nothing stored. Say that out loud at the start; for some children it is the first time they have heard it.</li>
+          <li>If a student discloses something real during discussion, that leaves the game and follows your school's existing safeguarding process. This wireframe deliberately contains no reporting mechanism.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PLAY -->
+    <section class="g-panel" id="screen-play" hidden>
+      <div class="g-meta">
+        <span class="g-step" id="step-label">Scenario 1 of 5</span>
+        <span class="g-dots" id="dots" aria-hidden="true"></span>
+      </div>
+      <h2 id="sc-title">—</h2>
+      <div class="g-situation" id="sc-situation"></div>
+
+      <div id="sc-choicewrap">
+        <ul class="g-choices" id="sc-choices"></ul>
+      </div>
+
+      <div class="g-outcome" id="sc-outcome" hidden>
+        <span class="g-principle" id="sc-principle"></span>
+        <h3 id="sc-outcome-h">What happens next</h3>
+        <p id="sc-consequence"></p>
+        <p class="g-echo" id="sc-echo"></p>
+        <div class="g-actions">
+          <button class="g-btn" id="btn-next" type="button">Continue</button>
+        </div>
+      </div>
+
+      <div class="g-teach" id="teach-play" hidden>
+        <h4>Teacher view — discussion prompts for this scenario</h4>
+        <ul id="teach-play-list"></ul>
+      </div>
+
+      <div class="g-toggle">
+        <button class="g-btn ghost" id="btn-teach-play" type="button" aria-pressed="false">Teacher view: off</button>
+        <p class="hint">Reveals discussion prompts. Toggle it off before handing a device to a student.</p>
+      </div>
+    </section>
+
+    <!-- END -->
+    <section id="screen-end" hidden>
+      <div class="g-panel">
+        <p class="g-step">The room, afterwards</p>
+        <h2>What you did in here</h2>
+        <p>Not a score. A path. Five decisions, in the order you made them, and the principle each one leaned on.</p>
+        <ul class="g-path" id="end-path"></ul>
+        <p class="g-echo" id="end-reflection" style="margin-top:1.1rem;"></p>
+
+        <div class="g-teach" id="teach-end" hidden>
+          <h4>Teacher view — closing discussion</h4>
+          <ul>
+            <li>Which of the five was hardest to agree on as a room? Hard usually means realistic.</li>
+            <li>Did anyone change their mind after seeing a consequence? What changed it?</li>
+            <li>Ask: who is the adult you would actually go to? Not who you <em>should</em> go to — who you <em>would</em>. If the honest answer is nobody, that is worth knowing.</li>
+            <li>Close on the no-data panel below. Ask the room why a lesson about online safety would refuse to collect anything about them.</li>
+          </ul>
+        </div>
+
+        <div class="g-toggle">
+          <button class="g-btn ghost" id="btn-teach-end" type="button" aria-pressed="false">Teacher view: off</button>
+          <p class="hint">Closing prompts for a guest teacher.</p>
+        </div>
+      </div>
+
+      <div class="g-vault">
+        <h3>Nothing you did here was recorded.</h3>
+        <p class="big">No account, no cookie, no analytics, no server. Close the tab and it is gone.</p>
+        <p>Your five choices lived in one temporary list inside this page while you played. They were never sent anywhere, because this page has nothing to send them with.</p>
+        <ul>
+          <li><strong>No cookies.</strong> None are set, none are read.</li>
+          <li><strong>No localStorage or sessionStorage.</strong> Nothing survives the tab closing.</li>
+          <li><strong>No analytics, no tracking pixel, no third-party script.</strong></li>
+          <li><strong>No network requests</strong> beyond the page itself and a web font.</li>
+          <li><strong>No sign-in, no name field, no free-text box</strong> — nothing to type your identity into.</li>
+        </ul>
+        <p style="margin-top:0.9rem;">This is checkable, not just claimable: view the source of this page, or open the network tab and play it again. That verifiability is the whole thesis of PAIX. <strong>No profiling of individuals. Ever.</strong></p>
+      </div>
+
+      <div class="g-panel" style="margin-top:1.4rem;">
+        <div class="g-actions" style="margin-top:0;">
+          <button class="g-btn" id="btn-again" type="button">Play again</button>
+          <a class="g-btn ghost" href="../index.html" style="text-decoration:none;">Back to the dashboard</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<section class="g-sec">
+  <div class="lx-wrap">
+    <h2>What is wireframed, and what is real</h2>
+    <div class="g-rule"></div>
+    <div class="g-two">
+      <div class="g-card real">
+        <h3>Real, working, in front of you</h3>
+        <ul>
+          <li>The loop — title, five scenarios in sequence, consequence, end screen, reset.</li>
+          <li>The choices and their consequence text, written to be argued with rather than graded.</li>
+          <li>The no-data guarantee. Verifiable by viewing source, not a promise in a policy.</li>
+          <li>The teacher view, with discussion prompts on every scenario.</li>
+          <li>Keyboard operation and a layout that holds at phone width.</li>
+        </ul>
+      </div>
+      <div class="g-card notyet">
+        <h3>Not built yet — deliberately</h3>
+        <ul>
+          <li>Art. No illustration, no character design, no interface polish beyond the PAIX house style.</li>
+          <li>Audio. No voice, no music, no sound design.</li>
+          <li>More scenarios. Five is a demonstration; a term's worth is a different piece of work.</li>
+          <li>A proper accessibility audit — screen-reader testing, contrast verification, plain-language review.</li>
+          <li>Curriculum alignment to NASRO standards, and to whatever each district already teaches.</li>
+        </ul>
+        <p>Written this way on purpose. An SRO should be able to see exactly which parts are finished before anyone is asked to stand in front of a class with it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="g-foot">
+  <div class="lx-wrap">
+    <p class="founder">Design founder: Donat Omer Thériault, EVE Glyph Design.</p>
+    <p style="margin:0 0 0.7rem;">The Lantern Room is a PAIX educational wireframe, prepared 25 July 2026 for the Lenexa Police Department School Resource Unit. The department's own <a href="https://www.lenexa.com/Government/Departments-Divisions/Police/Police-Department-Structure">Police Department Structure</a> page names <em>guest teacher</em> as the third basic function of an SRO, covering internet safety, bullying, violence prevention and de-escalation, and alcohol and drug prevention. This prototype addresses the first two of those.</p>
+    <p style="margin:0;">Related: the <a href="../index.html">ARK stewardship briefing</a> for the School Resource Unit, and the <a href="../../index.html">PAIX Parish Platform</a> portal.</p>
+    <div class="ark">
+      <p style="margin:0;">© 2026 Dany Theriault. EVE “digital stem cell” glyph and glyph-based design principles — all rights reserved. Stewardship of rights of use and assignment for large public and institutional usage rests with the Pacific Utilities Design Council. Published as a time-stamped record of authorship and intent.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var SCENARIOS = [
+    {
+      title: "A message from someone you don't know",
+      who: "Direct message · 9:41 p.m.",
+      situation: "An account you have never seen follows you and sends: <q>hey you seem cool, my friends are all fake tbh. do you have snap? easier to talk there</q> The profile has one photo and four followers. It knows the name of your school.",
+      choices: [
+        {
+          label: "Choice A",
+          text: "Reply, but keep it vague. Just say hi and see who it turns out to be.",
+          principle: "Slow the conversation down",
+          consequence: "The replies come fast and warm. Within ten minutes they are asking what year you are in and whether your parents check your phone. Nothing has gone wrong yet — but notice the shape of it: every question moves toward being alone with them somewhere your friends can't see. Curiosity is not a crime. It is just the door being held open.",
+          echo: "You kept the door ajar. That is a real choice a lot of people make."
+        },
+        {
+          label: "Choice B",
+          text: "Block, report, and don't answer at all.",
+          principle: "You owe a stranger nothing",
+          consequence: "The account disappears from your feed. No conversation, no explanation, no awkwardness — because there was never a relationship to be awkward about. You will never know whether they were dangerous. That is fine. You do not have to identify a threat before you are allowed to walk away from it.",
+          echo: "Fast, clean, and costs you nothing you actually had."
+        },
+        {
+          label: "Choice C",
+          text: "Screenshot it and show an adult you trust before doing anything.",
+          principle: "Bring a witness",
+          consequence: "The adult looks at it and asks how the account knew your school. That question is the useful part — you would probably not have asked it alone at 9:41 p.m. Whatever you decide next, someone else now knows this happened, which means you are no longer the only person holding it.",
+          echo: "The strongest move here was the least dramatic one."
+        }
+      ],
+      teach: [
+        "Ask the room: how did the account know the school? Trace it back — a tagged post, a bio, a team photo. Most 'how did they find me' answers are boring and preventable.",
+        "Blocking is framed here as costing nothing. Do students agree? Many fear looking rude or paranoid. Name that fear out loud.",
+        "Choice C only works if a trusted adult exists. Ask what makes an adult trustworthy to an 12-year-old — the honest answer is usually 'they won't overreact and take my phone.'"
+      ]
+    },
+    {
+      title: "The group chat turns",
+      who: "Class group chat · 34 members",
+      situation: "Someone posts an unflattering photo of a classmate with a caption. Six people laugh. Two add more. Then: <q>@you say something 😂</q> Your phone is now in your hand and thirty-four people are waiting.",
+      choices: [
+        {
+          label: "Choice A",
+          text: "Send a laughing emoji. It's easier, and it isn't really you doing it.",
+          principle: "The crowd is made of individuals",
+          consequence: "The emoji lands and the thread rolls on. Nothing happens to you at all — that is exactly why this is the most common choice in any room. But the pile-on is now one person bigger, and the person in the photo counts reactions the same way everyone else does. There is no version of a crowd that isn't made of people who each decided to be in it.",
+          echo: "The cheapest choice in the moment. Rarely the one people remember comfortably."
+        },
+        {
+          label: "Choice B",
+          text: "Say nothing. Put the phone down and stay out of it.",
+          principle: "Silence is safer, and it is not neutral",
+          consequence: "You are not part of it. That is genuinely worth something and you should not let anyone tell you otherwise. But from inside the photo, silence and agreement look identical — the classmate cannot see the thirty people who chose not to type. Staying out is a real position. It is just not the same as helping.",
+          echo: "Not making it worse is a floor, not a ceiling."
+        },
+        {
+          label: "Choice C",
+          text: "Message the classmate privately: 'that was out of order, you okay?'",
+          principle: "One private message breaks the arithmetic",
+          consequence: "The group chat does not change. The maths inside the classmate's head does. Research on this is boringly consistent: what protects someone in a pile-on is usually not a public hero, it is one person quietly making contact. It costs you nothing publicly and it may be the only message they keep.",
+          echo: "You did not fight the crowd. You just refused to let the count be unanimous."
+        }
+      ],
+      teach: [
+        "Ask for a show of hands on Choice A honestly — anonymously if needed. The point is to make 'going along with it' visible as a decision rather than a default.",
+        "Choice B is defended here rather than mocked. Ask why. Students who feel judged for staying quiet tend to stop listening.",
+        "Push on Choice C: what would stop you sending that private message? Usually it is fear of the sender turning on you next. That fear is the real subject of the lesson."
+      ]
+    },
+    {
+      title: "Just one photo",
+      who: "DM from someone you actually like · 11:20 p.m.",
+      situation: "Not a stranger this time. Someone from your year who has been funny and kind for two weeks: <q>send one? i'll delete it straight after, i promise. don't you trust me</q>",
+      choices: [
+        {
+          label: "Choice A",
+          text: "Send something borderline — nothing identifiable, no face.",
+          principle: "A copy is not a loan",
+          consequence: "It sends. Maybe they do delete it. But a photo is not lent, it is copied — once it leaves your phone the decision about it is no longer yours, and 'no face' stops mattering the second it is posted next to your name. Nothing might happen. The problem is that you cannot un-decide it later if it does.",
+          echo: "The risk here is not that they are lying. It is that you no longer get a vote."
+        },
+        {
+          label: "Choice B",
+          text: "Say no, plainly, and keep talking about something else.",
+          principle: "'No' is a complete sentence",
+          consequence: "You send 'no' and then a message about something else entirely. Either they move on — in which case they were fine — or they push, sulk, or say you clearly don't like them. That reaction is information you could not have got any other way, and you got it without giving anything up.",
+          echo: "The word 'no' just did a job that a whole paragraph could not."
+        },
+        {
+          label: "Choice C",
+          text: "Notice the pressure — 'don't you trust me' — and name it back to them.",
+          principle: "Trust is not a tollbooth",
+          consequence: "You reply: 'asking me to prove I trust you isn't the same as trusting me.' It is a slightly awkward thing to type. It also ends the technique, because that particular line only works while it is invisible. Whatever they say next, you are no longer being steered.",
+          echo: "You did not just decline. You showed the machinery."
+        }
+      ],
+      teach: [
+        "Deliberately set here between two people who like each other, not with a predatory stranger. Most real cases look like this one, and students dismiss lessons that only feature strangers.",
+        "Discuss 'don't you trust me' as a technique with a name — obligation reversal. Naming a manipulation makes it much easier to refuse later.",
+        "Have the legal and safeguarding position ready: in Kansas as elsewhere, images of minors carry consequences for everyone in the chain. Say it once, factually, without a scare film.",
+        "Emphasise the recovery route: if a photo has already been sent, the priority is telling an adult, not punishing the student. Students who fear punishment do not disclose."
+      ]
+    },
+    {
+      title: "The password that got out",
+      who: "Your account · Tuesday morning",
+      situation: "You gave your password to a friend last term so they could get you a game skin. This morning there are three posts on your account you did not write, and one of them is aimed at someone in your class. Your friend swears it wasn't them.",
+      choices: [
+        {
+          label: "Choice A",
+          text: "Post an angry story naming your friend as the one who did it.",
+          principle: "Certainty comes after the facts, not before",
+          consequence: "Half your year now believes your friend did it and the other half believes you're covering for yourself. Meanwhile the account is still open and the password is still shared. Anger is a completely reasonable reaction to being impersonated; it is just very bad at closing a security hole.",
+          echo: "Loud, satisfying, and the door is still unlocked."
+        },
+        {
+          label: "Choice B",
+          text: "Change the password first, turn on two-factor, then work out what happened.",
+          principle: "Close the door before the argument",
+          consequence: "Two minutes of unglamorous work and nobody else can post as you. Now the question 'who did this' becomes a question you can take your time over instead of a fire. Note the order: containment, then investigation, then feelings. That order is the same one adults are taught.",
+          echo: "The boring option was the one that actually stopped the bleeding."
+        },
+        {
+          label: "Choice C",
+          text: "Tell an adult straight away, even though you'll have to admit you shared the password.",
+          principle: "Admitting the mistake is part of fixing it",
+          consequence: "There is a slightly bad two minutes where you explain that you shared a password. Then an adult who can contact the school and the platform is on your side, and the post aimed at your classmate can be dealt with as something done to you, rather than something you have to defend alone. The embarrassment was the price. It was not the biggest cost available.",
+          echo: "You paid a small price to stop paying a larger one."
+        }
+      ],
+      teach: [
+        "Password sharing among friends is near-universal at this age and is usually an act of trust, not carelessness. Frame it that way or students will tune out.",
+        "Teach the order explicitly: contain, then investigate, then react. It transfers well beyond passwords.",
+        "Ask what stops someone choosing C. Almost always: 'I'll get in trouble for sharing it.' Whatever your school's policy is, be honest with them about what happens — vague reassurance does not build reporting behaviour."
+      ]
+    },
+    {
+      title: "The one who isn't in the group",
+      who: "Friday, lunch",
+      situation: "There is a new chat for weekend plans. Eleven people from your friendship group are in it. One is not, and everyone knows exactly who and exactly why. Nobody has said anything cruel. Nobody has said anything at all.",
+      choices: [
+        {
+          label: "Choice A",
+          text: "Leave it. You didn't make the group, and adding them would be awkward.",
+          principle: "Exclusion needs no author",
+          consequence: "The weekend happens. On Monday someone mentions it in front of the person who wasn't there, and you watch them arrange their face. No rule was broken and no message was sent. This is the kind of bullying that never shows up in an incident report, because there is nothing to report — which is exactly why it is so durable.",
+          echo: "Nobody did anything. That was the mechanism."
+        },
+        {
+          label: "Choice B",
+          text: "Add them to the chat without making a speech about it.",
+          principle: "Quiet inclusion beats loud rescue",
+          consequence: "They are in. Someone might grumble. But there is no announcement, no 'we felt bad', no spotlight on the fact that they were out — which matters, because being publicly pitied is its own kind of exclusion. The simplest version of this is usually the kindest one.",
+          echo: "Two taps. No speech. That was the whole intervention."
+        },
+        {
+          label: "Choice C",
+          text: "Message them separately and make your own plan with them.",
+          principle: "There is more than one room",
+          consequence: "You do not fix the group and you do not confront anyone. You just make sure that this weekend, someone is not alone. The group dynamic is untouched and will need dealing with eventually — but a person got a Saturday out of it, which is not a small thing while the bigger problem waits.",
+          echo: "Not a solution to the group. Genuinely a solution to the Saturday."
+        }
+      ],
+      teach: [
+        "This scenario has no villain by design. Ask the room whether it counts as bullying — the disagreement is the lesson, and definitions that require a named aggressor tend to miss this entirely.",
+        "Relational exclusion is the hardest form for staff to see and the hardest for students to report. Ask what an adult could even do here, and take the answer 'nothing' seriously before answering it.",
+        "Contrast B and C: one changes the group, one changes the weekend. Both are legitimate. Students often think only the brave public option counts."
+      ]
+    }
+  ];
+
+  var CLOSERS = [
+    "Five decisions, none of them scored. If you would make a different one now than you did five minutes ago, that is the whole exercise working.",
+    "Notice how few of these were about technology. Almost all of them were about what you were willing to say to another person.",
+    "None of these had a single correct answer, and any teaching resource that tells you otherwise has never been eleven."
+  ];
+
+  // In-memory only. Never persisted, never transmitted.
+  var path = [];
+  var index = 0;
+  var teacherOn = false;
+
+  var $ = function (id) { return document.getElementById(id); };
+  var screens = { title: $("screen-title"), play: $("screen-play"), end: $("screen-end") };
+
+  function show(name) {
+    for (var k in screens) { screens[k].hidden = (k !== name); }
+  }
+
+  function buildDots() {
+    var d = $("dots"); d.innerHTML = "";
+    for (var i = 0; i < SCENARIOS.length; i++) {
+      var el = document.createElement("i");
+      if (i < index) { el.className = "on"; }
+      else if (i === index) { el.className = "now"; }
+      d.appendChild(el);
+    }
+  }
+
+  function renderTeacherPrompts() {
+    var list = $("teach-play-list");
+    list.innerHTML = "";
+    var s = SCENARIOS[index];
+    if (!s) { return; }
+    for (var i = 0; i < s.teach.length; i++) {
+      var li = document.createElement("li");
+      li.textContent = s.teach[i];
+      list.appendChild(li);
+    }
+  }
+
+  function renderScenario() {
+    var s = SCENARIOS[index];
+    $("step-label").textContent = "Scenario " + (index + 1) + " of " + SCENARIOS.length;
+    buildDots();
+    $("sc-title").textContent = s.title;
+    $("sc-situation").innerHTML = '<span class="who"></span>' + s.situation;
+    $("sc-situation").querySelector(".who").textContent = s.who;
+
+    var ul = $("sc-choices");
+    ul.innerHTML = "";
+    s.choices.forEach(function (c, i) {
+      var li = document.createElement("li");
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "g-choice";
+      var lbl = document.createElement("span");
+      lbl.className = "lbl";
+      lbl.textContent = c.label;
+      b.appendChild(lbl);
+      b.appendChild(document.createTextNode(c.text));
+      b.addEventListener("click", function () { choose(i); });
+      li.appendChild(b);
+      ul.appendChild(li);
+    });
+
+    $("sc-choicewrap").hidden = false;
+    $("sc-outcome").hidden = true;
+    renderTeacherPrompts();
+    var first = ul.querySelector("button");
+    if (first) { first.focus(); }
+  }
+
+  function choose(i) {
+    var s = SCENARIOS[index];
+    var c = s.choices[i];
+    path.push({ title: s.title, choice: c.text, principle: c.principle, label: c.label });
+    $("sc-choicewrap").hidden = true;
+    $("sc-principle").textContent = "Principle · " + c.principle;
+    $("sc-consequence").textContent = c.consequence;
+    $("sc-echo").textContent = c.echo;
+    $("sc-outcome").hidden = false;
+    $("btn-next").textContent = (index === SCENARIOS.length - 1) ? "See the whole path" : "Continue";
+    $("btn-next").focus();
+  }
+
+  function next() {
+    index++;
+    if (index >= SCENARIOS.length) { renderEnd(); show("end"); window.scrollTo(0, 0); return; }
+    renderScenario();
+    window.scrollTo(0, 0);
+  }
+
+  function renderEnd() {
+    var ul = $("end-path");
+    ul.innerHTML = "";
+    path.forEach(function (p, i) {
+      var li = document.createElement("li");
+      var t = document.createElement("span"); t.className = "t";
+      t.textContent = (i + 1) + ". " + p.title;
+      var c = document.createElement("span"); c.className = "c";
+      c.textContent = "You chose: " + p.choice;
+      var pr = document.createElement("span"); pr.className = "p";
+      pr.textContent = "Principle exercised · " + p.principle;
+      li.appendChild(t); li.appendChild(c); li.appendChild(pr);
+      ul.appendChild(li);
+    });
+    var uniq = {}, n = 0;
+    path.forEach(function (p) { if (!uniq[p.principle]) { uniq[p.principle] = 1; n++; } });
+    $("end-reflection").textContent =
+      "You worked through " + path.length + " situations and leaned on " + n +
+      " different principle" + (n === 1 ? "" : "s") + " to do it. " +
+      CLOSERS[path.length % CLOSERS.length];
+    setTeacher(teacherOn);
+  }
+
+  function setTeacher(on) {
+    teacherOn = on;
+    ["teach-title", "teach-play", "teach-end"].forEach(function (id) {
+      var el = $(id); if (el) { el.hidden = !on; }
+    });
+    ["btn-teach-title", "btn-teach-play", "btn-teach-end"].forEach(function (id) {
+      var b = $(id);
+      if (b) {
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+        b.textContent = "Teacher view: " + (on ? "on" : "off");
+      }
+    });
+  }
+
+  function reset() {
+    path = [];
+    index = 0;
+    show("title");
+    window.scrollTo(0, 0);
+    $("btn-begin").focus();
+  }
+
+  $("btn-begin").addEventListener("click", function () {
+    index = 0; path = [];
+    show("play");
+    renderScenario();
+    window.scrollTo(0, 0);
+  });
+  $("btn-next").addEventListener("click", next);
+  $("btn-again").addEventListener("click", reset);
+  ["btn-teach-title", "btn-teach-play", "btn-teach-end"].forEach(function (id) {
+    $(id).addEventListener("click", function () { setTeacher(!teacherOn); });
+  });
+
+  setTeacher(false);
+  show("title");
+})();
+</script>
+
+</body>
+</html>
