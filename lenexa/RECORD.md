@@ -190,6 +190,57 @@ index, this ledger — are not the thing the seal is protecting.
 
 ---
 
+## EGD-LNX-2026-0725-04 — audit findings, corrections, and the errata sheet
+
+**Filed** 25 July 2026. Append-only. Nothing above this line was edited to produce it.
+
+An accessibility audit, a full link check and a footer sweep were run against this lane and
+against the wider estate after publication. What they found, and what was done, is below.
+
+### Documents
+
+| Document | SHA-256 | Status |
+| --- | --- | --- |
+| `ARK-Errata-LNX-2026-07-25.pdf` (1 page) | `e93e122b75904cd8a9aefe6ddad681bc03d033fe20b75e76c4d68e3d7e89148a` | New. The correction of record. |
+| `ARK-Command-Briefing-LNX-2026-07-25.pdf` (4 pages) | `b64fe592b9eb703b9c8be023f9b12508e5fbbc8b98a366ca9b7b614a143d29f8` | Reissued. In force. |
+| ↳ first issue, superseded | `38862e840939374d95fb4c3a5fcb7c1f8fde3d9b360da3e09edbc20ff2419e1d` | Superseded same day, before delivery. |
+| `ARK-Stewardship-Brief-Lenexa-PD-2026-07-25.pdf` (3 pages) | `32dd3676562f4916fe082c137ac82548af2ca23afcaef6ea0419271bc33ba393` | **Unchanged.** Corrected by errata, not by edit. |
+| `ARK-EXTRACT-LENEXA-PD-2026-0725.pdf` (2 pages) | `bb165f871854c82046ee17a86cc68989f4be833e2fb9faa98d012b20c5bb2745` | **Unchanged.** Sealed. Corrected by errata, not by edit. |
+
+### Findings and disposition
+
+| # | Finding | Severity | Disposition |
+| --- | --- | --- | --- |
+| 1 | Brief page 3, source item 8: labelled K.S.A. 38-2309, link resolved to the text of 38-2310. | Material for counsel | Errata 1. Generator corrected — both statutes now carried and separately linked in every future department brief. Published brief not reissued; its digest stands. |
+| 2 | The umbrella copyright instrument is cited to `EVEglyphDesign/umbrella-copyright-proof`, which is private. An external reader following the citation gets a 404. | High | Errata 2. `LICENSE-NOTICE.md` in this repository is named as the operative public statement of terms. Whether to make the canonical instrument public is an Operator decision and has not been made. |
+| 3 | The dashboard cited both Kansas statutes but linked only one. | Medium | Fixed in `lenexa/index.html`. Both now linked separately. |
+| 4 | One axe-core violation on `lenexa/index.html`. | Medium | Fixed. Re-run: 0 violations on the dashboard, 0 on the evidence page, 0 on the game across all six states. Keyboard-only playthrough of the game passes. No tracking of any kind present. |
+| 5 | Two repository descriptions named private individuals. | Medium | Rewritten. Neither now names a person who did not ask to be named. |
+| 6 | Estate-wide footer sweep of all 19 live GitHub Pages sites: only 4 carried the canonical footer verbatim, 1 carried a non-verbatim variant, 14 carried none. | High — canon §1 | Filed as `SIN-EGD-2026-0725-Q-FOOTERGAP-high-16` in the truth-ledger. Remediation dispatched across the estate; commits are recorded in each repository's own history. |
+| 7 | The canonical footer is stored with curly quotes in HTML and PDF and straight quotes in markdown, so a byte-exact comparison across formats fails by design. | Medium | Filed as `SIN-EGD-2026-0725-Q-GLYPHQUOTE-med-17`. Awaiting Operator ratification of a single canonical form. Recommendation on file: curly canonical, with a documented markdown transliteration. |
+| 8 | `registry/INDEX.csv` in the truth-ledger was missing entries 11–17. | Medium | Repaired. |
+
+### On method
+
+Canon §12 requires that a defect be filed and corrected in the same motion, or the filing is
+theatre. Findings 1 and 2 concern documents whose digests are already published and one of
+which is sealed. Editing those files would break a fingerprint a reader may already hold, so
+they were not edited. The errata sheet is the correction, and it is linked from both the
+dashboard and the public record page with its own digest.
+
+Findings 3–8 concern living surfaces, which carry no seal, and were fixed in place.
+
+### Still open, and owed to the Operator
+
+1. Ratification of the canonical quote character (SIN-17).
+2. Whether `umbrella-copyright-proof` should be made public, which would close Erratum 2 at
+   the source rather than by substitution.
+3. An unterminated CSS comment in `paroisse-sainte-anne-des-pays-bas` that breaks that site's
+   styling entirely. Found during the footer sweep, left untouched as out of scope, and
+   recorded here so it is not lost.
+
+---
+
 © 2026 Dany Theriault. EVE "digital stem cell" glyph and glyph-based design principles — all rights reserved. Stewardship of rights of use and assignment for large public and institutional usage rests with the Pacific Utilities Design Council. Published as a time-stamped record of authorship and intent.
 
 Pour le bien-être du peuple.

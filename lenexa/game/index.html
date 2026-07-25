@@ -11,10 +11,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/style.css">
 <style>
+  /* Accessibility: darker gold for TEXT use only (meets 4.5:1 on white/parchment/teacher-view/honest-banner
+     backgrounds). var(--stella-gold) is kept unchanged for borders, rules, dots and non-text UI decoration. */
+  :root { --gold-text: #8a6416; }
   body { background: var(--parchment); }
-  .lx-wrap { max-width: 900px; margin: 0 auto; padding: 0 1.2rem; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  .lx-wrap { max-width: 900px; margin: 0 auto; padding: 0 1.2rem; word-wrap: break-word; overflow-wrap: break-word; }
   * { box-sizing: border-box; }
-  img, svg { max-width: 100%; }
+  img, svg, table { max-width: 100%; }
+  pre, code { white-space: pre-wrap; word-break: break-word; }
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
 
   /* ---- top bar ---- */
   .g-bar { background: var(--marine-deep); color: #dce7ef; padding: 0.7rem 0; font-size: 0.88rem; }
@@ -42,7 +51,7 @@
   .g-panel p { font-size: 1rem; line-height: 1.65; color: var(--ink-soft); }
 
   .g-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; margin: 0 0 0.9rem; }
-  .g-step { font-size: 0.71rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--stella-gold); }
+  .g-step { font-size: 0.71rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); }
   .g-dots { display: flex; gap: 6px; }
   .g-dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--rule); display: block; }
   .g-dots i.on { background: var(--stella-gold); }
@@ -66,7 +75,7 @@
     transition: border-color 0.14s, background 0.14s, transform 0.14s;
   }
   .g-choice:hover { border-left-color: var(--stella-gold); background: #fffaf0; transform: translateX(2px); }
-  .g-choice .lbl { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--stella-gold); margin-bottom: 0.3rem; }
+  .g-choice .lbl { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--gold-text); margin-bottom: 0.3rem; }
 
   .g-btn {
     display: inline-block; cursor: pointer; font-size: 0.92rem; font-weight: 600;
@@ -79,8 +88,12 @@
   .g-btn.ghost:hover { background: var(--marine); color: #fff; }
   .g-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.3rem; }
 
-  :focus-visible { outline: 3px solid var(--stella-gold); outline-offset: 2px; }
+  /* Focus indicator: gold-text (#8a6416) gives >=4.5:1 on white/parchment/teacher-view/honest-banner
+     backgrounds, well above the 3:1 UI-component minimum. Elements on navy backgrounds (top bar link)
+     get stella-gold-light instead, which is the pair that actually meets 3:1 there. */
+  :focus-visible { outline: 3px solid var(--gold-text); outline-offset: 2px; }
   .g-choice:focus-visible { border-left-color: var(--marine); }
+  .g-bar a:focus-visible { outline: 3px solid var(--stella-gold-light); outline-offset: 2px; }
 
   /* ---- consequence ---- */
   .g-outcome { border-top: 1px solid var(--rule); margin-top: 1.2rem; padding-top: 1.2rem; }
@@ -98,7 +111,7 @@
     background: #eef3f7; border: 1px dashed var(--marine-light); border-left: 4px solid var(--marine-light);
     padding: 1rem 1.1rem; margin-top: 1.2rem;
   }
-  .g-teach h4 { margin: 0 0 0.5rem; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--marine); }
+  .g-teach h3 { margin: 0 0 0.5rem; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--marine); }
   .g-teach ul { margin: 0; padding-left: 1.15rem; }
   .g-teach li { font-size: 0.94rem; line-height: 1.6; color: #2c3a45; margin-bottom: 0.4rem; }
   .g-teach li:last-child { margin-bottom: 0; }
@@ -155,7 +168,13 @@
     .g-actions { gap: 0.55rem; }
   }
   @media (prefers-reduced-motion: reduce) {
-    * { transition: none !important; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .g-choice:hover { transform: none !important; }
   }
 </style>
 </head>
@@ -197,7 +216,7 @@
         <button class="g-btn ghost" id="btn-teach-title" type="button" aria-pressed="false">Teacher view: off</button>
       </div>
       <div class="g-teach" id="teach-title" hidden>
-        <h4>Teacher view — running this in a classroom</h4>
+        <h3>Teacher view — running this in a classroom</h3>
         <p>Suggested format: project the screen, read the situation aloud, take a show of hands on all three choices <em>before</em> revealing any consequence, then click the one the room chose. The discussion prompt for each scenario appears in this same panel while Teacher view is on.</p>
         <ul>
           <li>Running time: roughly 12–18 minutes for the five scenarios, plus discussion.</li>
@@ -210,17 +229,17 @@
     <!-- PLAY -->
     <section class="g-panel" id="screen-play" hidden>
       <div class="g-meta">
-        <span class="g-step" id="step-label">Scenario 1 of 5</span>
+        <span class="g-step" id="step-label" aria-live="polite">Scenario 1 of 5</span>
         <span class="g-dots" id="dots" aria-hidden="true"></span>
       </div>
-      <h2 id="sc-title">—</h2>
-      <div class="g-situation" id="sc-situation"></div>
+      <h2 id="sc-title" aria-live="polite">—</h2>
+      <div class="g-situation" id="sc-situation" aria-live="polite"></div>
 
       <div id="sc-choicewrap">
         <ul class="g-choices" id="sc-choices"></ul>
       </div>
 
-      <div class="g-outcome" id="sc-outcome" hidden>
+      <div class="g-outcome" id="sc-outcome" hidden aria-live="polite">
         <span class="g-principle" id="sc-principle"></span>
         <h3 id="sc-outcome-h">What happens next</h3>
         <p id="sc-consequence"></p>
@@ -231,7 +250,7 @@
       </div>
 
       <div class="g-teach" id="teach-play" hidden>
-        <h4>Teacher view — discussion prompts for this scenario</h4>
+        <h3>Teacher view — discussion prompts for this scenario</h3>
         <ul id="teach-play-list"></ul>
       </div>
 
@@ -251,7 +270,7 @@
         <p class="g-echo" id="end-reflection" style="margin-top:1.1rem;"></p>
 
         <div class="g-teach" id="teach-end" hidden>
-          <h4>Teacher view — closing discussion</h4>
+          <h3>Teacher view — closing discussion</h3>
           <ul>
             <li>Which of the five was hardest to agree on as a room? Hard usually means realistic.</li>
             <li>Did anyone change their mind after seeing a consequence? What changed it?</li>
@@ -289,7 +308,6 @@
     </section>
 
   </div>
-</main>
 
 <section class="g-sec">
   <div class="lx-wrap">
@@ -320,6 +338,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="g-foot">
   <div class="lx-wrap">

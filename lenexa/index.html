@@ -10,8 +10,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
 <style>
+  /* Accessibility: darker gold for TEXT use only (meets 4.5:1 on white/parchment).
+     var(--stella-gold) is kept unchanged for borders, rules and non-text UI decoration. */
+  :root { --gold-text: #8a6416; }
   body { background: var(--parchment); }
-  .lx-wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.4rem; }
+  .lx-wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.4rem; word-wrap: break-word; overflow-wrap: break-word; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
   .lx-top { background: var(--marine-deep); color: #eef4f8; padding: 2.6rem 0 2.9rem; border-bottom: 4px solid var(--stella-gold); }
   .lx-eyebrow { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--stella-gold-light); margin: 0 0 0.9rem; }
@@ -40,7 +44,7 @@
   .lx-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(232px, 1fr)); gap: 1rem; margin-bottom: 1.4rem; }
   .lx-stat { background: var(--white); border: 1px solid var(--rule); border-top: 3px solid var(--marine); padding: 1.1rem 1.15rem; }
   .lx-stat .n { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.25rem; line-height: 1; color: var(--marine-deep); display: block; margin-bottom: 0.35rem; }
-  .lx-stat .k { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--stella-gold); display: block; margin-bottom: 0.5rem; }
+  .lx-stat .k { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--gold-text); display: block; margin-bottom: 0.5rem; }
   .lx-stat p { margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--ink-soft); }
   .lx-stat a { color: #8a6416; }
 
@@ -65,10 +69,14 @@
 
   .lx-law { border-collapse: collapse; width: 100%; background: var(--white); border: 1px solid var(--rule); font-size: 0.92rem; }
   .lx-law th, .lx-law td { text-align: left; padding: 0.72rem 0.9rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
-  .lx-law th { background: var(--marine-deep); color: #fff; font-size: 0.73rem; letter-spacing: 0.11em; text-transform: uppercase; font-weight: 700; border-bottom: none; }
-  .lx-law tr:last-child td { border-bottom: none; }
-  .lx-law td:first-child { font-weight: 600; color: var(--marine-deep); white-space: nowrap; }
+  .lx-law thead th { background: var(--marine-deep); color: #fff; font-size: 0.73rem; letter-spacing: 0.11em; text-transform: uppercase; font-weight: 700; border-bottom: none; }
+  .lx-law tr:last-child td, .lx-law tr:last-child th { border-bottom: none; }
+  .lx-law tbody th { font-weight: 600; color: var(--marine-deep); white-space: nowrap; background: transparent; text-transform: none; letter-spacing: normal; font-size: inherit; }
   .lx-law a { color: #8a6416; }
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
 
   .lx-gaps { background: #fbf3e2; border: 1px solid #e4d2a8; border-left: 4px solid var(--stella-gold); padding: 1.4rem 1.55rem; }
   .lx-gaps h3 { margin: 0 0 0.6rem; font-size: 1.3rem; }
@@ -92,15 +100,50 @@
 
   @media (max-width: 760px) {
     .lx-cols { grid-template-columns: 1fr; }
-    .lx-law, .lx-law tbody, .lx-law tr, .lx-law td { display: block; width: 100%; }
+    .lx-law, .lx-law tbody, .lx-law tr, .lx-law td, .lx-law th { display: block; width: 100%; text-align: left; }
     .lx-law thead { display: none; }
     .lx-law tr { border-bottom: 1px solid var(--rule); padding: 0.4rem 0 0.9rem; }
     .lx-law tr:last-child { border-bottom: none; }
-    .lx-law td { border-bottom: none; padding: 0.35rem 1rem; }
-    .lx-law td:first-child { white-space: normal; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; padding-top: 0.9rem; }
+    .lx-law td, .lx-law tbody th { border-bottom: none; padding: 0.35rem 1rem; }
+    .lx-law tbody th { white-space: normal; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; padding-top: 0.9rem; }
     .lx-law td:nth-child(2)::before { content: 'What it governs'; }
     .lx-law td:nth-child(3)::before { content: 'Why the no-profiling rule matters here'; }
-    .lx-law td:nth-child(2)::before, .lx-law td:nth-child(3)::before { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stella-gold); margin: 0.5rem 0 0.2rem; }
+    .lx-law td:nth-child(2)::before, .lx-law td:nth-child(3)::before { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-text); margin: 0.5rem 0 0.2rem; }
+  }
+
+  @media (max-width: 420px) {
+    .lx-dl { flex-direction: column; align-items: stretch; }
+    .lx-dl a { text-align: center; }
+  }
+
+  img, svg, table { max-width: 100%; }
+  pre, code { white-space: pre-wrap; word-break: break-word; }
+
+  /* Visible focus indicator: 3px solid gold-text on light backgrounds gives 5.27:1
+     against white and 4.68:1 against parchment (both exceed the 3:1 UI-component minimum),
+     with a 2px offset. Does not remove any existing outline. */
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 3px solid var(--gold-text);
+    outline-offset: 2px;
+  }
+  /* On the navy band, gold-text lacks contrast against navy, so use gold-light there instead. */
+  .lx-top a:focus-visible,
+  .lx-doctrine a:focus-visible,
+  .lx-foot a:focus-visible {
+    outline: 3px solid var(--stella-gold-light);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .lx-surfaces a.s:hover { transform: none; }
   }
 </style>
 </head>
@@ -115,6 +158,7 @@
       <a class="pri" href="ARK-Command-Briefing-LNX-2026-07-25.pdf">Command briefing — print and hand up (PDF, 4 pages)</a>
       <a class="sec" href="ARK-Stewardship-Brief-Lenexa-PD-2026-07-25.pdf">The full brief (PDF, 3 pages)</a>
       <a class="sec" href="ARK-EXTRACT-LENEXA-PD-2026-0725.pdf">Sealed extract — the instrument itself (PDF, 2 pages)</a>
+      <a class="sec" href="ARK-Errata-LNX-2026-07-25.pdf">Errata — corrections to published record (PDF, 1 page)</a>
       <a class="sec" href="RECORD.md">Verify the record — SHA-256 · <code>32dd3676…c33ba393</code></a>
     </div>
     <div class="lx-addressed">
@@ -123,6 +167,7 @@
   </div>
 </header>
 
+<main>
 <section class="lx-sec">
   <div class="lx-wrap">
     <h2>Where this lands in your job</h2>
@@ -216,35 +261,36 @@
     <div class="lx-rule"></div>
     <p class="lx-sub">This is orientation, not legal advice, and the city's own counsel should check every line of it. Sources are linked so they can.</p>
     <table class="lx-law">
-      <thead><tr><th>Authority</th><th>What it governs</th><th>Why the no-profiling rule matters here</th></tr></thead>
+      <caption class="visually-hidden">How the ARK framework sits against existing law, by authority</caption>
+      <thead><tr><th scope="col">Authority</th><th scope="col">What it governs</th><th scope="col">Why the no-profiling rule matters here</th></tr></thead>
       <tbody>
         <tr>
-          <td>FERPA<br>20 U.S.C. §1232g</td>
+          <th scope="row">FERPA<br>20 U.S.C. §1232g</th>
           <td>Records held by a school. Law-enforcement-unit records are carved out, but an SRO only reaches actual education records without consent if formally designated a school official under the Department of Education's criteria (<a href="https://studentprivacy.ed.gov/frequently-asked-questions">ED guidance</a>).</td>
           <td>Material that generates no student record cannot drag an officer across that line by accident.</td>
         </tr>
         <tr>
-          <td>PPRA<br>20 U.S.C. §1232h</td>
+          <th scope="row">PPRA<br>20 U.S.C. §1232h</th>
           <td>Parental rights over instructional material, and consent for surveys touching sensitive subjects (<a href="https://studentprivacy.ed.gov/">ED</a>).</td>
           <td>Curriculum with a public, readable licence and no embedded survey instrument is straightforward to show a parent.</td>
         </tr>
         <tr>
-          <td>COPPA</td>
+          <th scope="row">COPPA</th>
           <td>Children under 13. A school may consent for an ed-tech vendor only inside a narrow educational context — never for commercial or profiling use (<a href="https://www.ftc.gov/business-guidance/resources/complying-coppa-frequently-asked-questions">FTC FAQ</a>).</td>
           <td>Collecting nothing removes the question rather than answering it.</td>
         </tr>
         <tr>
-          <td>Kansas juvenile records<br>K.S.A. 38-2309 <span style="white-space:normal">&amp;</span> 38-2310</td>
-          <td>Access to juvenile records, with restrictions for children under 14 and carve-outs letting educators see what is necessary for campus safety (<a href="https://ksrevisor.gov/statutes/chapters/ch38/038_023_0010.html">Kansas Revisor</a>).</td>
+          <th scope="row">Kansas juvenile records<br>K.S.A. 38-2309 <span style="white-space:normal">&amp;</span> 38-2310</th>
+          <td>Access to juvenile records, with restrictions for children under 14 and carve-outs letting educators see what is necessary for campus safety (<a href="https://ksrevisor.gov/statutes/chapters/ch38/038_023_0009.html">38-2309</a> and <a href="https://ksrevisor.gov/statutes/chapters/ch38/038_023_0010.html">38-2310</a>, Kansas Revisor).</td>
           <td>A programme that creates no juvenile record creates no juvenile record to fight over.</td>
         </tr>
         <tr>
-          <td>KORA<br>K.S.A. 45-215 et seq.</td>
+          <th scope="row">KORA<br>K.S.A. 45-215 et seq.</th>
           <td>Kansas Open Records Act. Police records are presumptively open, with enumerated exemptions (<a href="https://www.lenexa.com/City-Services/Public-Safety/Police-Services/Police-Records/Request-Police-Kansas-Open-Records">Lenexa PD request process</a>).</td>
           <td>Curriculum the department holds is not automatically shielded from a records request. Material that is already public by design has nothing to disclose under pressure.</td>
         </tr>
         <tr>
-          <td>Copyright<br>17 U.S.C. §105</td>
+          <th scope="row">Copyright<br>17 U.S.C. §105</th>
           <td>Federal works are public domain; state and municipal works generally are <em>not</em>, and remain copyrightable (<a href="https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf">Copyright Office Compendium</a>; <em>Georgia v. Public.Resource.Org</em>, 2020).</td>
           <td>A city can hold and use licensed material without the authorship being erased into the public domain. Both sides keep what is theirs.</td>
         </tr>
@@ -308,10 +354,11 @@
       <h3>One conversation, no obligation</h3>
       <p>Not a purchase and not a pilot agreement. A reading of the ARK block by whoever in the city would have to live with it, and an honest answer on whether a designer-retained, institution-licensed model for school outreach material is something Lenexa could use — or whether it is not a fit. A clear no is a useful outcome.</p>
       <p>Dany Theriault · EVE Glyph Design · Lenexa, Kansas · <a href="mailto:dany@eveglyphdesign.org">dany@eveglyphdesign.org</a></p>
-      <p style="font-size:0.88rem;color:#6b6252;margin-bottom:0;">Every public repository, every document, every fingerprint, all actually linked: <a href="evidence/">The public record</a> · Print and hand up the chain: <a href="ARK-Command-Briefing-LNX-2026-07-25.pdf">ARK Command Briefing (PDF, 4 pages)</a> · Everything on this page in one document: <a href="ARK-Stewardship-Brief-Lenexa-PD-2026-07-25.pdf">ARK Stewardship Brief (PDF)</a> · The sealed extract of the instrument, with fingerprints and signature block: <a href="ARK-EXTRACT-LENEXA-PD-2026-0725.pdf">ARK Extract (PDF)</a> · Its verification manifest: <a href="ARK-EXTRACT-LENEXA-PD-2026-0725-manifest.txt">manifest.txt</a> · Its hash and canon-conformance record: <a href="RECORD.md">RECORD.md</a> · Repository and full commit history: <a href="https://github.com/EVEglyphDesign/paix-parish-platform">github.com/EVEglyphDesign/paix-parish-platform</a> · Umbrella copyright notice: <a href="https://github.com/EVEglyphDesign/paix-parish-platform/blob/main/LICENSE-NOTICE.md">LICENSE-NOTICE.md</a></p>
+      <p style="font-size:0.88rem;color:#6b6252;margin-bottom:0;">Every public repository, every document, every fingerprint, all actually linked: <a href="evidence/">The public record</a> · Print and hand up the chain: <a href="ARK-Command-Briefing-LNX-2026-07-25.pdf">ARK Command Briefing (PDF, 4 pages)</a> · Corrections found after publication, not silently edited: <a href="ARK-Errata-LNX-2026-07-25.pdf">Errata sheet (PDF, 1 page) — SHA-256 e93e122b…d7e89148a</a> · Everything on this page in one document: <a href="ARK-Stewardship-Brief-Lenexa-PD-2026-07-25.pdf">ARK Stewardship Brief (PDF)</a> · The sealed extract of the instrument, with fingerprints and signature block: <a href="ARK-EXTRACT-LENEXA-PD-2026-0725.pdf">ARK Extract (PDF)</a> · Its verification manifest: <a href="ARK-EXTRACT-LENEXA-PD-2026-0725-manifest.txt">manifest.txt</a> · Its hash and canon-conformance record: <a href="RECORD.md">RECORD.md</a> · Repository and full commit history: <a href="https://github.com/EVEglyphDesign/paix-parish-platform">github.com/EVEglyphDesign/paix-parish-platform</a> · Umbrella copyright notice: <a href="https://github.com/EVEglyphDesign/paix-parish-platform/blob/main/LICENSE-NOTICE.md">LICENSE-NOTICE.md</a></p>
     </div>
   </div>
 </section>
+</main>
 
 <footer class="lx-foot">
   <div class="lx-wrap">

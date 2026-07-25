@@ -10,8 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/style.css">
 <style>
+  /* Accessibility: darker gold for TEXT use only (meets 4.5:1 on white/parchment).
+     var(--stella-gold) is kept unchanged for borders, rules and non-text UI decoration. */
+  :root { --gold-text: #8a6416; }
   body { background: var(--parchment); }
-  .ev-wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.4rem; }
+  .ev-wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.4rem; word-wrap: break-word; overflow-wrap: break-word; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  .ev-pd-list, .ev-grid { list-style: none; margin: 0; }
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
 
   .ev-top { background: var(--marine-deep); color: #eef4f8; padding: 2.6rem 0 2.9rem; border-bottom: 4px solid var(--stella-gold); }
   .ev-eyebrow { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--stella-gold-light); margin: 0 0 0.9rem; }
@@ -32,7 +41,7 @@
   .ev-pd-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0.9rem; }
   .ev-pd-item { border: 1px solid var(--rule); border-left: 3px solid var(--marine); padding: 1rem 1.1rem; background: var(--parchment); }
   .ev-pd-item a.pd-link { display: block; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.28rem; color: var(--marine-deep); text-decoration: none; margin-bottom: 0.35rem; }
-  .ev-pd-item a.pd-link:hover { color: var(--stella-gold); }
+  .ev-pd-item a.pd-link:hover { color: var(--gold-text); }
   .ev-pd-item .pd-hash { display: block; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.78rem; color: #6b6252; word-break: break-all; line-height: 1.5; }
   .ev-pd-item .pd-hash b { color: var(--marine); font-weight: 700; }
 
@@ -67,6 +76,33 @@
     .ev-pd-list { grid-template-columns: 1fr; }
     .ev-grid { grid-template-columns: 1fr; }
   }
+
+  img, svg, table { max-width: 100%; }
+  pre, code { white-space: pre-wrap; word-break: break-word; }
+
+  /* Visible focus indicator: 3px solid gold-text on light backgrounds gives >=4.5:1
+     against white/parchment (exceeds the 3:1 UI-component minimum), with a 2px offset.
+     Does not remove any existing outline. */
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 3px solid var(--gold-text);
+    outline-offset: 2px;
+  }
+  .ev-top a:focus-visible,
+  .ev-foot a:focus-visible {
+    outline: 3px solid var(--stella-gold-light);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 </style>
 </head>
 <body>
@@ -80,42 +116,47 @@
   </div>
 </header>
 
+<main>
 <section class="ev-sec">
   <div class="ev-wrap">
     <div class="ev-pd">
       <h2>Lenexa Police Department</h2>
       <div class="ev-rule"></div>
       <p class="ev-sub">The documents already prepared for the School Resource Unit, each with a direct download link and, where relevant, its SHA-256 fingerprint so the file can be checked against the original at any time.</p>
-      <div class="ev-pd-list">
-        <div class="ev-pd-item">
+      <ul class="ev-pd-list">
+        <li class="ev-pd-item">
           <a class="pd-link" href="../ARK-Command-Briefing-LNX-2026-07-25.pdf">Command briefing, 4 pages — print this one →</a>
-          <span class="pd-hash"><b>SHA-256</b> 38862e840939374d95fb4c3a5fcb7c1f8fde3d9b360da3e09edbc20ff2419e1d</span>
-        </div>
-        <div class="ev-pd-item">
+          <span class="pd-hash"><b>SHA-256</b> b64fe592b9eb703b9c8be023f9b12508e5fbbc8b98a366ca9b7b614a143d29f8 — reissued 25 July 2026. The first issue (38862e84…0ff2419e1d) cited one Kansas statute under the other's number and is superseded; see the errata sheet below.</span>
+        </li>
+        <li class="ev-pd-item">
+          <a class="pd-link" href="../ARK-Errata-LNX-2026-07-25.pdf">Errata — corrections to published record, 1 page →</a>
+          <span class="pd-hash"><b>SHA-256</b> e93e122b75904cd8a9aefe6ddad681bc03d033fe20b75e76c4d68e3d7e89148a — two errors found by audit after publication. The originals were not edited; this sheet is the correction.</span>
+        </li>
+        <li class="ev-pd-item">
           <a class="pd-link" href="../ARK-Stewardship-Brief-Lenexa-PD-2026-07-25.pdf">The brief, 3 pages →</a>
           <span class="pd-hash"><b>SHA-256</b> 32dd3676562f4916fe082c137ac82548af2ca23afcaef6ea0419271bc33ba393</span>
-        </div>
-        <div class="ev-pd-item">
+        </li>
+        <li class="ev-pd-item">
           <a class="pd-link" href="../ARK-EXTRACT-LENEXA-PD-2026-0725.pdf">The sealed extract, 2 pages →</a>
           <span class="pd-hash"><b>SHA-256</b> bb165f871854c82046ee17a86cc68989f4be833e2fb9faa98d012b20c5bb2745</span>
-        </div>
-        <div class="ev-pd-item">
+        </li>
+        <li class="ev-pd-item">
           <a class="pd-link" href="../ARK-EXTRACT-LENEXA-PD-2026-0725-manifest.txt">Verification manifest →</a>
           <span class="pd-hash"><b>SHA-256</b> 5e26edacaa63ac81edeca050ae3d674e49832420f9e943c4ff70740eea7a1007</span>
-        </div>
-        <div class="ev-pd-item">
+        </li>
+        <li class="ev-pd-item">
           <a class="pd-link" href="../RECORD.md">Append-only record of transmission →</a>
           <span class="pd-hash">Log of every version transmitted, in order, never edited after the fact.</span>
-        </div>
-        <div class="ev-pd-item">
+        </li>
+        <li class="ev-pd-item">
           <a class="pd-link" href="../game/">The Lantern Room, playable wireframe →</a>
           <span class="pd-hash">Five scenarios, a teacher view, and nothing recorded about anyone who plays it.</span>
-        </div>
-        <div class="ev-pd-item">
+        </li>
+        <li class="ev-pd-item">
           <a class="pd-link" href="../">Back to the ARK dashboard →</a>
           <span class="pd-hash">The full stewardship briefing this evidence page supports.</span>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
 
     <div class="ev-verify">
@@ -133,223 +174,225 @@
     <h2>Every repository, linked</h2>
     <div class="ev-rule"></div>
     <p class="ev-sub">Alphabetical, case-insensitive. Each card links to the source and full commit history on GitHub, and to the published site where one exists. Where none exists, the card says so plainly rather than linking a dead address.</p>
-    <div class="ev-grid">
-      <div class="ev-card">
+    <ul class="ev-grid">
+      <li class="ev-card">
         <h3>ark-midwest-watch</h3>
         <p>ARK-CIVIC Midwest Watch — civic-condition record for Lenexa and Johnson County, Kansas. Records institutions and instruments, never people. Pour le bien-être du peuple.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/ark-midwest-watch">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/ark-midwest-watch/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>ark-peer-review-ledger</h3>
         <p>Source-first peer-review ledger for Shawn Ryan Show #320 (Danny Goler) — EVE Glyph Design canon. Standard-intake only.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/ark-peer-review-ledger">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/ark-peer-review-ledger/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>data-liberation-kit</h3>
         <p>Your data belongs to you. This makes it that way. A forkable utility that assembles Full-Text Timestamped Extracts (FTTE) from the platforms holding your data.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/data-liberation-kit">Source and full history →</a>
           <span class="ev-nosite">Repository only — no published site</span>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>dicoe-partner-program</h3>
-        <p>DICOE partner program — dealership sales enablement surface for Jeff Eden &amp; team</p>
+        <p>DICOE partner program — a dealership sales-enablement surface built for a channel partner. Description written for this page; the version on GitHub names the individual.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/dicoe-partner-program">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/dicoe-partner-program/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>dmzopen-ai</h3>
         <p>DMZ Open — Sovereign Enterprise AI. Canonical site at dmzopen.ai.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/dmzopen-ai">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/dmzopen-ai/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>enterprise-grade-criteria</h3>
         <p>Enterprise-grade conformance criteria for AI agent platforms, derived from EVE Glyph Design canon. The auditable rubric a platform (e.g. Perplexity Computer) must pass to claim enterprise grade. Pour le bien-être du peuple.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/enterprise-grade-criteria">Source and full history →</a>
           <span class="ev-nosite">Repository only — no published site</span>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>epiq-revenue-leakage</h3>
         <p>Epiq Revenue-Leakage Model — consolidated model canon and team spin surface (EVE Glyph Design)</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/epiq-revenue-leakage">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/epiq-revenue-leakage/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>eve-dealer-parts-twin</h3>
         <p>Dealer parts inventory digital twin — SAP-shape schema, 9-location topology, PACCAR/CDK adapters. Sovereign durable asset.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/eve-dealer-parts-twin">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/eve-dealer-parts-twin/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>eve-glyph-education-public</h3>
         <p>Public reading surface for the EVE Glyph Design education stream — village, mothers lane, curriculum, roadmap. Pour le bien-être du peuple.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/eve-glyph-education-public">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/eve-glyph-education-public/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>eve-hyperloop</h3>
         <p>EVE Hyperloop Alert System — SAP vendor-lock-in escalation watch, sovereign-AI competitive signal, 90-session market dislocation monitor.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/eve-hyperloop">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/eve-hyperloop/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>eveglyph-arrivals</h3>
         <p>Public arrival receipts for EVE Glyph Design. Register at the front door.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/eveglyph-arrivals">Source and full history →</a>
           <span class="ev-nosite">Repository only — no published site</span>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>EVEglyphDesign</h3>
         <p>EVE Glyph Design - front-door profile</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/EVEglyphDesign">Source and full history →</a>
           <span class="ev-nosite">Repository only — no published site</span>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>freefred</h3>
         <p>FreeFred — Fredericton diversion, family violence, child custody, social services public-record corpus. Inherits CanFree canon. Additive to institutions, individual-controlled, YCJA/s.486 hard filters.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/freefred">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/freefred/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>godaddy-killer</h3>
         <p>Migrate any small business off GoDaddy hosting onto free, durable GitHub Pages — playbook, DNS templates, and verification tooling. Keep your domain, drop the builder.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/godaddy-killer">Source and full history →</a>
           <span class="ev-nosite">Repository only — no published site</span>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>hawkins-twin-platform</h3>
         <p>No public description.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/hawkins-twin-platform">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/hawkins-twin-platform/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>holy-trinity-caisse</h3>
         <p>Holy Trinity Caisse — parish-scale mutual-aid economy under PAIX. Fork this to start a new caisse.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/holy-trinity-caisse">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/holy-trinity-caisse/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>icloud_photos_downloader</h3>
         <p>A command-line tool to download photos from iCloud</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/icloud_photos_downloader">Source and full history →</a>
           <span class="ev-nosite">Repository only — no published site</span>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>jre-montreal-bridge</h3>
         <p>JRE Platform Outreach Repository — Montreal Comedy &amp; Cultural Exchange, AI Safety Dialogue, Canada-US Bridge Initiative</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/jre-montreal-bridge">Source and full history →</a>
           <span class="ev-nosite">Repository only — no published site</span>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>NA-Nuclear-Utilities</h3>
         <p>NA Nuclear Utilities SAP/Leadership/CSAT Scan — SIN-EVE-2026-0521-NUC-NASCAN-04-001</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/NA-Nuclear-Utilities">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/NA-Nuclear-Utilities/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>paix-educational-game</h3>
         <p>PAIX — the parishioner-facing educational video game. Working development home; distribution stays parish-embedded.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/paix-educational-game">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/paix-educational-game/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>paix-parish-platform</h3>
         <p>Parish Sovereign Gateway reference build — portal + 5 mirrored parish sites in the EVE Glyph Design canon. Knights of Columbus scale-in-a-week demo.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/paix-parish-platform">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/paix-parish-platform/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>paroisse-sainte-anne-des-pays-bas</h3>
         <p>Paroisse Sainte-Anne-des-Pays-Bas (Fredericton, N.-B.) — miroir non-officiel sous la doctrine EVE Glyph. Fondateur du design : Donat Omer Thériault. Pour le bien-être du peuple.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/paroisse-sainte-anne-des-pays-bas">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/paroisse-sainte-anne-des-pays-bas/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>starship-academy-demo</h3>
         <p>Starship Academy Training Series — public demo (front-end only)</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/starship-academy-demo">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/starship-academy-demo/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>tj-console</h3>
-        <p>Private working console for T.J. Burke. NB intelligence layer over FreeFred + CanFree.</p>
+        <p>A working console for a single named user — a New Brunswick intelligence layer over FreeFred and CanFree. Description written for this page; the version on GitHub names the individual.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/tj-console">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/tj-console/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>Victoria</h3>
         <p>Onboarding starter kit for building your own digital twin — identity, capability, and values layers, plus the shared triangulation map artifact.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/Victoria">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/Victoria/">Live site →</a>
         </div>
-      </div>
-      <div class="ev-card">
+      </li>
+      <li class="ev-card">
         <h3>video-dispatch</h3>
         <p>Sovereign YouTube mirror surface. Auto-indexes @DanyTheriault-j2k uploads into a GitHub Pages gallery. YouTube is the storage layer; GitHub is the canonical share URL. Pour le bien-être du peuple.</p>
         <div class="ev-links">
           <a href="https://github.com/EVEglyphDesign/video-dispatch">Source and full history →</a>
           <a href="https://eveglyphdesign.github.io/video-dispatch/">Live site →</a>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
 
     <div class="ev-count">
       <p><strong>26 public repositories</strong> are listed above. <strong>19</strong> of them have a published site at <code style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(255,255,255,0.1);padding:0.1em 0.4em;">eveglyphdesign.github.io</code>; the remaining <strong>7</strong> are source-only, and are marked "Repository only — no published site" rather than linked to a page that does not exist.</p>
+      <p><strong>Two descriptions on this page were rewritten.</strong> Every other description here is reproduced exactly as it appears on GitHub. Two of them named a private individual, and this page is being handed to a police department, so those two were reworded to describe the work without the name. The originals remain visible on GitHub and nothing has been hidden; the change is recorded here so the difference is not something a reader has to discover.</p>
       <p>This is a snapshot taken <strong>25 July 2026</strong>. The repository listing on <a href="https://github.com/EVEglyphDesign" style="color:#fff;">github.com/EVEglyphDesign</a> is the live authority — it can gain, lose or update entries after this page was written, and it should be treated as the source of truth over this page.</p>
     </div>
   </div>
 </section>
+</main>
 
 <footer class="ev-foot">
   <div class="ev-wrap">
