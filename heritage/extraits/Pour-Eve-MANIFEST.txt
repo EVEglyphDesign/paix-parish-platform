@@ -1,0 +1,31 @@
+POUR ÈVE — EXTRAIT SCELLÉ / SEALED EXTRACT
+EVE Glyph Design
+
+Clé / Key ID          EVEGLYPH-EVE-2026-0725
+Émis / Issued         25 juillet 2026, Lenexa, Kansas
+Auteur / Author       Dany Thériault
+Source                heritage/LIGNEE-ACADIENNE.md, §III
+Statut                Échantillon filigrané. Extrait, non intégral.
+
+EMPREINTES / FINGERPRINTS (SHA-256)
+  contenu / content payload   b36ca7ed8f2eec534bb001207782b139658a3161516fbfe7e7a961c4c7b1c143
+  Pour-Eve.pdf                3ca42237eb1521021e0b9817e3959f3a7e4eeb7dd003d0ba22a1ee29d990d4fc
+  Pour-Eve.png                3ad8b1b9148d44fa4bb181b9528ce730a041cd62f88490cef46f88dacb475a90
+
+VÉRIFICATION
+Toute copie reçue par message peut être vérifiée en recalculant son SHA-256
+et en le comparant à la valeur ci-dessus, publiée dans deux dépôts publics :
+  github.com/EVEglyphDesign/paix-parish-platform
+  github.com/EVEglyphDesign/paroisse-sainte-anne-des-pays-bas
+Une copie dont l'empreinte diffère n'est pas cet extrait.
+
+Any copy received by message can be verified by recomputing its SHA-256 and
+comparing it to the value above, published in the two public repositories
+listed. A copy whose fingerprint differs is not this extract.
+
+© 2026 Dany Theriault. EVE "digital stem cell" glyph and glyph-based design
+principles — all rights reserved. Stewardship of rights of use and assignment
+for large public and institutional usage rests with the Pacific Utilities
+Design Council.
+
+pour le bien-être du peuple
