@@ -241,6 +241,65 @@ Findings 3–8 concern living surfaces, which carry no seal, and were fixed in p
 
 ---
 
+## EGD-LNX-2026-0725-05 — three Operator decisions taken, and what closed
+
+**Filed** 25 July 2026, hours after `-04`. Append-only. Nothing above this line was edited.
+
+Entry `-04` closed six of eight findings and left three questions with the Operator. All three
+were decided the same day. This entry records the decisions and their effect.
+
+### Decision 1 — the umbrella copyright instrument is now public
+
+`github.com/EVEglyphDesign/umbrella-copyright-proof` was made **public**. It was checked first
+for credentials and for third-party personal information and contains neither; nothing in it was
+altered to publish it. It carries the canonical instrument — the stamped educational summary,
+19 pages, SHA-256 `086e823d5420239740e8a59f756cce63a9546b2faf371c4833e78220e140aa25` — with its
+append-only governance and portability ledgers and principles P0–P11.
+
+**Effect.** Erratum 2 is closed **at source** rather than by substitution. The citation carried by
+the sealed extract and by this file now resolves for any reader. The extract was **not** reissued
+and its digest is unchanged; nothing about it needed to change, because the citation it carries
+was always correct — the door was shut, and now it is open. The repository has been added to the
+public record page, which now lists 27.
+
+### Decision 2 — SIN-17 ratified: curly canonical, markdown transliteration documented
+
+The canonical footer is curly-quoted (`U+201C` / `U+201D`) in HTML, PDF and every rendered
+artifact, byte-exact, on one unbroken line. Markdown source may carry the straight-quote
+transliteration; that is the only permitted variance. HTML entities, other quotation marks,
+line-wrapping the sentence, and splicing text into it are never permitted; additional text after
+the complete sentence is. Written into canon as `GLOBAL.md §1a` (`dd2c4a6`) and ratified in the
+ledger (`39d7c57`).
+
+### Decision 3 — the eve-hyperloop clause is Operator-authored and stays
+
+The "EVE-IC microchip callout family" clause on five `eve-hyperloop` pages is confirmed as the
+Operator's own IP-scope language. It stays, with its per-page code lists intact, as its own
+sentence after the canonical footer. No future remediation pass may delete, shorten, merge or
+reword it — an agent that removes it is committing the defect, not fixing one.
+
+### This sheet has been reissued
+
+| Document | SHA-256 | Status |
+| --- | --- | --- |
+| `ARK-Errata-LNX-2026-07-25.pdf` rev 02, 2 pages | `6590782e8865b44d063db71d807ce377ca682dc71c8251b16fef0f0509fdbecb` | **In force.** Erratum 2 recorded as resolved at source. |
+| ↳ rev 01, 1 page | `e93e122b75904cd8a9aefe6ddad681bc03d033fe20b75e76c4d68e3d7e89148a` | Superseded. Recorded the citation as unresolved, which was true when it was issued. |
+| `ARK-Command-Briefing-LNX-2026-07-25.pdf`, 4 pages | `b64fe592b9eb703b9c8be023f9b12508e5fbbc8b98a366ca9b7b614a143d29f8` | Unchanged from `-04`. In force. |
+| `ARK-Stewardship-Brief-Lenexa-PD-2026-07-25.pdf`, 3 pages | `32dd3676562f4916fe082c137ac82548af2ca23afcaef6ea0419271bc33ba393` | Unchanged. Still not reissued. |
+| `ARK-EXTRACT-LENEXA-PD-2026-0725.pdf`, 2 pages | `bb165f871854c82046ee17a86cc68989f4be833e2fb9faa98d012b20c5bb2745` | Unchanged. Still sealed. |
+
+Rev 01 was published and had a digest, so it was not overwritten quietly — rev 02 carries a
+supersession table naming rev 01 and why it moved. That is the same discipline applied to the
+Command Briefing in `-04`, applied to the correction sheet itself.
+
+### Still open
+
+One item, unchanged from `-04`: the unterminated CSS comment breaking
+`paroisse-sainte-anne-des-pays-bas` styling. Out of scope for this lane, recorded so it is not
+lost.
+
+---
+
 © 2026 Dany Theriault. EVE "digital stem cell" glyph and glyph-based design principles — all rights reserved. Stewardship of rights of use and assignment for large public and institutional usage rests with the Pacific Utilities Design Council. Published as a time-stamped record of authorship and intent.
 
 Pour le bien-être du peuple.
