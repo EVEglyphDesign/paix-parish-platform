@@ -72,9 +72,14 @@ PARISHES = [
             ("Monday \u2013 Friday", "7:00 AM"),
             ("Saturday", "7:00 AM"),
             ("Reconciliation \u2014 Saturday", "after 7:00 AM Mass \u00b7 3:30 \u2013 4:30 PM"),
+            ("Adoration — weekdays", "after 7:00 AM Mass until noon (Wed. from 10:00 AM)"),
+            ("St. Benedict the Moor — Sunday", "8:00 AM"),
         ],
         "crest_style": "spanish",
         "portal_blurb": "The oldest Catholic congregation in the continental United States. Mass has been said here since 1565.",
+        "city_line": "St. Augustine, Florida · 38 Cathedral Place",
+        "status_note": "The parish keeps a second church, St. Benedict the Moor, at 86 M.L. King Avenue, where the 8:00 AM Sunday Mass is celebrated. Rector: Very Rev. John Tetlow. Bishop: Most Rev. Erik T. Pohlmeier. Parish mail goes to 35 Treasury Street, St. Augustine, FL 32084. The office is open Monday to Thursday 8:00 AM to 3:00 PM and Friday 8:00 AM to 2:00 PM; the cathedral itself is open weekdays 8:00 AM to 5:00 PM. The parish is served by Knights of Columbus First Florida Council 611.",
+        "schedule_note": "Adoration hours follow the parish bulletin of 4 January 2026; the static website page still shows an older ending time. The 8:00 AM Sunday Mass is at St. Benedict the Moor, the second church of the parish.",
         "founded_line": "Congregation 1565 \u00b7 Present church 1793\u20131797 \u00b7 Minor basilica 1976 \u00b7 Diocese of St. Augustine",
         "photo_credit": "Photograph: Carlstak, CC BY-SA 4.0, via Wikimedia Commons",
         "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Facade_of_Cathedral_of_St._Augustine.jpg",
@@ -275,6 +280,35 @@ PARISHES = [
         "photo_status": "pending",
         "schedule_note": "Horario reportado por feligreses; algunos directorios lo publican mal. Conviene confirmar por tel\u00e9fono.",
     },
+    {
+        "slug": "metamorphosis-nafplio",
+        "name": "\u0399\u03b5\u03c1\u03cc\u03c2 \u039a\u03b1\u03b8\u03bf\u03bb\u03b9\u03ba\u03cc\u03c2 \u039d\u03b1\u03cc\u03c2 \u039c\u03b5\u03c4\u03b1\u03bc\u03bf\u03c1\u03c6\u03ce\u03c3\u03b5\u03c9\u03c2 \u03c4\u03bf\u03c5 \u03a3\u03c9\u03c4\u03ae\u03c1\u03bf\u03c2",
+        "short": "\u039c\u03b5\u03c4\u03b1\u03bc\u03cc\u03c1\u03c6\u03c9\u03c3\u03b7 \u03c4\u03bf\u03c5 \u03a3\u03c9\u03c4\u03ae\u03c1\u03bf\u03c2 \u2014 \u039d\u03b1\u03cd\u03c0\u03bb\u03b9\u03bf",
+        "city": "\u039d\u03b1\u03cd\u03c0\u03bb\u03b9\u03bf, \u0391\u03c1\u03b3\u03bf\u03bb\u03af\u03b4\u03b1",
+        "founded": "1840",
+        "lang": "el-GR",
+        "region": "greece",
+        "official_url": "https://cathecclesia.gr/",
+        "address": "\u039f\u03b4\u03cc\u03c2 \u03a6\u03c9\u03c4\u03bf\u03bc\u03ac\u03c1\u03b1, \u03a0\u03b1\u03bb\u03b9\u03ac \u03a0\u03cc\u03bb\u03b7, 211 00 \u039d\u03b1\u03cd\u03c0\u03bb\u03b9\u03bf",
+        "phone": "+30 27520 24568",
+        "email": "",
+        "tagline": "\u0397 \u00ab\u03a6\u03c1\u03b1\u03b3\u03ba\u03bf\u03ba\u03ba\u03bb\u03b7\u03c3\u03b9\u03ac\u00bb \u03c4\u03b7\u03c2 \u03a0\u03b1\u03bb\u03b9\u03ac\u03c2 \u03a0\u03cc\u03bb\u03b7\u03c2 \u2014 \u03c4\u03bf \u03b1\u03c1\u03c7\u03b1\u03b9\u03cc\u03c4\u03b5\u03c1\u03bf \u03bc\u03bd\u03b7\u03bc\u03b5\u03af\u03bf \u03c4\u03c9\u03bd \u03a6\u03b9\u03bb\u03b5\u03bb\u03bb\u03ae\u03bd\u03c9\u03bd \u03c3\u03c4\u03b7\u03bd \u0395\u03bb\u03bb\u03ac\u03b4\u03b1",
+        "diocese": "\u0399\u03b5\u03c1\u03ac \u0391\u03c1\u03c7\u03b9\u03b5\u03c0\u03b9\u03c3\u03ba\u03bf\u03c0\u03ae \u039a\u03b1\u03b8\u03bf\u03bb\u03b9\u03ba\u03ce\u03bd \u0391\u03b8\u03b7\u03bd\u03ce\u03bd",
+        "schedule": [
+            ("\u039a\u03c5\u03c1\u03b9\u03b1\u03ba\u03ae \u03ba\u03b1\u03b9 \u03b5\u03bf\u03c1\u03c4\u03ad\u03c2", "11:00"),
+            ("\u0394\u03b5\u03c5\u03c4\u03ad\u03c1\u03b1 \u2013 \u03a4\u03b5\u03c4\u03ac\u03c1\u03c4\u03b7", "08:00"),
+            ("\u03a0\u03ad\u03bc\u03c0\u03c4\u03b7 \u2013 \u03a3\u03ac\u03b2\u03b2\u03b1\u03c4\u03bf", "18:00"),
+        ],
+        "crest_style": "philhellene",
+        "portal_blurb": "\u03a4\u03b6\u03b1\u03bc\u03af \u03c0\u03bf\u03c5 \u03ad\u03b3\u03b9\u03bd\u03b5 \u03b5\u03ba\u03ba\u03bb\u03b7\u03c3\u03af\u03b1 \u03c4\u03bf 1839. \u039c\u03ad\u03c3\u03b1 \u03c3\u03c4\u03ad\u03ba\u03b5\u03b9 \u03b7 \u0391\u03c8\u03af\u03b4\u03b1 \u03c4\u03bf\u03c5 Touret, \u03bc\u03b5 \u03c4\u03b1 \u03bf\u03bd\u03cc\u03bc\u03b1\u03c4\u03b1 \u03c0\u03b5\u03c1\u03af\u03c0\u03bf\u03c5 280 \u03a6\u03b9\u03bb\u03b5\u03bb\u03bb\u03ae\u03bd\u03c9\u03bd \u03c0\u03bf\u03c5 \u03ad\u03c0\u03b5\u03c3\u03b1\u03bd \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u0395\u03bb\u03bb\u03ac\u03b4\u03b1.",
+        "city_line": "\u039d\u03b1\u03cd\u03c0\u03bb\u03b9\u03bf, \u0391\u03c1\u03b3\u03bf\u03bb\u03af\u03b4\u03b1 \u00b7 \u03bf\u03b4\u03cc\u03c2 \u03a6\u03c9\u03c4\u03bf\u03bc\u03ac\u03c1\u03b1, \u03c3\u03c4\u03b1 \u03c3\u03ba\u03b1\u03bb\u03bf\u03c0\u03ac\u03c4\u03b9\u03b1 \u03c4\u03b7\u03c2 \u03bf\u03b4\u03bf\u03cd \u03a0\u03bf\u03c4\u03b1\u03bc\u03b9\u03ac\u03bd\u03bf\u03c5",
+        "founded_line": "\u03a0\u03b1\u03c1\u03b1\u03c7\u03ce\u03c1\u03b7\u03c3\u03b7 1839 \u00b7 \u0395\u03bd\u03bf\u03c1\u03af\u03b1 1840 \u00b7 \u0399\u03b5\u03c1\u03ac \u0391\u03c1\u03c7\u03b9\u03b5\u03c0\u03b9\u03c3\u03ba\u03bf\u03c0\u03ae \u039a\u03b1\u03b8\u03bf\u03bb\u03b9\u03ba\u03ce\u03bd \u0391\u03b8\u03b7\u03bd\u03ce\u03bd",
+        "status_note": "\u0394\u03b9\u03b1\u03c4\u03b7\u03c1\u03b7\u03c4\u03ad\u03bf \u03bc\u03bd\u03b7\u03bc\u03b5\u03af\u03bf \u2014 \u03b5\u03bd\u03c4\u03cc\u03c2 \u03c4\u03bf\u03c5 \u03ba\u03b7\u03c1\u03c5\u03b3\u03bc\u03ad\u03bd\u03bf\u03c5 \u03b9\u03c3\u03c4\u03bf\u03c1\u03b9\u03ba\u03bf\u03cd \u03c4\u03cc\u03c0\u03bf\u03c5 \u03c4\u03b7\u03c2 \u03a0\u03b1\u03bb\u03b9\u03ac\u03c2 \u03a0\u03cc\u03bb\u03b7\u03c2 \u039d\u03b1\u03c5\u03c0\u03bb\u03af\u03bf\u03c5.",
+        "schedule_note": "\u03a4\u03bf \u03c9\u03c1\u03ac\u03c1\u03b9\u03bf \u03c0\u03c1\u03bf\u03ad\u03c1\u03c7\u03b5\u03c4\u03b1\u03b9 \u03b1\u03c0\u03cc \u03c4\u03b7\u03bd \u03b9\u03c3\u03c4\u03bf\u03c3\u03b5\u03bb\u03af\u03b4\u03b1 \u03c4\u03b7\u03c2 \u03b5\u03bd\u03bf\u03c1\u03af\u03b1\u03c2 \u03ba\u03b1\u03b9 \u03b4\u03b5\u03bd \u03ad\u03c7\u03b5\u03b9 \u03b5\u03c0\u03b9\u03b2\u03b5\u03b2\u03b1\u03b9\u03c9\u03b8\u03b5\u03af \u03c0\u03c1\u03cc\u03c3\u03c6\u03b1\u03c4\u03b1. \u03a4\u03b7\u03bb\u03b5\u03c6\u03c9\u03bd\u03ae\u03c3\u03c4\u03b5 \u03c0\u03c1\u03b9\u03bd \u03c0\u03ac\u03c4\u03b5.",
+        "photo_alt": "\u039f \u03c4\u03c1\u03bf\u03cd\u03bb\u03bf\u03c2 \u03c4\u03bf\u03c5 \u03ba\u03b1\u03b8\u03bf\u03bb\u03b9\u03ba\u03bf\u03cd \u03bd\u03b1\u03bf\u03cd \u039c\u03b5\u03c4\u03b1\u03bc\u03bf\u03c1\u03c6\u03ce\u03c3\u03b5\u03c9\u03c2 \u03c4\u03bf\u03c5 \u03a3\u03c9\u03c4\u03ae\u03c1\u03bf\u03c2 \u03c3\u03c4\u03b7\u03bd \u03a0\u03b1\u03bb\u03b9\u03ac \u03a0\u03cc\u03bb\u03b7 \u03c4\u03bf\u03c5 \u039d\u03b1\u03c5\u03c0\u03bb\u03af\u03bf\u03c5",
+        "photo_credit": "\u03a6\u03c9\u03c4\u03bf\u03b3\u03c1\u03b1\u03c6\u03af\u03b1: C messier, CC BY-SA 4.0, \u03bc\u03ad\u03c3\u03c9 Wikimedia Commons",
+        "photo_credit_url": "https://commons.wikimedia.org/wiki/File:%CE%9A%CE%B1%CE%B8%CE%BF%CE%BB%CE%B9%CE%BA%CE%AE_%CE%B5%CE%BA%CE%BA%CE%BB%CE%B7%CF%83%CE%AF%CE%B1_%CE%9D%CE%B1%CF%85%CF%80%CE%BB%CE%AF%CE%BF%CF%85_7833.jpg",
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -410,6 +444,38 @@ STRINGS = {
         "for_people": "Por el bien del pueblo.",
         "welcome_lead": "Bienvenidos al sitio de la parroquia.",
     },
+    "el-GR": {
+        "home": "\u0391\u03c1\u03c7\u03b9\u03ba\u03ae",
+        "about": "\u0397 \u03b5\u03bd\u03bf\u03c1\u03af\u03b1 \u03bc\u03b1\u03c2",
+        "pastors": "\u039a\u03bb\u03ae\u03c1\u03bf\u03c2",
+        "church": "\u039f \u03bd\u03b1\u03cc\u03c2 \u03bc\u03b1\u03c2",
+        "mass": "\u038f\u03c1\u03b5\u03c2 \u03bb\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ce\u03bd",
+        "bulletin": "\u0391\u03bd\u03b1\u03ba\u03bf\u03b9\u03bd\u03ce\u03c3\u03b5\u03b9\u03c2",
+        "life": "\u0395\u03bd\u03bf\u03c1\u03b9\u03b1\u03ba\u03ae \u03b6\u03c9\u03ae",
+        "catechesis": "\u039a\u03b1\u03c4\u03ae\u03c7\u03b7\u03c3\u03b7",
+        "events": "\u0395\u03ba\u03b4\u03b7\u03bb\u03ce\u03c3\u03b5\u03b9\u03c2",
+        "links": "\u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03bc\u03bf\u03b9",
+        "contact": "\u0395\u03c0\u03b9\u03ba\u03bf\u03b9\u03bd\u03c9\u03bd\u03af\u03b1",
+        "welcome": "\u039a\u03b1\u03bb\u03ce\u03c2 \u03bf\u03c1\u03af\u03c3\u03b1\u03c4\u03b5",
+        "mass_h1": "\u038f\u03c1\u03b5\u03c2 \u03bb\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ce\u03bd",
+        "mass_day": "\u0397\u03bc\u03ad\u03c1\u03b1",
+        "mass_time": "\u038f\u03c1\u03b1",
+        "contact_h1": "\u0395\u03c0\u03b9\u03ba\u03bf\u03b9\u03bd\u03c9\u03bd\u03af\u03b1",
+        "about_h1": "\u0397 \u03b5\u03bd\u03bf\u03c1\u03af\u03b1 \u03bc\u03b1\u03c2",
+        "reach_us": "\u0395\u03c0\u03b9\u03ba\u03bf\u03b9\u03bd\u03c9\u03bd\u03af\u03b1",
+        "on_this_site": "\u03a3\u03b5 \u03b1\u03c5\u03c4\u03cc\u03bd \u03c4\u03bf\u03bd \u03b9\u03c3\u03c4\u03cc\u03c4\u03bf\u03c0\u03bf",
+        "doctrine": "\u0394\u03cc\u03b3\u03bc\u03b1",
+        "no_profile": "\u03a7\u03c9\u03c1\u03af\u03c2 \u03c0\u03c1\u03bf\u03c6\u03b9\u03bb\u03bf\u03c0\u03bf\u03af\u03b7\u03c3\u03b7",
+        "register": "\u0393\u03bb\u03c9\u03c3\u03c3\u03b9\u03ba\u03cc \u03cd\u03c6\u03bf\u03c2",
+        "founder": "\u0391\u03bd\u03b1\u03c6\u03bf\u03c1\u03ac \u03b9\u03b4\u03c1\u03c5\u03c4\u03ae",
+        "portal_back": "\u2190 \u0395\u03c0\u03b9\u03c3\u03c4\u03c1\u03bf\u03c6\u03ae \u03c3\u03c4\u03b7\u03bd \u03c0\u03cd\u03bb\u03b7",
+        "official_source": "\u0395\u03c0\u03af\u03c3\u03b7\u03bc\u03b7 \u03c0\u03b7\u03b3\u03ae",
+        "mirror_note": "\u0391\u03bd\u03b5\u03c0\u03af\u03c3\u03b7\u03bc\u03bf \u03b1\u03bd\u03c4\u03af\u03b3\u03c1\u03b1\u03c6\u03bf, \u03c6\u03c4\u03b9\u03b1\u03b3\u03bc\u03ad\u03bd\u03bf \u03bc\u03b5 \u03c0\u03c1\u03bf\u03c3\u03bf\u03c7\u03ae. \u03a0\u03b5\u03c1\u03b9\u03b5\u03c7\u03cc\u03bc\u03b5\u03bd\u03bf \u03b5\u03bd\u03bf\u03c1\u03af\u03b1\u03c2: \u00a9 \u03b7 \u03b5\u03bd\u03bf\u03c1\u03af\u03b1, \u03bc\u03b5 \u03b5\u03c0\u03b9\u03c6\u03cd\u03bb\u03b1\u03be\u03b7 \u03c0\u03b1\u03bd\u03c4\u03cc\u03c2 \u03b4\u03b9\u03ba\u03b1\u03b9\u03ce\u03bc\u03b1\u03c4\u03bf\u03c2.",
+        "no_tracking": "\u039a\u03b1\u03bc\u03af\u03b1 \u03c0\u03b1\u03c1\u03b1\u03ba\u03bf\u03bb\u03bf\u03cd\u03b8\u03b7\u03c3\u03b7. \u039a\u03b1\u03bd\u03ad\u03bd\u03b1 cookie. \u039a\u03b1\u03bc\u03af\u03b1 \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7. \u039a\u03b1\u03bd\u03ad\u03bd\u03b1 script \u03c4\u03c1\u03af\u03c4\u03c9\u03bd \u03c0\u03ad\u03c1\u03b1\u03bd \u03c4\u03c9\u03bd Google Fonts.",
+        "tribute_line": "\u0399\u03c3\u03c4\u03cc\u03c4\u03bf\u03c0\u03bf\u03c2 \u03ba\u03b1\u03c4\u03ac \u03c4\u03bf \u03b4\u03cc\u03b3\u03bc\u03b1 EVE Glyph Design. \u0399\u03b4\u03c1\u03c5\u03c4\u03ae\u03c2 \u03c4\u03bf\u03c5 \u03c3\u03c7\u03b5\u03b4\u03b9\u03b1\u03c3\u03bc\u03bf\u03cd:",
+        "for_people": "\u0393\u03b9\u03b1 \u03c4\u03bf \u03ba\u03b1\u03bb\u03cc \u03c4\u03bf\u03c5 \u03bb\u03b1\u03bf\u03cd.",
+        "welcome_lead": "\u039a\u03b1\u03bb\u03ce\u03c2 \u03bf\u03c1\u03af\u03c3\u03b1\u03c4\u03b5 \u03c3\u03c4\u03b7\u03bd \u03b9\u03c3\u03c4\u03bf\u03c3\u03b5\u03bb\u03af\u03b4\u03b1 \u03c4\u03b7\u03c2 \u03b5\u03bd\u03bf\u03c1\u03af\u03b1\u03c2.",
+    },
 }
 
 FOUNDER = "Donat Omer Thériault"
@@ -481,6 +547,12 @@ def crest_svg(style: str) -> str:
         # The standing cross the town is named for — La Cruz de Huanacaxtle
         motif = '''<path d="M50 58 L 50 84 M 40 66 L 60 66" stroke="#f5efe1" stroke-width="3" stroke-linecap="round"/>
   <circle cx="50" cy="66" r="3" fill="#d4a94a"/>'''
+    elif style == "philhellene":
+        # Classical temple front — the 1841 Touret Arch inside the Nafplio church
+        motif = '''<path d="M30 84 L 30 72 L 70 72 L 70 84" fill="none" stroke="#f5efe1" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M26 72 L 50 58 L 74 72 Z" fill="#f5efe1" opacity="0.92"/>
+  <path d="M40 84 L 40 72 M 50 84 L 50 72 M 60 84 L 60 72" stroke="#f5efe1" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="50" cy="68" r="2.6" fill="#d4a94a"/>'''
     else:  # trinity
         motif = '''<circle cx="50" cy="70" r="4" fill="none" stroke="#f5efe1" stroke-width="2"/>
   <circle cx="42" cy="78" r="4" fill="none" stroke="#f5efe1" stroke-width="2"/>
@@ -545,6 +617,8 @@ def nav(parish, active) -> str:
 '''
 
 def tel_label(parish) -> str:
+    if parish['lang'] == 'el-GR':
+        return "\u03a4\u03b7\u03bb."
     if parish['lang'] == 'fr-CA':
         return "Tél."
     if parish['lang'] == 'es-MX':
@@ -615,6 +689,11 @@ def page_index(parish) -> str:
         card_title = "Une paroisse, un peuple"
         card_body = "La foi vécue localement, avec la communauté qui prie, célèbre et prend soin les uns des autres."
         h1 = s["welcome"]
+    elif parish['lang'] == 'el-GR':
+        blurb = f"""<p>{parish['name']} βρίσκεται στην Παλιά Πόλη του Ναυπλίου. Η σελίδα αυτή είναι ένα ανεπίσημο αντίγραφο, φτιαγμένο κατά το δόγμα <em>EVE Glyph Design</em>, με την ίδια επιμέλεια που θα είχε μια επίσημη σελίδα. Επίσημη πηγή παραμένει το {src_link}.</p>"""
+        card_title = "Μια ενορία, ένας λαός"
+        card_body = "Η πίστη ζει στον τόπο της, με μια κοινότητα που προσεύχεται, γιορτάζει και φροντίζει ο ένας τον άλλον."
+        h1 = s["welcome"]
     elif parish['lang'] == 'es-MX':
         blurb = f"""<p>La {parish['name']} se encuentra en {parish['city']}. Este sitio es un espejo no oficial preparado bajo la doctrina <em>EVE Glyph Design</em>, con el mismo cuidado editorial que una página oficial. La fuente oficial sigue siendo {src_link}.</p>"""
         card_title = "Una parroquia, un pueblo"
@@ -680,12 +759,35 @@ PHOTO_PENDING = {
     "en-CA": "Photograph pending — no verified freely-licensed image of this church yet.",
     "en-US": "Photograph pending — no verified freely-licensed image of this church yet.",
     "es-MX": "Fotografía pendiente — aún no hay una imagen de este templo con licencia libre verificada.",
+    "el-GR": "\u0397 \u03c6\u03c9\u03c4\u03bf\u03b3\u03c1\u03b1\u03c6\u03af\u03b1 \u03b5\u03ba\u03ba\u03c1\u03b5\u03bc\u03b5\u03af \u2014 \u03b4\u03b5\u03bd \u03c5\u03c0\u03ac\u03c1\u03c7\u03b5\u03b9 \u03b1\u03ba\u03cc\u03bc\u03b7 \u03b5\u03c0\u03b1\u03bb\u03b7\u03b8\u03b5\u03c5\u03bc\u03ad\u03bd\u03b7 \u03b5\u03bb\u03b5\u03cd\u03b8\u03b5\u03c1\u03b7 \u03b5\u03b9\u03ba\u03cc\u03bd\u03b1.",
 }
 
 
 def page_about(parish) -> str:
     s = STRINGS[parish['lang']]
     status = parish.get('status_note')
+    if parish['lang'] == 'el-GR':
+        body = f"""<main><div class="container">
+<h1>{s['about_h1']}</h1>
+<p class="lead">{parish['tagline']}.</p>
+<p>Ο ναός στέκει στην Παλιά Πόλη του Ναυπλίου, στα σκαλοπάτια πάνω από την πλατεία του Αγίου Σπυρίδωνα. Οι Ναυπλιώτες τον λένε «Φραγκοκκλησιά». Ανήκει στην {parish['diocese']}.</p>
+<p>Το κτίριο λειτούργησε ως τέμενος στα χρόνια πριν από την Επανάσταση. Το 1839 ο δήμος Ναυπλίου το παραχώρησε στην Καθολική Εκκλησία, με βασιλικό διάταγμα του Όθωνα, και το 1840 καθιερώθηκε ως ναός της Μεταμορφώσεως του Σωτήρος — μια επιλογή ονόματος που συμβόλιζε τη μεταμόρφωση της ίδιας της χώρας μετά την οθωμανική περίοδο. Το μιχράβ σώζεται ακόμη στο εσωτερικό.</p>
+<div class="card">
+  <h3>Η Αψίδα του Touret (1841)</h3>
+  <p>Μέσα στον ναό στέκει μια ξύλινη αψίδα σε σχήμα πρόσοψης αρχαίου ναού, που χρηματοδότησε ο Γάλλος φιλέλληνας Auguste Hilarion Touret. Φέρει την επιγραφή <em>«A LA MEMOIRE DES PHILHELLENES MORTS POUR L’INDEPENDANCE»</em> και τα ονόματα περίπου 280 ξένων εθελοντών, μαζί με τον τόπο όπου έπεσε ο καθένας. Είναι το αρχαιότερο μνημείο των Φιλελλήνων στην Ελλάδα και αποκαταστάθηκε το 2002.</p>
+</div>
+<div class="card">
+  <h3>Η κρύπτη</h3>
+  <p>Κάτω από το δάπεδο υπάρχει ενετική δεξαμενή περίπου τριών μέτρων. Το 1839 μεταφέρθηκαν εκεί τα οστά φιλελλήνων και Βαυαρών στρατιωτών που χάθηκαν από τυφοειδή πυρετό το 1833–1834. Το 1990 τοποθετήθηκε το ανάγλυφο «Φιλέλληνες μάχονται υπέρ Ελλήνων» του Νικολάου Δαγούλη.</p>
+</div>
+<p>{html.escape(status) if status else ''}</p>
+<p>Για το πλήρες ιστορικό, τον κλήρο και τις ανακοινώσεις, δείτε την επίσημη πηγή: <a href="{parish['official_url']}">{tidy_url(parish['official_url'])}</a>.</p>
+<div class="card">
+  <h3>Η δέσμευσή μας</h3>
+  <p>Τοπική φιλοξενία, χωρίς παρακολούθηση, χωρίς διαφημίσεις. Το περιεχόμενο ανήκει στην ενορία, που μπορεί να αναλάβει αυτό το αντίγραφο όποτε θελήσει.</p>
+</div>
+</div></main>"""
+        return head(parish, s["about_h1"]) + header(parish) + nav(parish, "about.html") + body + footer(parish)
     if parish['lang'] == 'es-MX':
         body = f"""<main><div class="container">
 <h1>{s['about_h1']}</h1>
@@ -715,6 +817,7 @@ def page_about(parish) -> str:
 <h1>{s['about_h1']}</h1>
 <p class="lead">{parish['tagline']}.</p>
 <p>Founded in {parish['founded']}, {parish['name']} serves the community of {parish['city']}. It is part of {parish['diocese']}.</p>
+{f'<p>{html.escape(status)}</p>' if status else ''}
 <p>This page introduces the parish. For the full history, clergy biographies, and church story, please visit the parish's official site: <a href="{parish['official_url']}">{parish['official_url'].replace('https://', '')}</a>.</p>
 <div class="card">
   <h3>Our commitment</h3>
@@ -741,7 +844,11 @@ def page_mass(parish) -> str:
 
 def page_life(parish) -> str:
     s = STRINGS[parish['lang']]
-    if parish['lang'] == 'es-MX':
+    if parish['lang'] == 'el-GR':
+        items = ["Ομάδα προσευχής", "Προσκύνηση της Ευχαριστίας", "Χορωδία", "Κατήχηση", "Υποδοχή προσκυνητών και επισκεπτών", "Ενοριακό συμβούλιο", "Φροντίδα του μνημείου των Φιλελλήνων", "Εθελοντισμός"]
+        title = "Ενοριακή ζωή"
+        intro = "Οι δραστηριότητες της ενορίας. Για περισσότερα ή για να συμμετάσχετε, επικοινωνήστε με την ενορία."
+    elif parish['lang'] == 'es-MX':
         items = ["Grupo de oración", "Adoración eucarística", "Coro", "Catequesis", "Caballeros de Colón", "Consejo pastoral parroquial", "Ayuda a los necesitados", "Voluntariado parroquial"]
         title = "Vida parroquial"
         intro = "Los grupos activos en la parroquia. Para saber más o unirse a uno, comuníquese con la oficina parroquial."
@@ -768,6 +875,7 @@ def page_contact(parish) -> str:
     dt_lbls = {
         'fr-CA': ("Adresse", "Téléphone", "Courriel", "Diocèse"),
         'es-MX': ("Dirección", "Teléfono", "Correo", "Diócesis"),
+        'el-GR': ("\u0394\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7", "\u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03bf", "Email", "\u0391\u03c1\u03c7\u03b9\u03b5\u03c0\u03b9\u03c3\u03ba\u03bf\u03c0\u03ae"),
     }.get(parish['lang'], ("Address", "Phone", "Email", "Diocese"))
     email_row = (f'<dt>{dt_lbls[2]}</dt><dd><a href="mailto:{parish["email"]}">{parish["email"]}</a></dd>'
                  if parish.get('email') else '')
@@ -799,6 +907,8 @@ REGIONS = [
      "New Brunswick, Prince Edward Island, Nova Scotia."),
     ("mexico", "México",
      "Bahía de Banderas, Nayarit — the marina coast."),
+    ("greece", "Ελλάδα · Greece",
+     "Nafplio, Argolis — the first capital, and the church that keeps the names of the Philhellenes."),
 ]
 
 NUM_WORDS = {6: "Six", 7: "Seven", 8: "Eight", 9: "Nine", 10: "Ten", 11: "Eleven", 12: "Twelve"}
@@ -832,6 +942,8 @@ def parish_card(p) -> str:
             founded_line = f"Fondée {p['founded']} · {p['diocese']}"
         elif p['lang'] == 'es-MX':
             founded_line = f"Fundada {p['founded']} · {p['diocese']}"
+        elif p['lang'] == 'el-GR':
+            founded_line = f"\u0388\u03c4\u03bf\u03c2 {p['founded']} · {p['diocese']}"
         else:
             founded_line = f"Founded {p['founded']} · {p['diocese']}"
 
@@ -895,6 +1007,11 @@ def footnote_1613() -> str:
         '    against the terms of the capitulation they had just signed. Two registers survive:\n'
         '    <strong>1702–1728 and 1727–1755</strong>, now at the Centre acadien of Université Sainte-Anne.\n'
         '    Everything before 1702 is gone.</p>\n'
+        '\n'
+        '    <p>The Greek card above is the other half of the same idea. In Nafplio, a wooden arch put up in 1841\n'
+        '    carries the names of roughly 280 foreigners who died for somebody else\u2019s country, each one with the\n'
+        '    place he fell written beside it. Somebody decided those names were worth keeping. In Port-Royal,\n'
+        '    somebody decided ours were not.</p>\n'
         '\n'
         '    <p>People ask whether Rome kept a copy. Rome does governance, not sacraments — there is no central\n'
         '    baptismal register in the Vatican. Baptisms are written down in the parish, full stop.\n'
@@ -1443,6 +1560,12 @@ PORTAL_CSS = '''/* Portal-specific extensions to the EVE Glyph canon */
 }
 .caisse-hero-cta .btn-secondary:hover {
   background: rgba(176, 138, 62, 0.1);
+}
+
+/* A region with a single parish should not stretch one card across the page */
+.parish-grid:has(> .parish-card:only-child) {
+  grid-template-columns: minmax(280px, 520px);
+  justify-content: start;
 }
 
 .parish-grid-heading {

@@ -376,6 +376,19 @@ main .container { max-width: 780px; }
 .footnote-more a:hover { border-bottom-color: #1a5578; }
 
 /* Hero placeholder on a parish page with no licensed photograph */
+.hero-photo {
+  margin: 0 0 1.8rem;
+  overflow: hidden;
+}
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 470px;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
 .hero-photo-pending {
   background: linear-gradient(160deg, #12496c 0%, #0b3b5c 100%);
   min-height: 260px;

@@ -342,6 +342,12 @@
   background: rgba(176, 138, 62, 0.1);
 }
 
+/* A region with a single parish should not stretch one card across the page */
+.parish-grid:has(> .parish-card:only-child) {
+  grid-template-columns: minmax(280px, 520px);
+  justify-content: start;
+}
+
 .parish-grid-heading {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
