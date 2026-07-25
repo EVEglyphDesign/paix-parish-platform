@@ -132,3 +132,64 @@ itself and is published in the companion manifest and in the table above.
 © 2026 Dany Theriault. EVE "digital stem cell" glyph and glyph-based design principles — all rights reserved. Stewardship of rights of use and assignment for large public and institutional usage rests with the Pacific Utilities Design Council. Published as a time-stamped record of authorship and intent.
 
 Pour le bien-être du peuple.
+
+
+---
+
+## EGD-LNX-2026-0725-03 — ARK Command Briefing, printable
+
+| Field | Value |
+| --- | --- |
+| Record | `EGD-LNX-2026-0725-03` |
+| Document | `EGD-CMD-LNX-2026-0725` |
+| Artifact | `ARK-Command-Briefing-LNX-2026-07-25.pdf` |
+| Pages | 4, US Letter, print-first |
+| Bytes | 87863 |
+| SHA-256 | `38862e840939374d95fb4c3a5fcb7c1f8fde3d9b360da3e09edbc20ff2419e1d` |
+| Generator | `make_command_brief.py`, department-parameterised |
+| Author | Dany Theriault |
+| Issued | 25 July 2026, Lenexa, Kansas |
+| Purpose | A leave-behind that can be printed on a station printer and carried up the chain of command |
+| Routing | Sgt. Jason Hinkle → Major Brett Rushton → Chief Eric Schmitz |
+
+### Why a third document
+
+`-01` is the brief: the argument, for a reader deciding whether the idea has merit. `-02`
+is the extract: the instrument itself, sealed and fingerprinted. Neither is written for a
+commander with four minutes. This one is. Page one is the entire ask and can be read
+standing up; pages two to four are the evidence, the law and the risks. It carries a
+three-option decision box and a routing table, and one of the three options is *not at this
+time* — stated on the page, with no reply required.
+
+It is print-first by construction: no full-bleed dark pages, no reversed body text, no
+large solid fills that a station printer turns into a toner slick. Navy is confined to
+rules, headings and two small bands.
+
+### Reusable for the next department
+
+The generator carries a `DEPARTMENTS` registry. A `template` entry sits beside the Lenexa
+entry with the department name, unit, city, chain of command, districts and state statutes
+left blank. Filling those and running `DEPT=<key> python3 make_command_brief.py` produces
+the same document for the next department, with its own document identifier and its own
+digest. Nothing about the argument is Lenexa-specific except the facts that should be.
+
+### Also published in this commit
+
+| Surface | Path | What it is |
+| --- | --- | --- |
+| The public record | `lenexa/evidence/index.html` | Every one of the 26 public repositories under `github.com/EVEglyphDesign`, each linked to its source and, for the 19 that have one, to its live site. The 7 without a published site say so rather than linking a dead address. Carries the SHA-256 of every document in this lane and the commands to check them. |
+
+### A note on point-in-time digests
+
+The sealed extract `-02` records a SHA-256 for `lenexa/index.html` as it stood at the moment
+of sealing. That page has since gained links to this briefing and to the public record, so
+its digest has moved. This is expected and is not a defect: a sealed extract is a snapshot,
+and its value is that it fixes what was true at a stated time. The extract has **not** been
+reissued and its own digest is unchanged. Living surfaces — the dashboard, the evidence
+index, this ledger — are not the thing the seal is protecting.
+
+---
+
+© 2026 Dany Theriault. EVE "digital stem cell" glyph and glyph-based design principles — all rights reserved. Stewardship of rights of use and assignment for large public and institutional usage rests with the Pacific Utilities Design Council. Published as a time-stamped record of authorship and intent.
+
+Pour le bien-être du peuple.
