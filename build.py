@@ -958,6 +958,11 @@ def footnote_1613(t) -> str:
         '\n'
         '    <p class="footnote-more"><a href="https://github.com/EVEglyphDesign/paix-parish-platform/blob/main/heritage/LIGNEE-ACADIENNE.md">'
         f'{html.escape(t("footnote.more"))} →</a></p>\n'
+        '    <div class="footnote-credit">\n'
+        f'      <p>{html.escape(t("footnote.cma"))}</p>\n'
+        '      <p><a href="https://snacadie.org/nos-dossiers/promotion/congres-mondial-acadien" rel="noopener">'
+        f'{html.escape(t("footnote.cma_link"))} →</a></p>\n'
+        '    </div>\n'
         '  </div>\n')
 
 
@@ -1656,6 +1661,23 @@ PORTAL_CSS = '''/* Portal-specific extensions to the EVE Glyph canon */
 }
 .footnote-block strong { color: #4a4234; font-weight: 600; }
 .footnote-more { margin-top: 1.3rem; }
+.footnote-credit {
+  margin-top: 1.8rem;
+  padding: 1rem 1.15rem;
+  border-left: 3px solid var(--stella-gold);
+  background: #fbf6ea;
+  max-width: 68ch;
+}
+.footnote-credit p { margin: 0; font-size: 0.92rem; color: #5a5142; }
+.footnote-credit p + p { margin-top: 0.6rem; }
+.footnote-credit a {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-weight: 600;
+  color: #8a6416;
+  text-decoration: none;
+  border-bottom: 1px solid #ddc98f;
+}
+.footnote-credit a:hover { color: var(--ink); border-bottom-color: var(--stella-gold); }
 .footnote-more a {
   font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.88rem;

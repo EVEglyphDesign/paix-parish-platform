@@ -985,5 +985,13 @@
  "parish.santa-cruz-huanacaxtle.status_note": {
   "text": "Párroco: Pbro. Luis Alberto Moreno Martínez, según el directorio del clero de la Diócesis de Tepic. Fiesta patronal: el 3 de mayo, Día de la Santa Cruz. No se publicó en ninguna fuente primaria el año de fundación de la parroquia; se deja el hueco abierto en lugar de inventarlo. El código postal es C.P. 63732 según la diócesis, aunque varios directorios turísticos publican 63734. No existe ninguna fotografía de la iglesia con licencia libre: se revisaron Wikimedia Commons, Wikidata, Flickr y las imágenes de calle de KartaView a menos de trescientos metros, y ninguna muestra la fachada. La tarjeta se queda sin fotografía hasta que alguien del pueblo mande una.",
   "note": "source language: es-MX"
+ },
+ "footnote.cma": {
+  "text": "The Congrès mondial acadien gathers the Acadian diaspora every five years. It is held by the Société Nationale de l'Acadie, and the 2029 congress runs 8 to 18 August in the Baie-des-Chaleurs, the region that takes in Paquetville. Credit where it is due: the Acadian account belongs to that institution and to the people who carry it, not to this page. Anyone who wants the record from a legitimate source rather than from us should start there.",
+  "note": "source language: en"
+ },
+ "footnote.cma_link": {
+  "text": "Société Nationale de l'Acadie — Congrès mondial acadien",
+  "note": "source language: en; institution and event names are never translated"
  }
 }
