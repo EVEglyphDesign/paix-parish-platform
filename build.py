@@ -606,7 +606,7 @@ def head(parish, t, css_prefix, page_title, url_of=None) -> str:
 <link rel="icon" type="image/svg+xml" href="{css_prefix}crest.svg">{alts}
 </head>
 <body>
-'''
+{lang_switcher(t, url_of)}'''
 
 def header(parish, t, css_prefix) -> str:
     return f'''<header class="site-header">
@@ -766,7 +766,7 @@ def page_index(parish, t, url_of, portal_back, ap="assets/") -> str:
 '''
     return (head(parish, t, ap, t("ui.welcome"), url_of=url_of) + header(parish, t, ap)
             + nav(parish, t, "index.html", portal_back)
-            + lang_switcher(t, url_of) + body + footer(parish, t))
+            + body + footer(parish, t))
 
 
 def page_about(parish, t, url_of, portal_back, ap="assets/") -> str:
@@ -803,7 +803,7 @@ def page_about(parish, t, url_of, portal_back, ap="assets/") -> str:
 </div></main>'''
     return (head(parish, t, ap, t("ui.about_h1"), url_of=url_of) + header(parish, t, ap)
             + nav(parish, t, "about.html", portal_back)
-            + lang_switcher(t, url_of) + body + footer(parish, t))
+            + body + footer(parish, t))
 
 
 def page_mass(parish, t, url_of, portal_back, ap="assets/") -> str:
@@ -820,7 +820,7 @@ def page_mass(parish, t, url_of, portal_back, ap="assets/") -> str:
 </div></main>'''
     return (head(parish, t, ap, t("ui.mass_h1"), url_of=url_of) + header(parish, t, ap)
             + nav(parish, t, "mass.html", portal_back)
-            + lang_switcher(t, url_of) + body + footer(parish, t))
+            + body + footer(parish, t))
 
 
 def page_life(parish, t, url_of, portal_back, ap="assets/") -> str:
@@ -834,7 +834,7 @@ def page_life(parish, t, url_of, portal_back, ap="assets/") -> str:
 </div></main>'''
     return (head(parish, t, ap, t("page.life_h1"), url_of=url_of) + header(parish, t, ap)
             + nav(parish, t, "life.html", portal_back)
-            + lang_switcher(t, url_of) + body + footer(parish, t))
+            + body + footer(parish, t))
 
 
 def page_contact(parish, t, url_of, portal_back, ap="assets/") -> str:
@@ -858,7 +858,7 @@ def page_contact(parish, t, url_of, portal_back, ap="assets/") -> str:
 </div></main>'''
     return (head(parish, t, ap, t("ui.contact_h1"), url_of=url_of) + header(parish, t, ap)
             + nav(parish, t, "contact.html", portal_back)
-            + lang_switcher(t, url_of) + body + footer(parish, t))
+            + body + footer(parish, t))
 
 
 # ---------------------------------------------------------------------------
@@ -984,6 +984,7 @@ def portal(t, prefix="", url_of=None) -> str:
 {hreflang_links(url_of)}
 </head>
 <body class="portal-body">
+{lang_switcher(t, url_of)}
 
 <header class="site-header portal-header">
   <div class="container">
@@ -1005,7 +1006,6 @@ def portal(t, prefix="", url_of=None) -> str:
   </div>
 </nav>
 
-{lang_switcher(t, url_of)}
 <main>
   <div class="container portal-hero">
     <h1>{html.escape(t("portal.hero_h1"))}</h1>

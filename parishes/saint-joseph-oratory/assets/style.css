@@ -446,11 +446,17 @@ main .container { max-width: 780px; }
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
+  max-width: none;
+  width: 100%;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
   gap: 0.4rem 0.45rem;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
 .lang-bar-label {
+  margin-right: auto;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -530,7 +536,8 @@ main .container { max-width: 780px; }
 .lang-grid a:hover { border-color: var(--stella-gold); background: #fffdf7; }
 
 @media (max-width: 640px) {
-  .lang-bar .container { gap: 0.35rem 0.35rem; }
+  .lang-bar .container { gap: 0.35rem 0.35rem; justify-content: flex-start;
+    padding-left: 1rem; padding-right: 1rem; }
   .lang-bar a { font-size: 0.88rem; padding: 0.4rem 0.6rem; }
   .lang-bar-label { width: 100%; margin-right: 0; }
 }
