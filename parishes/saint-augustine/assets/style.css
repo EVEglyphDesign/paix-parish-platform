@@ -428,3 +428,78 @@ main .container { max-width: 780px; }
   .region-head h2 { font-size: 1.3rem; }
   .hero-photo-pending { min-height: 190px; }
 }
+
+/* ---------------------------------------------------------------------------
+   Language bar — Latin is the pivot, every other language is rendered from it.
+   Latin therefore carries a mark of its own; it is not just another option.
+   --------------------------------------------------------------------------- */
+.lang-bar {
+  background: #f3eee2;
+  border-bottom: 1px solid #ddd3bd;
+}
+.lang-bar .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 0.9rem;
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+}
+.lang-bar-label {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #8a7f6b;
+  margin-right: 0.3rem;
+}
+.lang-bar a {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.83rem;
+  color: #5d5445;
+  text-decoration: none;
+  padding: 0.12rem 0.1rem;
+  border-bottom: 2px solid transparent;
+}
+.lang-bar a:hover { color: var(--stella-gold); border-bottom-color: #ddd3bd; }
+.lang-bar a.active {
+  color: var(--ink);
+  font-weight: 600;
+  border-bottom-color: var(--stella-gold);
+}
+.lang-bar a[data-pivot] { font-variant: small-caps; letter-spacing: 0.03em; }
+.lang-bar a[data-pivot]::after {
+  content: "\00b7 pivot";
+  font-variant: normal;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  color: #a3987f;
+  margin-left: 0.28rem;
+}
+
+/* The nine-language grid in the portal's language section */
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+}
+.lang-grid a {
+  display: block;
+  padding: 0.75rem 0.9rem;
+  background: #fbf8f0;
+  border: 1px solid #e2d9c4;
+  border-radius: 3px;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: var(--ink);
+  text-decoration: none;
+  text-align: center;
+  transition: border-color 0.15s, background 0.15s;
+}
+.lang-grid a:hover { border-color: var(--stella-gold); background: #fffdf7; }
+
+@media (max-width: 640px) {
+  .lang-bar .container { gap: 0.1rem 0.7rem; }
+  .lang-bar a { font-size: 0.78rem; }
+}

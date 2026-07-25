@@ -8,7 +8,7 @@
 
 A Parish Sovereign Gateway reference build under the **EVE Glyph Design** doctrine.
 
-Front-page portal + **eleven mirrored parish sites across five regions**, all in one editorial canon:
+Front-page portal + **twelve mirrored parish sites across five regions**, each published in **nine languages**, all in one editorial canon:
 
 **United States**
 - **Holy Trinity Catholic Parish** — Lenexa, Kansas
@@ -18,6 +18,7 @@ Front-page portal + **eleven mirrored parish sites across five regions**, all in
 - **Oratoire Saint-Joseph du Mont-Royal** — Montréal, Québec
 
 **Atlantic Canada**
+- **St. Dunstan's Church** — Fredericton, New Brunswick. The founding Catholic parish of Fredericton (1827) and the first cathedral of New Brunswick; Bishop William Dollard was consecrated here on 11 June 1843. The Great Fire of 11 November 1850 spared it — parishioners stood on the roof and beat out the embers. It incubated Sainte-Anne-des-Pays-Bas, which became an independent French-language parish on 2 September 1981. Today part of St. Mary Magdalene Parish.
 - **Paroisse Sainte-Anne-des-Pays-Bas** — Fredericton, Nouveau-Brunswick
 - **Église Saint-Augustin de Paquetville** — Paquetville, Nouveau-Brunswick
 - **St. Dunstan's Basilica Parish** — Charlottetown, Prince Edward Island
@@ -30,6 +31,19 @@ Front-page portal + **eleven mirrored parish sites across five regions**, all in
 
 **Ελλάδα · Greece**
 - **Ιερός Καθολικός Ναός Μεταμορφώσεως του Σωτήρος** — Ναύπλιο, Αργολίδα. The «Frankoklisia» of the Old Town: a mosque ceded to the Catholic Church in 1839 and consecrated in 1840, holding the 1841 Touret Arch — the oldest Philhellene monument in Greece, inscribed with the names of some 280 foreign volunteers who died for Greek independence.
+
+## Languages — Latin is the pivot
+
+Nine languages: **Latina · English · Français · Español · Italiano · Português · Română · Ελληνικά · Kiswahili**.
+
+The template is not a hub-and-spoke translation of English. Every string is first carried into **Latin** (`i18n/la.json`, the pivot), and every other language is rendered *from the Latin*, never from a sibling. That gives symmetrical alignment across the whole set — the Greek and the Swahili stand at the same distance from the centre as the French does.
+
+- `i18n/source.json` — the extraction manifest (266 keys)
+- `i18n/la.json` — the pivot
+- `i18n/{en,fr,es,it,pt,ro,el,sw}.json` — the leaves, each rendered from the pivot
+- `i18n_runtime.py` — resolution order `<lang> → la → source`, with placeholder-integrity fallback and a coverage report printed on every build
+
+Each parish's own language stays at the bare URL so no existing link breaks; the other eight sit under `/<code>/`. `hreflang` is emitted for all nine plus `x-default`. Proper nouns, street addresses, telephone numbers and clock times are never translated. The 1841 Touret arch inscription is reproduced byte-for-byte in all nine.
 
 ## Heritage
 
@@ -54,6 +68,6 @@ Reference build for the **Knights of Columbus Council of Palms #6673** (Holy Tri
 python3 build.py
 ```
 
-All content is generated from `PARISHES` in `build.py`. Adding a parish is one dict entry.
+All content is generated from `PARISHES` in `build.py` plus the `i18n/` manifests. Adding a parish is one dict entry; adding a language is one `i18n/<code>.json` rendered from the Latin pivot.
 
 *Pour le bien-être du peuple. For the good of the people.*

@@ -1,0 +1,925 @@
+{
+ "ui.home": {
+  "text": "Home"
+ },
+ "ui.about": {
+  "text": "Our parish"
+ },
+ "ui.pastors": {
+  "text": "Clergy"
+ },
+ "ui.church": {
+  "text": "Our church"
+ },
+ "ui.mass": {
+  "text": "Mass schedule"
+ },
+ "ui.bulletin": {
+  "text": "Bulletin"
+ },
+ "ui.life": {
+  "text": "Parish life"
+ },
+ "ui.catechesis": {
+  "text": "Faith formation"
+ },
+ "ui.events": {
+  "text": "Events"
+ },
+ "ui.links": {
+  "text": "Links"
+ },
+ "ui.contact": {
+  "text": "Contact"
+ },
+ "ui.welcome": {
+  "text": "Welcome"
+ },
+ "ui.mass_h1": {
+  "text": "Mass schedule"
+ },
+ "ui.mass_day": {
+  "text": "Day"
+ },
+ "ui.mass_time": {
+  "text": "Time"
+ },
+ "ui.contact_h1": {
+  "text": "Get in touch"
+ },
+ "ui.about_h1": {
+  "text": "Our parish"
+ },
+ "ui.reach_us": {
+  "text": "Reach us"
+ },
+ "ui.on_this_site": {
+  "text": "On this site"
+ },
+ "ui.doctrine": {
+  "text": "Doctrine"
+ },
+ "ui.no_profile": {
+  "text": "No profiling"
+ },
+ "ui.register": {
+  "text": "Language register"
+ },
+ "ui.founder": {
+  "text": "Founder credit"
+ },
+ "ui.portal_back": {
+  "text": "Back to the portal"
+ },
+ "ui.official_source": {
+  "text": "Official source"
+ },
+ "ui.mirror_note": {
+  "text": "Non-official mirror, prepared with care. Parish content: the parish holds all rights."
+ },
+ "ui.no_tracking": {
+  "text": "No tracking. No cookies. No analytics. No third-party scripts other than Google Fonts."
+ },
+ "ui.tribute_line": {
+  "text": "Site built under the EVE Glyph Design doctrine. Design founder:"
+ },
+ "ui.for_people": {
+  "text": "For the good of the people."
+ },
+ "ui.welcome_lead": {
+  "text": "Welcome to the parish website."
+ },
+ "ui.photo_pending": {
+  "text": "Photograph pending. This mirror will not publish an image it does not have the right to publish."
+ },
+ "ui.commitment_h": {
+  "text": "Our commitment"
+ },
+ "ui.commitment_p": {
+  "text": "Locally hosted, no tracking, no ads. The parish owns its content and may take over this mirror at any time."
+ },
+ "ui.about_founded": {
+  "text": "Founded in {year}, {name} serves the community of {city}. It is part of {diocese}."
+ },
+ "ui.about_official": {
+  "text": "This page introduces the parish. For the full history, clergy biographies and church story, please visit the parish's official site:"
+ },
+ "ui.lang_label": {
+  "text": "Language"
+ },
+ "ui.lang_pivot_note": {
+  "text": "Every language on this surface is translated from a single Latin baseline, so no language is a second-class citizen of another."
+ },
+ "portal.title": {
+  "text": "PAIX Parish Platform"
+ },
+ "portal.subtitle": {
+  "text": "Parish Sovereign Gateway — a community-first alternative to predatory hosting"
+ },
+ "portal.meta_desc": {
+  "text": "A parish-owned platform template. Locally hosted, no tracking, no ads. Under the EVE Glyph Design doctrine."
+ },
+ "portal.nav_parishes": {
+  "text": "Parishes"
+ },
+ "portal.nav_ledger": {
+  "text": "Charitable Ledger"
+ },
+ "portal.nav_about": {
+  "text": "About the platform"
+ },
+ "portal.nav_kofc": {
+  "text": "For the Knights"
+ },
+ "portal.nav_doctrine": {
+  "text": "Doctrine"
+ },
+ "portal.hero_h1": {
+  "text": "A parish website belongs to the parish."
+ },
+ "portal.hero_lead": {
+  "text": "{count} parishes across four countries, one design canon, nine languages. Locally hosted. No tracking. No ads. No third-party predators. Every dollar stays in the community."
+ },
+ "portal.hero_p": {
+  "text": "Select a parish to enter its site. Every parish site shares the same EVE Glyph Design canon, so navigation and typography stay familiar. Each parish's official site remains the source of truth — this is a mirror prepared with care, ready to be handed over to the parish's existing IT volunteer whenever they want it."
+ },
+ "portal.ledger_badge": {
+  "text": "Paired with the parish sites"
+ },
+ "portal.ledger_h2": {
+  "text": "The Charitable Ledger"
+ },
+ "portal.ledger_lead": {
+  "text": "A running tally of what the people already do around here — the shopping, the hour of help, the favour from someone with a trade — so it adds up somewhere and the parish can see it."
+ },
+ "portal.ledger_li1": {
+  "text": "Shop through the parish code, the savings go to the parish."
+ },
+ "portal.ledger_li2": {
+  "text": "An hour of help, one witness signs off, it goes on the ledger."
+ },
+ "portal.ledger_li3": {
+  "text": "Someone with a trade — plumber, accountant, nurse — can put an hour in at their real rate."
+ },
+ "portal.ledger_li4": {
+  "text": "One page, the whole parish can read it."
+ },
+ "portal.ledger_cta1": {
+  "text": "See how it works"
+ },
+ "portal.ledger_cta2": {
+  "text": "Letter to the Knights"
+ },
+ "portal.about_h2": {
+  "text": "What this is"
+ },
+ "portal.about_p": {
+  "text": "{count} Catholic parishes, each with a mirrored site under a shared editorial template. Same header, same footer, same navigation — but each parish keeps its own crest, mass times, contact information and diocesan link. If a parish already has an IT volunteer, this is not a replacement; it is an option they can inspect, fork, or ignore."
+ },
+ "portal.pillar1_h": {
+  "text": "Locally hosted"
+ },
+ "portal.pillar1_p": {
+  "text": "Static site on GitHub Pages or the parish's own hosting. No third-party dashboards, no vendor lock-in."
+ },
+ "portal.pillar2_h": {
+  "text": "Zero surveillance"
+ },
+ "portal.pillar2_p": {
+  "text": "No cookies. No analytics. No third-party scripts other than Google Fonts. Marked noindex, nofollow until the parish approves publication."
+ },
+ "portal.pillar3_h": {
+  "text": "Full parish ownership"
+ },
+ "portal.pillar3_p": {
+  "text": "The parish owns its content, its domain, and its exit. Fork the repository, take it home, keep going."
+ },
+ "portal.pillar4_h": {
+  "text": "Consistent design"
+ },
+ "portal.pillar4_p": {
+  "text": "Shared EVE Glyph Design canon so parishioners moving between parish sites feel at home."
+ },
+ "portal.lang_h2": {
+  "text": "Nine languages, one baseline"
+ },
+ "portal.lang_p1": {
+  "text": "This surface is not English with translations bolted on. Every string is carried to a single Latin baseline first, and every other language is rendered from that baseline. Latin is the pivot because it is the language the Church already shares, and because a pivot means no living language is subordinate to another living language."
+ },
+ "portal.lang_p2": {
+  "text": "Latin, English, French, Spanish, Italian, Portuguese, Romanian, Greek and Swahili. Greek is rendered from the Latin baseline like every other tongue. Swahili is here because the platform is for all people, not only the wealthy ones — a person should be able to show this to their mother and their sister in the language they actually think in, and be understood."
+ },
+ "portal.lang_p3": {
+  "text": "Proper names, street addresses, telephone numbers and clock times are never translated. They are rendered exactly as the parish publishes them, in every language."
+ },
+ "portal.kofc_h2": {
+  "text": "For the Knights of Columbus"
+ },
+ "portal.kofc_lead": {
+  "text": "This is what scale in a week looks like — with no hurt feelings."
+ },
+ "portal.kofc_p": {
+  "text": "If the Knights want to standardize parish web presence across a diocese, this template can spin up a new parish site in about an hour. But that is not the offer. The offer is a choice:"
+ },
+ "portal.kofc_li1_b": {
+  "text": "Existing IT volunteer stays put."
+ },
+ "portal.kofc_li1": {
+  "text": "If a Brother Knight or parishioner is already running the parish site, nothing is disrupted. This platform is available if they want to switch or fork; otherwise it sits alongside their existing work as a reference."
+ },
+ "portal.kofc_li2_b": {
+  "text": "Money stays in the parish."
+ },
+ "portal.kofc_li2": {
+  "text": "No annual hosting invoices, no website subscriptions, no advertising credits. Static hosting is free, and every dollar the parish saves stays in the community."
+ },
+ "portal.kofc_li3_b": {
+  "text": "Parishioners stay safe."
+ },
+ "portal.kofc_li3": {
+  "text": "No surveillance, no engagement-optimized feeds, no algorithmic exposure of children, women, or vulnerable people. The parish site is a parish site — not a data-extraction surface for a distant platform."
+ },
+ "portal.kofc_li4_b": {
+  "text": "The Knights stay in charge."
+ },
+ "portal.kofc_li4": {
+  "text": "Ownership, doctrine and exit rights belong to the parish and its Council. The design canon is a shared reference, not a vendor contract."
+ },
+ "portal.kofc_note": {
+  "text": "Council of Palms #6673 (Holy Trinity, Lenexa) is the reference council for this build."
+ },
+ "portal.kofc_xref": {
+  "text": "The Charitable Ledger above pairs with the parish sites — that is the other half of what is on offer."
+ },
+ "portal.doctrine_h2": {
+  "text": "Doctrine"
+ },
+ "portal.doc1_h": {
+  "text": "No profiling"
+ },
+ "portal.doc1_p": {
+  "text": "No parishioner is scored, categorized or targeted by this platform. Ever."
+ },
+ "portal.doc2_h": {
+  "text": "Safety first, betterment second"
+ },
+ "portal.doc2_p": {
+  "text": "Content and identity safety comes before growth, engagement, or monetization."
+ },
+ "portal.doc3_h": {
+  "text": "Founder credit"
+ },
+ "portal.doc3_p": {
+  "text": "Design founder: {founder}, EVE Glyph Design. This credit is irrevocable."
+ },
+ "portal.doc4_h": {
+  "text": "Parish sovereignty"
+ },
+ "portal.doc4_p": {
+  "text": "The parish binds the platform, receives a governance receipt, and may exit with full content export at any time."
+ },
+ "portal.related_h2": {
+  "text": "Related surface"
+ },
+ "portal.rel1_h": {
+  "text": "PAIX Educational Game"
+ },
+ "portal.rel1_p": {
+  "text": "The parishioner-facing educational video game — the game surface of the EVE Glyph Design education program, distributed through the parish and Church portal. Education first; catechetical outputs stay disabled until Church review is complete. Safety first, betterment second."
+ },
+ "portal.rel2_h": {
+  "text": "Holy Trinity Charitable Ledger (Lenexa pilot)"
+ },
+ "portal.rel2_p": {
+  "text": "The Holy Trinity Lenexa mutual-aid economy pilot. One good deed. One witness. One hour. One token."
+ },
+ "portal.foot_col1_h": {
+  "text": "PAIX Parish Platform"
+ },
+ "portal.foot_col1_p": {
+  "text": "A Parish Sovereign Gateway reference build. Under the EVE Glyph Design doctrine. Contact the parish directly — see each parish page for details."
+ },
+ "portal.foot_col2_h": {
+  "text": "Parishes"
+ },
+ "portal.foot_col3_h": {
+  "text": "Reference"
+ },
+ "portal.foot_ref1": {
+  "text": "Sainte-Anne source repository"
+ },
+ "portal.foot_ref2": {
+  "text": "KofC #6673 outreach"
+ },
+ "portal.foot_ref3": {
+  "text": "GoDaddy-Killer migration kit"
+ },
+ "portal.foot_tribute1": {
+  "text": "Platform designed under the doctrine EVE Glyph Design. Design founder:"
+ },
+ "portal.foot_tribute2": {
+  "text": "Every parish retains full ownership of its own content, domain and exit path. This is a mirror prepared with care, not a takeover."
+ },
+ "portal.foot_photos": {
+  "text": "Church photographs:"
+ },
+ "region.united-states.name": {
+  "text": "United States"
+ },
+ "region.united-states.sub": {
+  "text": "Lenexa, Kansas and St. Augustine, Florida."
+ },
+ "region.montreal.name": {
+  "text": "Montréal"
+ },
+ "region.montreal.sub": {
+  "text": "The one on the mountain."
+ },
+ "region.atlantic-canada.name": {
+  "text": "Atlantic Canada"
+ },
+ "region.atlantic-canada.sub": {
+  "text": "New Brunswick, Prince Edward Island, Nova Scotia. Fredericton first — the English parish and the French one, in the order they came."
+ },
+ "region.mexico.name": {
+  "text": "México"
+ },
+ "region.mexico.sub": {
+  "text": "Bahía de Banderas, Nayarit — the marina coast."
+ },
+ "region.greece.name": {
+  "text": "Ελλάδα · Greece"
+ },
+ "region.greece.sub": {
+  "text": "Nafplio, Argolis — the first capital, and the church that keeps the names of the Philhellenes."
+ },
+ "footnote.h2": {
+  "text": "Footnote — and who were the Acadians, anyway?"
+ },
+ "footnote.aside": {
+  "text": "Down here at the bottom, because it is a footnote and not a sales pitch."
+ },
+ "footnote.p1": {
+  "text": "Long before any of the parishes above, there was one at Port-Royal, in what is now Nova Scotia: Saint-Jean-Baptiste, founded 1613. Capuchin friars ran the mission from 1632. First Catholic parish in what eventually became Canada."
+ },
+ "footnote.p2": {
+  "text": "Then most of the paperwork stopped existing. In 1654 a New England force under Robert Sedgwick took Port-Royal, killed the Capuchin superior Léonard de Chartres and shipped his confrères out — against the terms of the capitulation they had just signed. Two registers survive: 1702–1728 and 1727–1755, now at the Centre acadien of Université Sainte-Anne. Everything before 1702 is gone."
+ },
+ "footnote.p3": {
+  "text": "The Greek card above is the other half of the same idea. In Nafplio, a wooden arch put up in 1841 carries the names of roughly 280 foreigners who died for somebody else's country, each one with the place he fell written beside it. Somebody decided those names were worth keeping. In Port-Royal, somebody decided ours were not."
+ },
+ "footnote.p4": {
+  "text": "People ask whether Rome kept a copy. Rome does governance, not sacraments — there is no central baptismal register in the Vatican. Baptisms are written down in the parish, full stop. When the parish burns, that is the end of it."
+ },
+ "footnote.p5": {
+  "text": "One set did travel. The Saint-Charles-des-Mines registers from Grand-Pré went with the deported Acadians to Maryland, then to Louisiana, and were handed to the priest at Fort San Gabriel in 1767. They sit in the Diocese of Baton Rouge vaults today."
+ },
+ "footnote.p6": {
+  "text": "And no, this is not a claim to being the oldest Catholic anything in North America. St. Augustine, Florida has 1565 — it is the second card at the top of this page. San Miguel Chapel in Santa Fe is around 1610. Port-Royal is just the first one that is ours, and the one whose paperwork got burned."
+ },
+ "footnote.more": {
+  "text": "Full write-up — the Acadian lineage page"
+ },
+ "parish.holy-trinity.tagline": {
+  "text": "Parish, school & early education center — Archdiocese of Kansas City in Kansas",
+  "note": "source language: en-US"
+ },
+ "parish.holy-trinity.portal_blurb": {
+  "text": "Home parish of Knights of Columbus Council of Palms #6673.",
+  "note": "source language: en-US"
+ },
+ "parish.holy-trinity.founded_line": {
+  "text": "Founded 1979 · Archdiocese of Kansas City in Kansas · Knights of Columbus Council of Palms #6673",
+  "note": "source language: en-US"
+ },
+ "parish.holy-trinity.diocese": {
+  "text": "Archdiocese of Kansas City in Kansas · Knights of Columbus Council of Palms #6673",
+  "note": "source language: en-US"
+ },
+ "parish.holy-trinity.sched.0": {
+  "text": "Saturday Vigil",
+  "note": "day/occasion label only; the clock time is never translated (source: en-US)"
+ },
+ "parish.holy-trinity.sched.1": {
+  "text": "Sunday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-US)"
+ },
+ "parish.holy-trinity.sched.2": {
+  "text": "Monday – Friday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-US)"
+ },
+ "parish.holy-trinity.sched.3": {
+  "text": "Saturday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-US)"
+ },
+ "parish.cathedral-basilica-st-augustine.tagline": {
+  "text": "America’s first parish — a congregation at Mass since 8 September 1565",
+  "note": "source language: en-US"
+ },
+ "parish.cathedral-basilica-st-augustine.portal_blurb": {
+  "text": "The oldest Catholic congregation in the continental United States. Mass has been said here since 1565.",
+  "note": "source language: en-US"
+ },
+ "parish.cathedral-basilica-st-augustine.city_line": {
+  "text": "St. Augustine, Florida · 38 Cathedral Place",
+  "note": "source language: en-US"
+ },
+ "parish.cathedral-basilica-st-augustine.status_note": {
+  "text": "The parish keeps a second church, St. Benedict the Moor, at 86 M.L. King Avenue, where the 8:00 AM Sunday Mass is celebrated. Rector: Very Rev. John Tetlow. Bishop: Most Rev. Erik T. Pohlmeier. Parish mail goes to 35 Treasury Street, St. Augustine, FL 32084. The office is open Monday to Thursday 8:00 AM to 3:00 PM and Friday 8:00 AM to 2:00 PM; the cathedral itself is open weekdays 8:00 AM to 5:00 PM. The parish is served by Knights of Columbus First Florida Council 611.",
+  "note": "source language: en-US"
+ },
+ "parish.cathedral-basilica-st-augustine.schedule_note": {
+  "text": "Adoration hours follow the parish bulletin of 4 January 2026; the static website page still shows an older ending time. The 8:00 AM Sunday Mass is at St. Benedict the Moor, the second church of the parish.",
+  "note": "source language: en-US"
+ },
+ "parish.cathedral-basilica-st-augustine.founded_line": {
+  "text": "Congregation 1565 · Present church 1793–1797 · Minor basilica 1976 · Diocese of St. Augustine",
+  "note": "source language: en-US"
+ },
+ "parish.cathedral-basilica-st-augustine.diocese": {
+  "text": "Diocese of St. Augustine",
+  "note": "source language: en-US"
+ },
+ "parish.cathedral-basilica-st-augustine.sched.0": {
+  "text": "Saturday Vigil",
+  "note": "day/occasion label only; the clock time is never translated (source: en-US)"
+ },
+ "parish.cathedral-basilica-st-augustine.sched.1": {
+  "text": "Sunday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-US)"
+ },
+ "parish.cathedral-basilica-st-augustine.sched.2": {
+  "text": "Monday – Friday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-US)"
+ },
+ "parish.cathedral-basilica-st-augustine.sched.3": {
+  "text": "Saturday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-US)"
+ },
+ "parish.cathedral-basilica-st-augustine.sched.4": {
+  "text": "Reconciliation — Saturday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-US)"
+ },
+ "parish.cathedral-basilica-st-augustine.sched.5": {
+  "text": "Adoration — weekdays",
+  "note": "day/occasion label only; the clock time is never translated (source: en-US)"
+ },
+ "parish.cathedral-basilica-st-augustine.sched.6": {
+  "text": "St. Benedict the Moor — Sunday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-US)"
+ },
+ "parish.saint-joseph-oratory.tagline": {
+  "text": "Basilique mineure et sanctuaire national — fondé en 1904 par saint frère André",
+  "note": "source language: fr-CA"
+ },
+ "parish.saint-joseph-oratory.portal_blurb": {
+  "text": "La plus grande église du Canada, sur le flanc du mont Royal. Fondée en 1904 par un portier, saint frère André.",
+  "note": "source language: fr-CA"
+ },
+ "parish.saint-joseph-oratory.status_note": {
+  "text": "Sanctuaire national et basilique mineure — non pas une paroisse territoriale.",
+  "note": "source language: fr-CA"
+ },
+ "parish.saint-joseph-oratory.founded_line": {
+  "text": "Fondé 1904 · Basilique mineure 1955 · Lieu historique national du Canada",
+  "note": "source language: fr-CA"
+ },
+ "parish.saint-joseph-oratory.diocese": {
+  "text": "Archidiocèse de Montréal · Congrégation de Sainte-Croix",
+  "note": "source language: fr-CA"
+ },
+ "parish.saint-joseph-oratory.sched.0": {
+  "text": "Dimanche — crypte (français)",
+  "note": "day/occasion label only; the clock time is never translated (source: fr-CA)"
+ },
+ "parish.saint-joseph-oratory.sched.1": {
+  "text": "Dimanche — basilique (français)",
+  "note": "day/occasion label only; the clock time is never translated (source: fr-CA)"
+ },
+ "parish.saint-joseph-oratory.sched.2": {
+  "text": "Dimanche — anglais / espagnol",
+  "note": "day/occasion label only; the clock time is never translated (source: fr-CA)"
+ },
+ "parish.saint-joseph-oratory.sched.3": {
+  "text": "Lundi – samedi — crypte",
+  "note": "day/occasion label only; the clock time is never translated (source: fr-CA)"
+ },
+ "parish.saint-joseph-oratory.sched.4": {
+  "text": "Lundi – samedi — anglais",
+  "note": "day/occasion label only; the clock time is never translated (source: fr-CA)"
+ },
+ "parish.saint-joseph-oratory.sched.5": {
+  "text": "Mercredi — messe pour les malades",
+  "note": "day/occasion label only; the clock time is never translated (source: fr-CA)"
+ },
+ "parish.saint-dunstan-fredericton.tagline": {
+  "text": "The founding Catholic parish of Fredericton — first cathedral of New Brunswick",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-dunstan-fredericton.portal_blurb": {
+  "text": "The founding parish of Catholic Fredericton, and the first cathedral of New Brunswick.",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-dunstan-fredericton.city_line": {
+  "text": "Fredericton, New Brunswick · 120 Regent Street",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-dunstan-fredericton.status_note": {
+  "text": "St. Dunstan's is today the principal church of St. Mary Magdalene Parish, an amalgamated parish that also takes in St. Columba at Fredericton Junction and Sts. John and Paul at New Maryland. Pastor: Rev. Peter Osborne; Bishop of Saint John: Most Rev. Christian Riesbeck, C.C. Parish mail goes to PO Box 187, Fredericton, New Brunswick E3B 4Y9. A resident priest has served here since Fr. Michael McSweeney arrived in 1827, and the church built under Bishop William Dollard in the 1840s was the first Roman Catholic cathedral in New Brunswick — Dollard was consecrated in it on 11 June 1843. When the Great Fire of 11 November 1850 took more than three hundred buildings in Fredericton, St. Dunstan's was one of the few left standing; parishioners are said to have held the roof against the embers with their own bodies. The present church, with its ninety-two foot spire, was consecrated on 15 August 1965. This is the parish that carried the French-speaking Catholics of Fredericton for sixteen years — French Mass twice a month from 1965, then a curate of St. Dunstan's assigned to them from 1978 — until Sainte-Anne-des-Pays-Bas was erected as a parish in its own right on 2 September 1981.",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-dunstan-fredericton.schedule_note": {
+  "text": "The weekend times — Saturday 4:00 PM, Sunday 9:00 AM and 11:30 AM — agree across the diocesan parish finder, the parish's own site and third-party listings. The weekday times do not: the diocese, the parish site and the aggregators each publish a different set. The weekday rows above follow the parish's own site, which is the closest thing to a first-hand source, but call the office at (506) 444-6001 before making a weekday trip.",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-dunstan-fredericton.founded_line": {
+  "text": "Resident priest 1827 · First cathedral of New Brunswick 1843 · Present church 1965 · Diocese of Saint John",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-dunstan-fredericton.diocese": {
+  "text": "Diocese of Saint John · St. Mary Magdalene Parish",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-dunstan-fredericton.sched.0": {
+  "text": "Saturday Vigil",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-dunstan-fredericton.sched.1": {
+  "text": "Sunday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-dunstan-fredericton.sched.2": {
+  "text": "First Saturday of the month",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-dunstan-fredericton.sched.3": {
+  "text": "Thursday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-dunstan-fredericton.sched.4": {
+  "text": "Wednesday — Benediction, then Mass",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-dunstan-fredericton.sched.5": {
+  "text": "Friday — Rosary to St. Joseph, then Mass",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-dunstan-fredericton.sched.6": {
+  "text": "Confession — Saturday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-dunstan-fredericton.sched.7": {
+  "text": "Adoration — Thursday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.sainte-anne.tagline": {
+  "text": "Paroisse catholique francophone fondée en 1981",
+  "note": "source language: fr-CA"
+ },
+ "parish.sainte-anne.portal_blurb": {
+  "text": "Paroisse francophone fondée en 1981. Miroir non-officiel sous la doctrine EVE Glyph.",
+  "note": "source language: fr-CA"
+ },
+ "parish.sainte-anne.city_line": {
+  "text": "Fredericton, Nouveau-Brunswick · 715 rue Priestman",
+  "note": "source language: fr-CA"
+ },
+ "parish.sainte-anne.founded_line": {
+  "text": "Paroisse fondée 1981 · Église 2001 · Archidiocèse de Moncton",
+  "note": "source language: fr-CA"
+ },
+ "parish.sainte-anne.diocese": {
+  "text": "Archidiocèse de Moncton",
+  "note": "source language: fr-CA"
+ },
+ "parish.sainte-anne.sched.0": {
+  "text": "Samedi soir",
+  "note": "day/occasion label only; the clock time is never translated (source: fr-CA)"
+ },
+ "parish.sainte-anne.sched.1": {
+  "text": "Dimanche",
+  "note": "day/occasion label only; the clock time is never translated (source: fr-CA)"
+ },
+ "parish.sainte-anne.sched.2": {
+  "text": "Lundi, mardi et vendredi",
+  "note": "day/occasion label only; the clock time is never translated (source: fr-CA)"
+ },
+ "parish.saint-augustine.tagline": {
+  "text": "Paroisse acadienne fondée en 1874 — patrimoine et famille",
+  "note": "source language: fr-CA"
+ },
+ "parish.saint-augustine.portal_blurb": {
+  "text": "Paroisse acadienne du village de Paquetville, patrimoine familial des Thériault.",
+  "note": "source language: fr-CA"
+ },
+ "parish.saint-augustine.diocese": {
+  "text": "Diocèse de Bathurst",
+  "note": "source language: fr-CA"
+ },
+ "parish.saint-augustine.sched.0": {
+  "text": "Samedi soir",
+  "note": "day/occasion label only; the clock time is never translated (source: fr-CA)"
+ },
+ "parish.saint-augustine.sched.1": {
+  "text": "Dimanche",
+  "note": "day/occasion label only; the clock time is never translated (source: fr-CA)"
+ },
+ "parish.saint-augustine.sched.2": {
+  "text": "Mercredi et vendredi",
+  "note": "day/occasion label only; the clock time is never translated (source: fr-CA)"
+ },
+ "parish.saint-dunstan.tagline": {
+  "text": "Mother church of the Diocese of Charlottetown — founded 1816",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-dunstan.portal_blurb": {
+  "text": "Mother church of the Diocese of Charlottetown. Founded 1816.",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-dunstan.city_line": {
+  "text": "Charlottetown, Prince Edward Island · 65 Great George Street",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-dunstan.status_note": {
+  "text": "Four churches have stood on this corner of Great George Street since 1816: the wooden chapel of 1816, a larger wooden cathedral from 1843, the stone cathedral dedicated in 1907, and the present basilica. Fire started in the sanctuary on the night of 7 March 1913 and took the roof and the whole interior; the walls and façade survived, and the church was rebuilt inside its own stone shell and rededicated on 24 September 1919. Pope Pius XI granted the title of basilica, conferred at the consecration of 26 June 1929 — a hundred years to the year after the diocese was created. It has been a National Historic Site of Canada since 1990. Bishop of Charlottetown: Most Rev. Joseph Dabrowski, C.S.M.A. Knights of Columbus Our Lady of Fatima Council #824, founded in 1903 and the first council east of Montréal, meets here.",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-dunstan.founded_line": {
+  "text": "Parish 1816 · Cathedral 1829 · Fire 1913 · Present church 1919 · Basilica 1929 · National Historic Site 1990",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-dunstan.diocese": {
+  "text": "Diocese of Charlottetown",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-dunstan.sched.0": {
+  "text": "Saturday Vigil",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-dunstan.sched.1": {
+  "text": "Sunday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-dunstan.sched.2": {
+  "text": "Tuesday – Friday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-catherine.tagline": {
+  "text": "Serving Halifax's West End since 1948 — home of the Franciscans of Halifax",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-catherine.portal_blurb": {
+  "text": "Home of the Franciscans of Halifax. West End Halifax since 1948.",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-catherine.diocese": {
+  "text": "Archdiocese of Halifax-Yarmouth · St. Francis and St. Clare of Assisi Parish",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-catherine.sched.0": {
+  "text": "Sunday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-catherine.sched.1": {
+  "text": "Tuesday – Friday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-catherine.sched.2": {
+  "text": "Saturday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-mary-basilica.tagline": {
+  "text": "Mother church of the Archdiocese of Halifax-Yarmouth — Gothic Revival, National Historic Site",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-mary-basilica.portal_blurb": {
+  "text": "Mother church of the Archdiocese of Halifax-Yarmouth. Gothic Revival, National Historic Site of Canada.",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-mary-basilica.diocese": {
+  "text": "Archdiocese of Halifax-Yarmouth",
+  "note": "source language: en-CA"
+ },
+ "parish.saint-mary-basilica.sched.0": {
+  "text": "Sunday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-mary-basilica.sched.1": {
+  "text": "Monday & Wednesday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-mary-basilica.sched.2": {
+  "text": "Tuesday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.saint-mary-basilica.sched.3": {
+  "text": "Thursday – Saturday",
+  "note": "day/occasion label only; the clock time is never translated (source: en-CA)"
+ },
+ "parish.sagrada-familia-nuevo-vallarta.tagline": {
+  "text": "La cuasiparroquia de Las Jarretaderas, a la entrada de Nuevo Vallarta y su marina",
+  "note": "source language: es-MX"
+ },
+ "parish.sagrada-familia-nuevo-vallarta.portal_blurb": {
+  "text": "La parroquia del pueblo de Las Jarretaderas, a la entrada de Nuevo Vallarta, la marina y el corredor hospitalario.",
+  "note": "source language: es-MX"
+ },
+ "parish.sagrada-familia-nuevo-vallarta.schedule_note": {
+  "text": "Horario según el directorio diocesano de Tepic. Conviene confirmar por teléfono antes de asistir.",
+  "note": "source language: es-MX"
+ },
+ "parish.sagrada-familia-nuevo-vallarta.founded_line": {
+  "text": "Cuasiparroquia · Diócesis de Tepic · Decanato Bahía de Banderas",
+  "note": "source language: es-MX"
+ },
+ "parish.sagrada-familia-nuevo-vallarta.diocese": {
+  "text": "Diócesis de Tepic · Decanato Bahía de Banderas",
+  "note": "source language: es-MX"
+ },
+ "parish.sagrada-familia-nuevo-vallarta.sched.0": {
+  "text": "Domingo",
+  "note": "day/occasion label only; the clock time is never translated (source: es-MX)"
+ },
+ "parish.sagrada-familia-nuevo-vallarta.sched.1": {
+  "text": "Martes – jueves",
+  "note": "day/occasion label only; the clock time is never translated (source: es-MX)"
+ },
+ "parish.sagrada-familia-nuevo-vallarta.sched.2": {
+  "text": "Jueves",
+  "note": "day/occasion label only; the clock time is never translated (source: es-MX)"
+ },
+ "parish.sagrada-familia-nuevo-vallarta.sched.3": {
+  "text": "Sábado",
+  "note": "day/occasion label only; the clock time is never translated (source: es-MX)"
+ },
+ "parish.sagrada-familia-nuevo-vallarta.sched.4": {
+  "text": "Confesiones — domingo",
+  "note": "day/occasion label only; the clock time is never translated (source: es-MX)"
+ },
+ "parish.santa-cruz-huanacaxtle.tagline": {
+  "text": "La parroquia del pueblo pesquero y de la Marina Riviera Nayarit",
+  "note": "source language: es-MX"
+ },
+ "parish.santa-cruz-huanacaxtle.portal_blurb": {
+  "text": "Parroquia de un pueblo pesquero de Nayarit convertido en puerto náutico, junto a la Marina Riviera Nayarit.",
+  "note": "source language: es-MX"
+ },
+ "parish.santa-cruz-huanacaxtle.schedule_note": {
+  "text": "Horario reportado por feligreses; algunos directorios lo publican mal. Conviene confirmar por teléfono.",
+  "note": "source language: es-MX"
+ },
+ "parish.santa-cruz-huanacaxtle.founded_line": {
+  "text": "Diócesis de Tepic · Decanato Bahía de Banderas",
+  "note": "source language: es-MX"
+ },
+ "parish.santa-cruz-huanacaxtle.diocese": {
+  "text": "Diócesis de Tepic · Decanato Bahía de Banderas",
+  "note": "source language: es-MX"
+ },
+ "parish.santa-cruz-huanacaxtle.sched.0": {
+  "text": "Domingo",
+  "note": "day/occasion label only; the clock time is never translated (source: es-MX)"
+ },
+ "parish.santa-cruz-huanacaxtle.sched.1": {
+  "text": "Sábado",
+  "note": "day/occasion label only; the clock time is never translated (source: es-MX)"
+ },
+ "parish.santa-cruz-huanacaxtle.sched.2": {
+  "text": "Oficina parroquial",
+  "note": "day/occasion label only; the clock time is never translated (source: es-MX)"
+ },
+ "parish.metamorphosis-nafplio.tagline": {
+  "text": "Η «Φραγκοκκλησιά» της Παλιάς Πόλης — το αρχαιότερο μνημείο των Φιλελλήνων στην Ελλάδα",
+  "note": "source language: el-GR"
+ },
+ "parish.metamorphosis-nafplio.portal_blurb": {
+  "text": "Τζαμί που έγινε εκκλησία το 1839. Μέσα στέκει η Αψίδα του Touret, με τα ονόματα περίπου 280 Φιλελλήνων που έπεσαν για την Ελλάδα.",
+  "note": "source language: el-GR"
+ },
+ "parish.metamorphosis-nafplio.city_line": {
+  "text": "Ναύπλιο, Αργολίδα · οδός Φωτομάρα, στα σκαλοπάτια της οδού Ποταμιάνου",
+  "note": "source language: el-GR"
+ },
+ "parish.metamorphosis-nafplio.status_note": {
+  "text": "Διατηρητέο μνημείο — εντός του κηρυγμένου ιστορικού τόπου της Παλιάς Πόλης Ναυπλίου.",
+  "note": "source language: el-GR"
+ },
+ "parish.metamorphosis-nafplio.schedule_note": {
+  "text": "Το ωράριο προέρχεται από την ιστοσελίδα της ενορίας και δεν έχει επιβεβαιωθεί πρόσφατα. Τηλεφωνήστε πριν πάτε.",
+  "note": "source language: el-GR"
+ },
+ "parish.metamorphosis-nafplio.founded_line": {
+  "text": "Παραχώρηση 1839 · Ενορία 1840 · Ιερά Αρχιεπισκοπή Καθολικών Αθηνών",
+  "note": "source language: el-GR"
+ },
+ "parish.metamorphosis-nafplio.diocese": {
+  "text": "Ιερά Αρχιεπισκοπή Καθολικών Αθηνών",
+  "note": "source language: el-GR"
+ },
+ "parish.metamorphosis-nafplio.sched.0": {
+  "text": "Κυριακή και εορτές",
+  "note": "day/occasion label only; the clock time is never translated (source: el-GR)"
+ },
+ "parish.metamorphosis-nafplio.sched.1": {
+  "text": "Δευτέρα – Τετάρτη",
+  "note": "day/occasion label only; the clock time is never translated (source: el-GR)"
+ },
+ "parish.metamorphosis-nafplio.sched.2": {
+  "text": "Πέμπτη – Σάββατο",
+  "note": "day/occasion label only; the clock time is never translated (source: el-GR)"
+ },
+ "page.index_blurb": {
+  "text": "{name}, founded in {founded}, is located in {city}. This site is a non-official mirror prepared under the EVE Glyph Design doctrine, with the same editorial care as the parish's official site. The official source remains {source_link}.",
+  "note": "{name} {founded} {city} {source_link} are substituted at build time; keep all four placeholders"
+ },
+ "page.index_blurb_nofound": {
+  "text": "{name} is located in {city}. This site is a non-official mirror prepared under the EVE Glyph Design doctrine, with the same editorial care as the parish's official site. The official source remains {source_link}.",
+  "note": "variant used when the founding year is unknown; keep all three placeholders"
+ },
+ "page.card_title": {
+  "text": "One parish, one people"
+ },
+ "page.card_body": {
+  "text": "Faith lived locally, with a community that prays, celebrates and cares for one another."
+ },
+ "page.life_h1": {
+  "text": "Parish life"
+ },
+ "page.life_intro": {
+  "text": "The active groups in the parish. To learn more or to join a group, contact the parish office."
+ },
+ "page.life_item.0": {
+  "text": "Prayer group",
+  "note": "short list item, two or three words"
+ },
+ "page.life_item.1": {
+  "text": "Eucharistic adoration",
+  "note": "short list item, two or three words"
+ },
+ "page.life_item.2": {
+  "text": "Choir",
+  "note": "short list item, two or three words"
+ },
+ "page.life_item.3": {
+  "text": "Faith formation",
+  "note": "short list item, two or three words"
+ },
+ "page.life_item.4": {
+  "text": "Knights of Columbus",
+  "note": "short list item, two or three words"
+ },
+ "page.life_item.5": {
+  "text": "Parish pastoral council",
+  "note": "short list item, two or three words"
+ },
+ "page.life_item.6": {
+  "text": "Outreach to those in need",
+  "note": "short list item, two or three words"
+ },
+ "page.life_item.7": {
+  "text": "Parish volunteering",
+  "note": "short list item, two or three words"
+ },
+ "page.dt_address": {
+  "text": "Address"
+ },
+ "page.dt_phone": {
+  "text": "Phone"
+ },
+ "page.dt_email": {
+  "text": "Email"
+ },
+ "page.dt_diocese": {
+  "text": "Diocese"
+ },
+ "page.tel_abbrev": {
+  "text": "Tel.",
+  "note": "abbreviation for telephone used in the footer, with trailing period"
+ },
+ "nafplio.location": {
+  "text": "The church stands in the Old Town of Nafplio, up the steps above the square of Agios Spyridon. People in Nafplio call it the Frankoklisia — the Frankish church. It belongs to {diocese}.",
+  "note": "keep the {diocese} placeholder; Frankoklisia and Agios Spyridon are proper nouns"
+ },
+ "nafplio.history": {
+  "text": "The building served as a mosque in the years before the Greek War of Independence. In 1839 the Municipality of Nafplio ceded it to the Catholic Church by royal decree of King Otto, and in 1840 it was consecrated to the Transfiguration of the Saviour — a choice of name meant to stand for the transfiguration of the country itself after the Ottoman period. The mihrab is still there inside."
+ },
+ "nafplio.arch_h": {
+  "text": "The Touret Arch (1841)"
+ },
+ "nafplio.arch_p": {
+  "text": "Inside the church stands a wooden arch shaped like the front of an ancient temple, paid for by the French philhellene Auguste Hilarion Touret. It carries the inscription A LA MEMOIRE DES PHILHELLENES MORTS POUR L'INDEPENDANCE and the names of roughly 280 foreign volunteers, each with the place where he fell written beside it. It is the oldest monument to the Philhellenes in Greece, and it was restored in 2002.",
+  "note": "the French inscription must be reproduced verbatim in every language, never translated"
+ },
+ "nafplio.crypt_h": {
+  "text": "The crypt"
+ },
+ "nafplio.crypt_p": {
+  "text": "Under the floor there is a Venetian cistern about three metres deep. In 1839 the bones of philhellenes and of Bavarian soldiers lost to typhoid fever in 1833–1834 were moved into it. In 1990 the relief Philhellenes Fighting for the Greeks, by Nikolaos Dagoulis, was installed there."
+ },
+ "nafplio.card_title": {
+  "text": "One parish, one people"
+ },
+ "nafplio.card_body": {
+  "text": "Faith lives where it stands, with a community that prays, celebrates and looks after one another."
+ }
+}

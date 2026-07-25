@@ -14,6 +14,9 @@ import os, shutil, html
 from pathlib import Path
 from textwrap import dedent
 
+from i18n_runtime import (LANGS, LANG_CODES, PIVOT, DEFAULT, NATIVE_OF,
+                          translator, coverage)
+
 ROOT = Path(__file__).parent
 PARISHES_DIR = ROOT / "parishes"
 
@@ -114,6 +117,70 @@ PARISHES = [
         "photo_credit_url": "https://commons.wikimedia.org/wiki/File:Oratoire_Saint-Joseph_du_Mont-Royal_-_Montreal.jpg",
     },
     {
+        "slug": "saint-dunstan-fredericton",
+        "name": "St. Dunstan's Church",
+        "short": "St. Dunstan's \u2014 Fredericton",
+        "city": "Fredericton, New Brunswick",
+        "founded": "1827",
+        "lang": "en-CA",
+        "official_url": "https://stmarymagdaleneparish.ca",
+        "address": "120 Regent Street, Fredericton, New Brunswick E3B 3W6",
+        "phone": "(506) 444-6001",
+        "email": "office@stmarymagdaleneparish.ca",
+        "tagline": "The founding Catholic parish of Fredericton \u2014 first cathedral of New Brunswick",
+        "diocese": "Diocese of Saint John \u00b7 St. Mary Magdalene Parish",
+        "schedule": [
+            ("Saturday Vigil", "4:00 PM"),
+            ("Sunday", "9:00 AM & 11:30 AM"),
+            ("First Saturday of the month", "9:00 AM"),
+            ("Thursday", "12:05 PM"),
+            ("Wednesday \u2014 Benediction, then Mass", "6:00 PM \u00b7 6:30 PM"),
+            ("Friday \u2014 Rosary to St. Joseph, then Mass", "6:00 PM \u00b7 6:30 PM"),
+            ("Confession \u2014 Saturday", "from 2:30 PM"),
+            ("Adoration \u2014 Thursday", "1:00 \u2013 5:00 PM"),
+        ],
+        "schedule_note": (
+            "The weekend times \u2014 Saturday 4:00 PM, Sunday 9:00 AM and 11:30 AM \u2014 agree across the "
+            "diocesan parish finder, the parish's own site and third-party listings. The weekday times "
+            "do not: the diocese, the parish site and the aggregators each publish a different set. "
+            "The weekday rows above follow the parish's own site, which is the closest thing to a "
+            "first-hand source, but call the office at (506) 444-6001 before making a weekday trip."
+        ),
+        "crest_style": "spire",
+        "portal_blurb": (
+            "The founding parish of Catholic Fredericton, and the first cathedral of New Brunswick."
+        ),
+        "portal_blurb_override": (
+            "The founding parish of Catholic Fredericton \u2014 a resident priest from 1827, and the first "
+            "cathedral of the Diocese of New Brunswick. Sainte-Anne-des-Pays-Bas grew up inside it "
+            "before going out on its own in 1981."
+        ),
+        "region": "atlantic-canada",
+        "photo_status": "pending",
+        "photo_alt": "St. Dunstan's Church, 120 Regent Street, Fredericton, New Brunswick",
+        "city_line": "Fredericton, New Brunswick \u00b7 120 Regent Street",
+        "status_note": (
+            "St. Dunstan's is today the principal church of St. Mary Magdalene Parish, an amalgamated "
+            "parish that also takes in St. Columba at Fredericton Junction and Sts. John and Paul at "
+            "New Maryland. Pastor: Rev. Peter Osborne; Bishop of Saint John: Most Rev. Christian "
+            "Riesbeck, C.C. Parish mail goes to PO Box 187, Fredericton, New Brunswick E3B 4Y9. "
+            "A resident priest has served here since Fr. Michael McSweeney arrived in 1827, and the "
+            "church built under Bishop William Dollard in the 1840s was the first Roman Catholic "
+            "cathedral in New Brunswick \u2014 Dollard was consecrated in it on 11 June 1843. When the "
+            "Great Fire of 11 November 1850 took more than three hundred buildings in Fredericton, "
+            "St. Dunstan's was one of the few left standing; parishioners are said to have held the "
+            "roof against the embers with their own bodies. The present church, with its ninety-two "
+            "foot spire, was consecrated on 15 August 1965. This is the parish that carried the "
+            "French-speaking Catholics of Fredericton for sixteen years \u2014 French Mass twice a month "
+            "from 1965, then a curate of St. Dunstan's assigned to them from 1978 \u2014 until "
+            "Sainte-Anne-des-Pays-Bas was erected as a parish in its own right on 2 September 1981."
+        ),
+        "founded_line": (
+            "Resident priest 1827 \u00b7 First cathedral of New Brunswick 1843 \u00b7 "
+            "Present church 1965 \u00b7 Diocese of Saint John"
+        ),
+    },
+    {
         "slug": "sainte-anne",
         "name": "Paroisse Sainte-Anne-des-Pays-Bas",
         "short": "Sainte-Anne-des-Pays-Bas",
@@ -169,10 +236,27 @@ PARISHES = [
         "founded": "1816",
         "lang": "en-CA",
         "official_url": "https://www.stdunstanspei.com",
-        "address": "45 Great George Street, Charlottetown, PE C1A 4J8",
+        "address": "65 Great George Street, Charlottetown, PE C1A 4J8",
         "phone": "(902) 894-3486",
         "email": "office@stdunstanspei.com",
         "tagline": "Mother church of the Diocese of Charlottetown — founded 1816",
+        "city_line": "Charlottetown, Prince Edward Island · 65 Great George Street",
+        "founded_line": (
+            "Parish 1816 · Cathedral 1829 · Fire 1913 · Present church 1919 · "
+            "Basilica 1929 · National Historic Site 1990"
+        ),
+        "status_note": (
+            "Four churches have stood on this corner of Great George Street since 1816: the wooden "
+            "chapel of 1816, a larger wooden cathedral from 1843, the stone cathedral dedicated in "
+            "1907, and the present basilica. Fire started in the sanctuary on the night of 7 March "
+            "1913 and took the roof and the whole interior; the walls and façade survived, and the "
+            "church was rebuilt inside its own stone shell and rededicated on 24 September 1919. "
+            "Pope Pius XI granted the title of basilica, conferred at the consecration of 26 June "
+            "1929 — a hundred years to the year after the diocese was created. It has been a "
+            "National Historic Site of Canada since 1990. Bishop of Charlottetown: Most Rev. Joseph "
+            "Dabrowski, C.S.M.A. Knights of Columbus Our Lady of Fatima Council #824, founded in "
+            "1903 and the first council east of Montréal, meets here."
+        ),
         "diocese": "Diocese of Charlottetown",
         "schedule": [
             ("Saturday Vigil", "4:00 PM"),
@@ -181,7 +265,14 @@ PARISHES = [
         ],
         "crest_style": "gothic",
         "portal_blurb": "Mother church of the Diocese of Charlottetown. Founded 1816.",
+        "portal_blurb_override": (
+            "Mother church of the Diocese of Charlottetown. Fourth church on the same corner — "
+            "rebuilt inside its own walls after the fire of 1913."
+        ),
         "region": "atlantic-canada",
+        "photo_alt": "St. Dunstan's Basilica, Great George Street, Charlottetown — front elevation with both spires",
+        "photo_credit": "Photograph: SoftwareSimian, CC BY-SA 4.0, via Wikimedia Commons",
+        "photo_credit_url": "https://commons.wikimedia.org/wiki/File:St._Dunstan%27s_Basilica_(Charlottetown_PEI)_front_2015-May-25.jpg",
     },
     {
         "slug": "saint-catherine",
@@ -311,173 +402,6 @@ PARISHES = [
     },
 ]
 
-# ---------------------------------------------------------------------------
-# Language pack
-# ---------------------------------------------------------------------------
-
-STRINGS = {
-    "fr-CA": {
-        "home": "Accueil",
-        "about": "Notre paroisse",
-        "pastors": "Nos curés",
-        "church": "Notre église",
-        "mass": "Horaire des messes",
-        "bulletin": "Feuillet paroissial",
-        "life": "Vie paroissiale",
-        "catechesis": "Catéchèse",
-        "events": "Événements",
-        "links": "Liens",
-        "contact": "Contact",
-        "welcome": "Bienvenue",
-        "mass_h1": "Horaire des messes",
-        "mass_day": "Jour",
-        "mass_time": "Heure",
-        "contact_h1": "Nous joindre",
-        "about_h1": "Notre paroisse",
-        "reach_us": "Nous joindre",
-        "on_this_site": "Sur ce site",
-        "doctrine": "Doctrine",
-        "no_profile": "Aucun profilage",
-        "register": "Registre de langue",
-        "founder": "Crédit fondateur",
-        "portal_back": "← Retour au portail",
-        "official_source": "Source officielle",
-        "mirror_note": "Miroir non-officiel préparé avec soin. Contenu paroissial : © la paroisse, tous droits réservés.",
-        "no_tracking": "Aucun traçage. Aucun cookie. Aucune analytique. Aucun script tiers autre que la police de caractères Google Fonts.",
-        "tribute_line": "Site conçu sous la doctrine EVE Glyph Design. Fondateur du design :",
-        "for_people": "Pour le bien-être du peuple.",
-        "welcome_lead": "Bonjour et bienvenue au site paroissial.",
-    },
-    "en-CA": {
-        "home": "Home",
-        "about": "Our parish",
-        "pastors": "Clergy",
-        "church": "Our church",
-        "mass": "Mass schedule",
-        "bulletin": "Bulletin",
-        "life": "Parish life",
-        "catechesis": "Faith formation",
-        "events": "Events",
-        "links": "Links",
-        "contact": "Contact",
-        "welcome": "Welcome",
-        "mass_h1": "Mass schedule",
-        "mass_day": "Day",
-        "mass_time": "Time",
-        "contact_h1": "Get in touch",
-        "about_h1": "Our parish",
-        "reach_us": "Reach us",
-        "on_this_site": "On this site",
-        "doctrine": "Doctrine",
-        "no_profile": "No profiling",
-        "register": "Language register",
-        "founder": "Founder credit",
-        "portal_back": "← Back to the portal",
-        "official_source": "Official source",
-        "mirror_note": "Non-official mirror, prepared with care. Parish content: © the parish, all rights reserved.",
-        "no_tracking": "No tracking. No cookies. No analytics. No third-party scripts other than Google Fonts.",
-        "tribute_line": "Site built under the EVE Glyph Design doctrine. Design founder:",
-        "for_people": "For the good of the people.",
-        "welcome_lead": "Welcome to the parish website.",
-    },
-    "en-US": {
-        "home": "Home",
-        "about": "Our parish",
-        "pastors": "Clergy",
-        "church": "Our church",
-        "mass": "Mass schedule",
-        "bulletin": "Bulletin",
-        "life": "Parish life",
-        "catechesis": "Faith formation",
-        "events": "Events",
-        "links": "Links",
-        "contact": "Contact",
-        "welcome": "Welcome",
-        "mass_h1": "Mass schedule",
-        "mass_day": "Day",
-        "mass_time": "Time",
-        "contact_h1": "Get in touch",
-        "about_h1": "Our parish",
-        "reach_us": "Reach us",
-        "on_this_site": "On this site",
-        "doctrine": "Doctrine",
-        "no_profile": "No profiling",
-        "register": "Language register",
-        "founder": "Founder credit",
-        "portal_back": "← Back to the portal",
-        "official_source": "Official source",
-        "mirror_note": "Non-official mirror, prepared with care. Parish content: © the parish, all rights reserved.",
-        "no_tracking": "No tracking. No cookies. No analytics. No third-party scripts other than Google Fonts.",
-        "tribute_line": "Site built under the EVE Glyph Design doctrine. Design founder:",
-        "for_people": "For the good of the people.",
-        "welcome_lead": "Welcome to the parish website.",
-    },
-    "es-MX": {
-        "home": "Inicio",
-        "about": "Nuestra parroquia",
-        "pastors": "Clero",
-        "church": "Nuestro templo",
-        "mass": "Horario de misas",
-        "bulletin": "Boletín",
-        "life": "Vida parroquial",
-        "catechesis": "Catequesis",
-        "events": "Eventos",
-        "links": "Enlaces",
-        "contact": "Contacto",
-        "welcome": "Bienvenidos",
-        "mass_h1": "Horario de misas",
-        "mass_day": "Día",
-        "mass_time": "Hora",
-        "contact_h1": "Comuníquese con nosotros",
-        "about_h1": "Nuestra parroquia",
-        "reach_us": "Comuníquese",
-        "on_this_site": "En este sitio",
-        "doctrine": "Doctrina",
-        "no_profile": "Sin perfilado",
-        "register": "Registro de lengua",
-        "founder": "Crédito del fundador",
-        "portal_back": "← Volver al portal",
-        "official_source": "Fuente oficial",
-        "mirror_note": "Espejo no oficial, preparado con cuidado. Contenido parroquial: © la parroquia, todos los derechos reservados.",
-        "no_tracking": "Sin rastreo. Sin cookies. Sin analítica. Sin scripts de terceros salvo Google Fonts.",
-        "tribute_line": "Sitio construido bajo la doctrina EVE Glyph Design. Fundador del diseño:",
-        "for_people": "Por el bien del pueblo.",
-        "welcome_lead": "Bienvenidos al sitio de la parroquia.",
-    },
-    "el-GR": {
-        "home": "\u0391\u03c1\u03c7\u03b9\u03ba\u03ae",
-        "about": "\u0397 \u03b5\u03bd\u03bf\u03c1\u03af\u03b1 \u03bc\u03b1\u03c2",
-        "pastors": "\u039a\u03bb\u03ae\u03c1\u03bf\u03c2",
-        "church": "\u039f \u03bd\u03b1\u03cc\u03c2 \u03bc\u03b1\u03c2",
-        "mass": "\u038f\u03c1\u03b5\u03c2 \u03bb\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ce\u03bd",
-        "bulletin": "\u0391\u03bd\u03b1\u03ba\u03bf\u03b9\u03bd\u03ce\u03c3\u03b5\u03b9\u03c2",
-        "life": "\u0395\u03bd\u03bf\u03c1\u03b9\u03b1\u03ba\u03ae \u03b6\u03c9\u03ae",
-        "catechesis": "\u039a\u03b1\u03c4\u03ae\u03c7\u03b7\u03c3\u03b7",
-        "events": "\u0395\u03ba\u03b4\u03b7\u03bb\u03ce\u03c3\u03b5\u03b9\u03c2",
-        "links": "\u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03bc\u03bf\u03b9",
-        "contact": "\u0395\u03c0\u03b9\u03ba\u03bf\u03b9\u03bd\u03c9\u03bd\u03af\u03b1",
-        "welcome": "\u039a\u03b1\u03bb\u03ce\u03c2 \u03bf\u03c1\u03af\u03c3\u03b1\u03c4\u03b5",
-        "mass_h1": "\u038f\u03c1\u03b5\u03c2 \u03bb\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ce\u03bd",
-        "mass_day": "\u0397\u03bc\u03ad\u03c1\u03b1",
-        "mass_time": "\u038f\u03c1\u03b1",
-        "contact_h1": "\u0395\u03c0\u03b9\u03ba\u03bf\u03b9\u03bd\u03c9\u03bd\u03af\u03b1",
-        "about_h1": "\u0397 \u03b5\u03bd\u03bf\u03c1\u03af\u03b1 \u03bc\u03b1\u03c2",
-        "reach_us": "\u0395\u03c0\u03b9\u03ba\u03bf\u03b9\u03bd\u03c9\u03bd\u03af\u03b1",
-        "on_this_site": "\u03a3\u03b5 \u03b1\u03c5\u03c4\u03cc\u03bd \u03c4\u03bf\u03bd \u03b9\u03c3\u03c4\u03cc\u03c4\u03bf\u03c0\u03bf",
-        "doctrine": "\u0394\u03cc\u03b3\u03bc\u03b1",
-        "no_profile": "\u03a7\u03c9\u03c1\u03af\u03c2 \u03c0\u03c1\u03bf\u03c6\u03b9\u03bb\u03bf\u03c0\u03bf\u03af\u03b7\u03c3\u03b7",
-        "register": "\u0393\u03bb\u03c9\u03c3\u03c3\u03b9\u03ba\u03cc \u03cd\u03c6\u03bf\u03c2",
-        "founder": "\u0391\u03bd\u03b1\u03c6\u03bf\u03c1\u03ac \u03b9\u03b4\u03c1\u03c5\u03c4\u03ae",
-        "portal_back": "\u2190 \u0395\u03c0\u03b9\u03c3\u03c4\u03c1\u03bf\u03c6\u03ae \u03c3\u03c4\u03b7\u03bd \u03c0\u03cd\u03bb\u03b7",
-        "official_source": "\u0395\u03c0\u03af\u03c3\u03b7\u03bc\u03b7 \u03c0\u03b7\u03b3\u03ae",
-        "mirror_note": "\u0391\u03bd\u03b5\u03c0\u03af\u03c3\u03b7\u03bc\u03bf \u03b1\u03bd\u03c4\u03af\u03b3\u03c1\u03b1\u03c6\u03bf, \u03c6\u03c4\u03b9\u03b1\u03b3\u03bc\u03ad\u03bd\u03bf \u03bc\u03b5 \u03c0\u03c1\u03bf\u03c3\u03bf\u03c7\u03ae. \u03a0\u03b5\u03c1\u03b9\u03b5\u03c7\u03cc\u03bc\u03b5\u03bd\u03bf \u03b5\u03bd\u03bf\u03c1\u03af\u03b1\u03c2: \u00a9 \u03b7 \u03b5\u03bd\u03bf\u03c1\u03af\u03b1, \u03bc\u03b5 \u03b5\u03c0\u03b9\u03c6\u03cd\u03bb\u03b1\u03be\u03b7 \u03c0\u03b1\u03bd\u03c4\u03cc\u03c2 \u03b4\u03b9\u03ba\u03b1\u03b9\u03ce\u03bc\u03b1\u03c4\u03bf\u03c2.",
-        "no_tracking": "\u039a\u03b1\u03bc\u03af\u03b1 \u03c0\u03b1\u03c1\u03b1\u03ba\u03bf\u03bb\u03bf\u03cd\u03b8\u03b7\u03c3\u03b7. \u039a\u03b1\u03bd\u03ad\u03bd\u03b1 cookie. \u039a\u03b1\u03bc\u03af\u03b1 \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7. \u039a\u03b1\u03bd\u03ad\u03bd\u03b1 script \u03c4\u03c1\u03af\u03c4\u03c9\u03bd \u03c0\u03ad\u03c1\u03b1\u03bd \u03c4\u03c9\u03bd Google Fonts.",
-        "tribute_line": "\u0399\u03c3\u03c4\u03cc\u03c4\u03bf\u03c0\u03bf\u03c2 \u03ba\u03b1\u03c4\u03ac \u03c4\u03bf \u03b4\u03cc\u03b3\u03bc\u03b1 EVE Glyph Design. \u0399\u03b4\u03c1\u03c5\u03c4\u03ae\u03c2 \u03c4\u03bf\u03c5 \u03c3\u03c7\u03b5\u03b4\u03b9\u03b1\u03c3\u03bc\u03bf\u03cd:",
-        "for_people": "\u0393\u03b9\u03b1 \u03c4\u03bf \u03ba\u03b1\u03bb\u03cc \u03c4\u03bf\u03c5 \u03bb\u03b1\u03bf\u03cd.",
-        "welcome_lead": "\u039a\u03b1\u03bb\u03ce\u03c2 \u03bf\u03c1\u03af\u03c3\u03b1\u03c4\u03b5 \u03c3\u03c4\u03b7\u03bd \u03b9\u03c3\u03c4\u03bf\u03c3\u03b5\u03bb\u03af\u03b4\u03b1 \u03c4\u03b7\u03c2 \u03b5\u03bd\u03bf\u03c1\u03af\u03b1\u03c2.",
-    },
-}
-
 FOUNDER = "Donat Omer Thériault"
 
 # Mandatory verbatim rights footer — EVE Glyph Index L0 canon, Gate 2.
@@ -547,6 +471,11 @@ def crest_svg(style: str) -> str:
         # The standing cross the town is named for — La Cruz de Huanacaxtle
         motif = '''<path d="M50 58 L 50 84 M 40 66 L 60 66" stroke="#f5efe1" stroke-width="3" stroke-linecap="round"/>
   <circle cx="50" cy="66" r="3" fill="#d4a94a"/>'''
+    elif style == "spire":
+        # A single tall spire topped with a cross — St. Dunstan's, Fredericton (1965)
+        motif = '''<path d="M50 54 L 60 78 L 40 78 Z" fill="#f5efe1" opacity="0.92"/>
+  <path d="M36 84 L 64 84 L 64 78 L 36 78 Z" fill="#f5efe1" opacity="0.75"/>
+  <path d="M50 48 L 50 56 M 46.5 51 L 53.5 51" stroke="#d4a94a" stroke-width="2" stroke-linecap="round"/>'''
     elif style == "philhellene":
         # Classical temple front — the 1841 Touret Arch inside the Nafplio church
         motif = '''<path d="M30 84 L 30 72 L 70 72 L 70 84" fill="none" stroke="#f5efe1" stroke-width="2.4" stroke-linecap="round"/>
@@ -561,99 +490,114 @@ def crest_svg(style: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# Page skeleton
+# Page skeleton — every string comes from the Latin pivot via i18n_runtime
 # ---------------------------------------------------------------------------
 
-def head(parish, page_title, css_prefix="assets/") -> str:
+def lang_switcher(t, url_of) -> str:
+    """Language toggle. `url_of(code)` returns the href for that language."""
+    links = []
+    current = t.code
+    for code, endonym, _html_lang, _dir in LANGS:
+        cls = ' class="active"' if code == current else ''
+        pivot = ' data-pivot="1"' if code == PIVOT else ''
+        links.append(
+            f'      <a href="{url_of(code)}" hreflang="{code}" lang="{code}"'
+            f'{cls}{pivot}>{html.escape(endonym)}</a>')
+    return ('  <div class="lang-bar">\n'
+            '    <div class="container">\n'
+            f'      <span class="lang-bar-label">{html.escape(t("ui.lang_label"))}</span>\n'
+            + '\n'.join(links) + '\n'
+            '    </div>\n'
+            '  </div>\n')
+
+
+def hreflang_links(url_of) -> str:
+    out = [f'<link rel="alternate" hreflang="{c}" href="{url_of(c)}">'
+           for c, _, _, _ in LANGS]
+    out.append(f'<link rel="alternate" hreflang="x-default" href="{url_of(DEFAULT)}">')
+    return "\n".join(out)
+
+
+def head(parish, t, css_prefix, page_title, url_of=None) -> str:
+    alts = ("\n" + hreflang_links(url_of)) if url_of else ""
     return f'''<!DOCTYPE html>
-<html lang="{parish['lang']}">
+<html lang="{t.html_lang}">
 <head>
 <meta charset="utf-8">
 <title>{html.escape(page_title)} — {html.escape(parish['short'])}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{html.escape(parish['tagline'])}">
+<meta name="description" content="{html.escape(t('parish.' + parish['slug'] + '.tagline'))}">
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{css_prefix}style.css">
-<link rel="icon" type="image/svg+xml" href="{css_prefix}crest.svg">
+<link rel="icon" type="image/svg+xml" href="{css_prefix}crest.svg">{alts}
 </head>
 <body>
 '''
 
-def header(parish, css_prefix="assets/") -> str:
+def header(parish, t, css_prefix) -> str:
     return f'''<header class="site-header">
   <div class="container">
     <img src="{css_prefix}crest.svg" alt="" class="crest" aria-hidden="true">
     <div class="site-title">
       <h1>{html.escape(parish['name'])}</h1>
-      <div class="sub">{html.escape(parish['city'])} — {html.escape(parish['tagline'])}</div>
+      <div class="sub">{html.escape(parish['city'])} — {html.escape(t('parish.' + parish['slug'] + '.tagline'))}</div>
     </div>
   </div>
 </header>
 '''
 
-def nav(parish, active) -> str:
-    s = STRINGS[parish['lang']]
+def nav(parish, t, active, portal_back) -> str:
     items = [
-        ("index.html", s["home"]),
-        ("about.html", s["about"]),
-        ("mass.html", s["mass"]),
-        ("life.html", s["life"]),
-        ("contact.html", s["contact"]),
+        ("index.html", t("ui.home")),
+        ("about.html", t("ui.about")),
+        ("mass.html", t("ui.mass")),
+        ("life.html", t("ui.life")),
+        ("contact.html", t("ui.contact")),
     ]
     links = []
     for href, label in items:
         cls = ' class="active"' if href == active else ''
         links.append(f'    <a href="{href}"{cls}>{html.escape(label)}</a>')
-    portal_back = "../../index.html"
     return f'''<nav class="site-nav" aria-label="Navigation">
   <div class="container">
 {chr(10).join(links)}
-    <a href="{portal_back}" style="margin-left:auto; color: var(--stella-gold-light);">{html.escape(s["portal_back"])}</a>
+    <a href="{portal_back}" style="margin-left:auto; color: var(--stella-gold-light);">{html.escape(t("ui.portal_back"))}</a>
   </div>
 </nav>
 '''
 
-def tel_label(parish) -> str:
-    if parish['lang'] == 'el-GR':
-        return "\u03a4\u03b7\u03bb."
-    if parish['lang'] == 'fr-CA':
-        return "Tél."
-    if parish['lang'] == 'es-MX':
-        return "Tel."
-    return "Tel."
 
-
-def footer(parish) -> str:
-    s = STRINGS[parish['lang']]
+def footer(parish, t) -> str:
+    slug = parish['slug']
     email_line = (f'<br>\n        <a href="mailto:{parish["email"]}">{parish["email"]}</a>'
                   if parish.get('email') else '')
     return f'''<footer class="site-footer">
   <div class="container">
     <div class="footer-cols">
       <div>
-        <h4>{html.escape(s["reach_us"])}</h4>
+        <h4>{html.escape(t("ui.reach_us"))}</h4>
         <p>{html.escape(parish['address'])}<br>
-        {html.escape(tel_label(parish))} : {html.escape(parish['phone'])}{email_line}</p>
+        {html.escape(t("page.tel_abbrev"))} : {html.escape(parish['phone'])}{email_line}</p>
       </div>
       <div>
-        <h4>{html.escape(s["on_this_site"])}</h4>
-        <p><a href="mass.html">{html.escape(s["mass"])}</a><br>
-        <a href="life.html">{html.escape(s["life"])}</a><br>
-        <a href="contact.html">{html.escape(s["contact"])}</a></p>
+        <h4>{html.escape(t("ui.on_this_site"))}</h4>
+        <p><a href="mass.html">{html.escape(t("ui.mass"))}</a><br>
+        <a href="life.html">{html.escape(t("ui.life"))}</a><br>
+        <a href="contact.html">{html.escape(t("ui.contact"))}</a></p>
       </div>
       <div>
-        <h4>{html.escape(s["official_source"])}</h4>
-        <p><a href="{parish['official_url']}">{html.escape(parish['official_url'].replace('https://', ''))}</a><br>
-        {html.escape(parish['diocese'])}</p>
+        <h4>{html.escape(t("ui.official_source"))}</h4>
+        <p><a href="{parish['official_url']}">{html.escape(tidy_url(parish['official_url']))}</a><br>
+        {html.escape(t("parish." + slug + ".diocese"))}</p>
       </div>
     </div>
     <div class="tribute">
-      <p>{html.escape(s["tribute_line"])} <span class="name">{html.escape(FOUNDER)}</span>.</p>
-      <p>{html.escape(s["mirror_note"])}</p>
-      <p style="margin-top:0.8rem; font-size:0.78rem;">{html.escape(s["no_tracking"])} <em>{html.escape(s["for_people"])}</em></p>
+      <p>{html.escape(t("ui.tribute_line"))} <span class="name">{html.escape(FOUNDER)}</span>.</p>
+      <p>{html.escape(t("ui.mirror_note"))}</p>
+      <p style="margin-top:0.8rem; font-size:0.78rem;">{html.escape(t("ui.no_tracking"))} <em>{html.escape(t("ui.for_people"))}</em></p>
     </div>
     {photo_credit_block(parish)}
     <div class="ark-footer">
@@ -676,240 +620,178 @@ def photo_credit_block(parish) -> str:
         credit = f'<a href="{url}">{credit}</a>'
     return f'<div class="photo-credit"><p>{credit}</p></div>'
 
-# ---------------------------------------------------------------------------
-# Parish pages
-# ---------------------------------------------------------------------------
-
-def page_index(parish) -> str:
-    s = STRINGS[parish['lang']]
-    src_link = f'<a href="{parish["official_url"]}">{tidy_url(parish["official_url"])}</a>'
-    if parish['lang'] == 'fr-CA':
-        founded_clause = f", fondée en {parish['founded']}," if parish['founded'] else ""
-        blurb = f"""<p>L'{parish['name']}{founded_clause} est située à {parish['city']}. Ce site est un miroir non-officiel préparé sous la doctrine <em>EVE Glyph Design</em>, avec le même soin éditorial que le site officiel. La source officielle demeure {src_link}.</p>"""
-        card_title = "Une paroisse, un peuple"
-        card_body = "La foi vécue localement, avec la communauté qui prie, célèbre et prend soin les uns des autres."
-        h1 = s["welcome"]
-    elif parish['lang'] == 'el-GR':
-        blurb = f"""<p>{parish['name']} βρίσκεται στην Παλιά Πόλη του Ναυπλίου. Η σελίδα αυτή είναι ένα ανεπίσημο αντίγραφο, φτιαγμένο κατά το δόγμα <em>EVE Glyph Design</em>, με την ίδια επιμέλεια που θα είχε μια επίσημη σελίδα. Επίσημη πηγή παραμένει το {src_link}.</p>"""
-        card_title = "Μια ενορία, ένας λαός"
-        card_body = "Η πίστη ζει στον τόπο της, με μια κοινότητα που προσεύχεται, γιορτάζει και φροντίζει ο ένας τον άλλον."
-        h1 = s["welcome"]
-    elif parish['lang'] == 'es-MX':
-        blurb = f"""<p>La {parish['name']} se encuentra en {parish['city']}. Este sitio es un espejo no oficial preparado bajo la doctrina <em>EVE Glyph Design</em>, con el mismo cuidado editorial que una página oficial. La fuente oficial sigue siendo {src_link}.</p>"""
-        card_title = "Una parroquia, un pueblo"
-        card_body = "La fe vivida en el lugar, con una comunidad que reza, celebra y se cuida entre sí."
-        h1 = s["welcome"]
-    else:
-        blurb = f"""<p>{parish['name']}, founded in {parish['founded']}, is located in {parish['city']}. This site is a non-official mirror prepared under the <em>EVE Glyph Design</em> doctrine, with the same editorial care as the parish's official site. The official source remains <a href="{parish['official_url']}">{parish['official_url'].replace('https://', '')}</a>.</p>"""
-        card_title = "One parish, one people"
-        card_body = "Faith lived locally, with a community that prays, celebrates and cares for one another."
-        h1 = s["welcome"]
-
-    body = f'''<main>
-{hero_figure(parish)}
-  <div class="container">
-    <h1>{h1}</h1>
-    <p class="lead">{s["welcome_lead"]}</p>
-    {blurb}
-    <div class="card">
-      <h3>{card_title}</h3>
-      <p>{card_body}</p>
-    </div>
-
-    <h2>{s["mass"]}</h2>
-    <table class="schedule">
-      <thead><tr><th>{s["mass_day"]}</th><th>{s["mass_time"]}</th></tr></thead>
-      <tbody>
-{chr(10).join(f'        <tr><td>{html.escape(d)}</td><td>{html.escape(t)}</td></tr>' for d, t in parish["schedule"])}
-      </tbody>
-    </table>
-{schedule_note(parish)}
-  </div>
-</main>
-'''
-    return head(parish, s["welcome"]) + header(parish) + nav(parish, "index.html") + body + footer(parish)
-
 
 def tidy_url(u: str) -> str:
     return u.replace('https://', '').replace('http://', '').rstrip('/')
 
 
-def hero_figure(parish) -> str:
+def schedule_rows(parish, t, indent="        ") -> str:
+    slug = parish['slug']
+    rows = []
+    for i, (_day, time) in enumerate(parish["schedule"]):
+        day = t(f"parish.{slug}.sched.{i}")
+        rows.append(f'{indent}<tr><td>{html.escape(day)}</td><td>{html.escape(time)}</td></tr>')
+    return chr(10).join(rows)
+
+
+def hero_figure(parish, t, ap="assets/") -> str:
     """Hero photograph, or an honest placeholder where no licensed photograph exists."""
     if parish.get('photo_status') == 'pending':
         return ('  <figure class="hero-photo hero-photo-pending">\n'
                 '    <div class="hero-photo-pending-inner">\n'
-                f'      <img src="assets/crest.svg" alt="" aria-hidden="true">\n'
-                f'      <p>{html.escape(PHOTO_PENDING[parish["lang"]])}</p>\n'
+                f'      <img src="{ap}crest.svg" alt="" aria-hidden="true">\n'
+                f'      <p>{html.escape(t("ui.photo_pending"))}</p>\n'
                 '    </div>\n'
                 '  </figure>')
+    alt = parish.get('photo_alt') or f"{parish['name']} \u2014 {parish['city']}"
     return ('  <figure class="hero-photo">\n'
-            f'    <img src="assets/hero.jpg" alt="{html.escape(parish["name"])} \u2014 {html.escape(parish["city"])}" loading="eager">\n'
+            f'    <img src="{ap}hero.jpg" alt="{html.escape(alt)}" loading="eager">\n'
             '  </figure>')
 
 
-def schedule_note(parish) -> str:
+def schedule_note(parish, t) -> str:
     if not parish.get('schedule_note'):
         return ''
-    return f'    <p class="schedule-note">{html.escape(parish["schedule_note"])}</p>'
+    return f'    <p class="schedule-note">{html.escape(t("parish." + parish["slug"] + ".schedule_note"))}</p>'
 
 
-PHOTO_PENDING = {
-    "fr-CA": "Photographie à venir — aucune image sous licence libre vérifiée pour cette église.",
-    "en-CA": "Photograph pending — no verified freely-licensed image of this church yet.",
-    "en-US": "Photograph pending — no verified freely-licensed image of this church yet.",
-    "es-MX": "Fotografía pendiente — aún no hay una imagen de este templo con licencia libre verificada.",
-    "el-GR": "\u0397 \u03c6\u03c9\u03c4\u03bf\u03b3\u03c1\u03b1\u03c6\u03af\u03b1 \u03b5\u03ba\u03ba\u03c1\u03b5\u03bc\u03b5\u03af \u2014 \u03b4\u03b5\u03bd \u03c5\u03c0\u03ac\u03c1\u03c7\u03b5\u03b9 \u03b1\u03ba\u03cc\u03bc\u03b7 \u03b5\u03c0\u03b1\u03bb\u03b7\u03b8\u03b5\u03c5\u03bc\u03ad\u03bd\u03b7 \u03b5\u03bb\u03b5\u03cd\u03b8\u03b5\u03c1\u03b7 \u03b5\u03b9\u03ba\u03cc\u03bd\u03b1.",
-}
+# ---------------------------------------------------------------------------
+# Parish pages
+# ---------------------------------------------------------------------------
 
-
-def page_about(parish) -> str:
-    s = STRINGS[parish['lang']]
-    status = parish.get('status_note')
-    if parish['lang'] == 'el-GR':
-        body = f"""<main><div class="container">
-<h1>{s['about_h1']}</h1>
-<p class="lead">{parish['tagline']}.</p>
-<p>Ο ναός στέκει στην Παλιά Πόλη του Ναυπλίου, στα σκαλοπάτια πάνω από την πλατεία του Αγίου Σπυρίδωνα. Οι Ναυπλιώτες τον λένε «Φραγκοκκλησιά». Ανήκει στην {parish['diocese']}.</p>
-<p>Το κτίριο λειτούργησε ως τέμενος στα χρόνια πριν από την Επανάσταση. Το 1839 ο δήμος Ναυπλίου το παραχώρησε στην Καθολική Εκκλησία, με βασιλικό διάταγμα του Όθωνα, και το 1840 καθιερώθηκε ως ναός της Μεταμορφώσεως του Σωτήρος — μια επιλογή ονόματος που συμβόλιζε τη μεταμόρφωση της ίδιας της χώρας μετά την οθωμανική περίοδο. Το μιχράβ σώζεται ακόμη στο εσωτερικό.</p>
-<div class="card">
-  <h3>Η Αψίδα του Touret (1841)</h3>
-  <p>Μέσα στον ναό στέκει μια ξύλινη αψίδα σε σχήμα πρόσοψης αρχαίου ναού, που χρηματοδότησε ο Γάλλος φιλέλληνας Auguste Hilarion Touret. Φέρει την επιγραφή <em>«A LA MEMOIRE DES PHILHELLENES MORTS POUR L’INDEPENDANCE»</em> και τα ονόματα περίπου 280 ξένων εθελοντών, μαζί με τον τόπο όπου έπεσε ο καθένας. Είναι το αρχαιότερο μνημείο των Φιλελλήνων στην Ελλάδα και αποκαταστάθηκε το 2002.</p>
-</div>
-<div class="card">
-  <h3>Η κρύπτη</h3>
-  <p>Κάτω από το δάπεδο υπάρχει ενετική δεξαμενή περίπου τριών μέτρων. Το 1839 μεταφέρθηκαν εκεί τα οστά φιλελλήνων και Βαυαρών στρατιωτών που χάθηκαν από τυφοειδή πυρετό το 1833–1834. Το 1990 τοποθετήθηκε το ανάγλυφο «Φιλέλληνες μάχονται υπέρ Ελλήνων» του Νικολάου Δαγούλη.</p>
-</div>
-<p>{html.escape(status) if status else ''}</p>
-<p>Για το πλήρες ιστορικό, τον κλήρο και τις ανακοινώσεις, δείτε την επίσημη πηγή: <a href="{parish['official_url']}">{tidy_url(parish['official_url'])}</a>.</p>
-<div class="card">
-  <h3>Η δέσμευσή μας</h3>
-  <p>Τοπική φιλοξενία, χωρίς παρακολούθηση, χωρίς διαφημίσεις. Το περιεχόμενο ανήκει στην ενορία, που μπορεί να αναλάβει αυτό το αντίγραφο όποτε θελήσει.</p>
-</div>
-</div></main>"""
-        return head(parish, s["about_h1"]) + header(parish) + nav(parish, "about.html") + body + footer(parish)
-    if parish['lang'] == 'es-MX':
-        body = f"""<main><div class="container">
-<h1>{s['about_h1']}</h1>
-<p class="lead">{parish['tagline']}.</p>
-<p>La {parish['name']} sirve a la comunidad de {parish['city']}. Pertenece a {parish['diocese']}.</p>
-<p>Esta p\u00e1gina es una presentaci\u00f3n. Para la historia completa, el clero y los avisos parroquiales, consulte la fuente oficial: <a href="{parish['official_url']}">{tidy_url(parish['official_url'])}</a>.</p>
-<div class="card">
-  <h3>Nuestro compromiso</h3>
-  <p>Alojamiento local, sin rastreo, sin publicidad. La parroquia conserva su contenido y puede hacerse cargo de este espejo cuando quiera.</p>
-</div>
-</div></main>"""
-        return head(parish, s["about_h1"]) + header(parish) + nav(parish, "about.html") + body + footer(parish)
-    if parish['lang'] == 'fr-CA':
-        body = f"""<main><div class="container">
-<h1>{s['about_h1']}</h1>
-<p class="lead">{parish['tagline']}.</p>
-<p>Fondé{'e' if not status else ''} en {parish['founded']}, {'la' if not status else "l'"} {parish['name']} sert la communauté de {parish['city']}. Elle fait partie de {parish['diocese']}.</p>
-{f'<p>{html.escape(status)}</p>' if status else ''}
-<p>Cette page est un espace de présentation. Pour l'historique complet, la biographie des curés et le récit de l'église, consultez le site officiel de la paroisse : <a href="{parish['official_url']}">{parish['official_url'].replace('https://', '')}</a>.</p>
-<div class="card">
-  <h3>Notre engagement</h3>
-  <p>Site local, hébergement libre, aucun traçage, aucune publicité. La paroisse reste propriétaire de son contenu et peut reprendre ce miroir à tout moment.</p>
-</div>
-</div></main>"""
+def page_index(parish, t, url_of, portal_back, ap="assets/") -> str:
+    slug = parish['slug']
+    src_link = f'<a href="{parish["official_url"]}">{tidy_url(parish["official_url"])}</a>'
+    if parish['founded']:
+        blurb = t("page.index_blurb", name=html.escape(parish['name']),
+                  founded=parish['founded'], city=html.escape(parish['city']),
+                  source_link=src_link)
     else:
-        body = f"""<main><div class="container">
-<h1>{s['about_h1']}</h1>
-<p class="lead">{parish['tagline']}.</p>
-<p>Founded in {parish['founded']}, {parish['name']} serves the community of {parish['city']}. It is part of {parish['diocese']}.</p>
-{f'<p>{html.escape(status)}</p>' if status else ''}
-<p>This page introduces the parish. For the full history, clergy biographies, and church story, please visit the parish's official site: <a href="{parish['official_url']}">{parish['official_url'].replace('https://', '')}</a>.</p>
+        blurb = t("page.index_blurb_nofound", name=html.escape(parish['name']),
+                  city=html.escape(parish['city']), source_link=src_link)
+
+    body = f'''<main>
+{hero_figure(parish, t, ap)}
+  <div class="container">
+    <h1>{html.escape(t("ui.welcome"))}</h1>
+    <p class="lead">{html.escape(t("ui.welcome_lead"))}</p>
+    <p>{blurb}</p>
+    <div class="card">
+      <h3>{html.escape(t("page.card_title"))}</h3>
+      <p>{html.escape(t("page.card_body"))}</p>
+    </div>
+
+    <h2>{html.escape(t("ui.mass"))}</h2>
+    <table class="schedule">
+      <thead><tr><th>{html.escape(t("ui.mass_day"))}</th><th>{html.escape(t("ui.mass_time"))}</th></tr></thead>
+      <tbody>
+{schedule_rows(parish, t)}
+      </tbody>
+    </table>
+{schedule_note(parish, t)}
+  </div>
+</main>
+'''
+    return (head(parish, t, ap, t("ui.welcome"), url_of=url_of) + header(parish, t, ap)
+            + nav(parish, t, "index.html", portal_back)
+            + lang_switcher(t, url_of) + body + footer(parish, t))
+
+
+def page_about(parish, t, url_of, portal_back, ap="assets/") -> str:
+    slug = parish['slug']
+    status = t(f"parish.{slug}.status_note") if parish.get('status_note') else ''
+    tagline = t(f"parish.{slug}.tagline")
+    diocese = t(f"parish.{slug}.diocese")
+    official = f'<a href="{parish["official_url"]}">{tidy_url(parish["official_url"])}</a>'
+
+    if slug == 'nafplio-transfiguration':
+        middle = f'''<p>{html.escape(t("nafplio.location", diocese=diocese))}</p>
+<p>{html.escape(t("nafplio.history"))}</p>
 <div class="card">
-  <h3>Our commitment</h3>
-  <p>Locally hosted, no tracking, no ads. The parish owns its content and may take over this mirror at any time.</p>
+  <h3>{html.escape(t("nafplio.arch_h"))}</h3>
+  <p>{html.escape(t("nafplio.arch_p"))}</p>
 </div>
-</div></main>"""
-    return head(parish, s["about_h1"]) + header(parish) + nav(parish, "about.html") + body + footer(parish)
+<div class="card">
+  <h3>{html.escape(t("nafplio.crypt_h"))}</h3>
+  <p>{html.escape(t("nafplio.crypt_p"))}</p>
+</div>'''
+    else:
+        middle = f'''<p>{html.escape(t("ui.about_founded", name=parish["name"], year=parish["founded"], city=parish["city"], diocese=diocese))}</p>'''
 
-
-def page_mass(parish) -> str:
-    s = STRINGS[parish['lang']]
     body = f'''<main><div class="container">
-<h1>{s["mass_h1"]}</h1>
+<h1>{html.escape(t("ui.about_h1"))}</h1>
+<p class="lead">{html.escape(tagline)}.</p>
+{middle}
+{f'<p>{html.escape(status)}</p>' if status else ''}
+<p>{html.escape(t("ui.about_official"))} {official}</p>
+<div class="card">
+  <h3>{html.escape(t("ui.commitment_h"))}</h3>
+  <p>{html.escape(t("ui.commitment_p"))}</p>
+</div>
+</div></main>'''
+    return (head(parish, t, ap, t("ui.about_h1"), url_of=url_of) + header(parish, t, ap)
+            + nav(parish, t, "about.html", portal_back)
+            + lang_switcher(t, url_of) + body + footer(parish, t))
+
+
+def page_mass(parish, t, url_of, portal_back, ap="assets/") -> str:
+    body = f'''<main><div class="container">
+<h1>{html.escape(t("ui.mass_h1"))}</h1>
 <table class="schedule">
-  <thead><tr><th>{s["mass_day"]}</th><th>{s["mass_time"]}</th></tr></thead>
+  <thead><tr><th>{html.escape(t("ui.mass_day"))}</th><th>{html.escape(t("ui.mass_time"))}</th></tr></thead>
   <tbody>
-{chr(10).join(f'    <tr><td>{html.escape(d)}</td><td>{html.escape(t)}</td></tr>' for d, t in parish["schedule"])}
+{schedule_rows(parish, t, indent="    ")}
   </tbody>
 </table>
-<p><a href="{parish['official_url']}">{html.escape(s["official_source"])}</a></p>
+{schedule_note(parish, t)}
+<p><a href="{parish['official_url']}">{html.escape(t("ui.official_source"))}</a></p>
 </div></main>'''
-    return head(parish, s["mass_h1"]) + header(parish) + nav(parish, "mass.html") + body + footer(parish)
+    return (head(parish, t, ap, t("ui.mass_h1"), url_of=url_of) + header(parish, t, ap)
+            + nav(parish, t, "mass.html", portal_back)
+            + lang_switcher(t, url_of) + body + footer(parish, t))
 
 
-def page_life(parish) -> str:
-    s = STRINGS[parish['lang']]
-    if parish['lang'] == 'el-GR':
-        items = ["Ομάδα προσευχής", "Προσκύνηση της Ευχαριστίας", "Χορωδία", "Κατήχηση", "Υποδοχή προσκυνητών και επισκεπτών", "Ενοριακό συμβούλιο", "Φροντίδα του μνημείου των Φιλελλήνων", "Εθελοντισμός"]
-        title = "Ενοριακή ζωή"
-        intro = "Οι δραστηριότητες της ενορίας. Για περισσότερα ή για να συμμετάσχετε, επικοινωνήστε με την ενορία."
-    elif parish['lang'] == 'es-MX':
-        items = ["Grupo de oración", "Adoración eucarística", "Coro", "Catequesis", "Caballeros de Colón", "Consejo pastoral parroquial", "Ayuda a los necesitados", "Voluntariado parroquial"]
-        title = "Vida parroquial"
-        intro = "Los grupos activos en la parroquia. Para saber más o unirse a uno, comuníquese con la oficina parroquial."
-    elif parish['lang'] == 'fr-CA':
-        items = ["Groupe de prières", "Adoration eucharistique", "Chorale", "Catéchèse", "Chevaliers de Colomb", "Comité de pastorale", "Aide aux personnes démunies", "Bénévolat paroissial"]
-        title = "Vie paroissiale"
-        intro = "Voici les groupes actifs dans la paroisse. Pour plus de détails ou pour vous joindre à un groupe, contactez le secrétariat de la paroisse."
-    else:
-        items = ["Prayer group", "Eucharistic adoration", "Choir", "Faith formation", "Knights of Columbus", "Parish pastoral council", "Outreach to those in need", "Parish volunteering"]
-        title = "Parish life"
-        intro = "The active groups in the parish. To learn more or to join a group, contact the parish office."
+def page_life(parish, t, url_of, portal_back, ap="assets/") -> str:
+    items = [t(f"page.life_item.{i}") for i in range(8)]
     body = f'''<main><div class="container">
-<h1>{title}</h1>
-<p class="lead">{intro}</p>
+<h1>{html.escape(t("page.life_h1"))}</h1>
+<p class="lead">{html.escape(t("page.life_intro"))}</p>
 <ul class="groups">
 {chr(10).join(f'  <li>{html.escape(x)}</li>' for x in items)}
 </ul>
 </div></main>'''
-    return head(parish, title) + header(parish) + nav(parish, "life.html") + body + footer(parish)
+    return (head(parish, t, ap, t("page.life_h1"), url_of=url_of) + header(parish, t, ap)
+            + nav(parish, t, "life.html", portal_back)
+            + lang_switcher(t, url_of) + body + footer(parish, t))
 
 
-def page_contact(parish) -> str:
-    s = STRINGS[parish['lang']]
-    dt_lbls = {
-        'fr-CA': ("Adresse", "Téléphone", "Courriel", "Diocèse"),
-        'es-MX': ("Dirección", "Teléfono", "Correo", "Diócesis"),
-        'el-GR': ("\u0394\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7", "\u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03bf", "Email", "\u0391\u03c1\u03c7\u03b9\u03b5\u03c0\u03b9\u03c3\u03ba\u03bf\u03c0\u03ae"),
-    }.get(parish['lang'], ("Address", "Phone", "Email", "Diocese"))
-    email_row = (f'<dt>{dt_lbls[2]}</dt><dd><a href="mailto:{parish["email"]}">{parish["email"]}</a></dd>'
+def page_contact(parish, t, url_of, portal_back, ap="assets/") -> str:
+    slug = parish['slug']
+    email_row = (f'<dt>{html.escape(t("page.dt_email"))}</dt>'
+                 f'<dd><a href="mailto:{parish["email"]}">{parish["email"]}</a></dd>'
                  if parish.get('email') else '')
     body = f'''<main><div class="container">
-<h1>{s["contact_h1"]}</h1>
+<h1>{html.escape(t("ui.contact_h1"))}</h1>
 <div class="contact-block">
   <dl>
-    <dt>{dt_lbls[0]}</dt><dd>{html.escape(parish['address'])}</dd>
-    <dt>{dt_lbls[1]}</dt><dd>{html.escape(parish['phone'])}</dd>
+    <dt>{html.escape(t("page.dt_address"))}</dt><dd>{html.escape(parish['address'])}</dd>
+    <dt>{html.escape(t("page.dt_phone"))}</dt><dd>{html.escape(parish['phone'])}</dd>
     {email_row}
-    <dt>{dt_lbls[3]}</dt><dd>{html.escape(parish['diocese'])}</dd>
+    <dt>{html.escape(t("page.dt_diocese"))}</dt><dd>{html.escape(t("parish." + slug + ".diocese"))}</dd>
   </dl>
 </div>
-<p><a href="{parish['official_url']}">{html.escape(s["official_source"])} → {tidy_url(parish['official_url'])}</a></p>
+<p><a href="{parish['official_url']}">{html.escape(t("ui.official_source"))} → {tidy_url(parish['official_url'])}</a></p>
 </div></main>'''
-    return head(parish, s["contact_h1"]) + header(parish) + nav(parish, "contact.html") + body + footer(parish)
+    return (head(parish, t, ap, t("ui.contact_h1"), url_of=url_of) + header(parish, t, ap)
+            + nav(parish, t, "contact.html", portal_back)
+            + lang_switcher(t, url_of) + body + footer(parish, t))
 
 
 # ---------------------------------------------------------------------------
 # Portal (front page)
 # ---------------------------------------------------------------------------
 
-REGIONS = [
-    ("united-states", "United States",
-     "Lenexa, Kansas and St. Augustine, Florida."),
-    ("montreal", "Montréal",
-     "The one on the mountain."),
-    ("atlantic-canada", "Atlantic Canada",
-     "New Brunswick, Prince Edward Island, Nova Scotia."),
-    ("mexico", "México",
-     "Bahía de Banderas, Nayarit — the marina coast."),
-    ("greece", "Ελλάδα · Greece",
-     "Nafplio, Argolis — the first capital, and the church that keeps the names of the Philhellenes."),
-]
+REGION_ORDER = ["united-states", "montreal", "atlantic-canada", "mexico", "greece"]
 
 NUM_WORDS = {6: "Six", 7: "Seven", 8: "Eight", 9: "Nine", 10: "Ten", 11: "Eleven", 12: "Twelve"}
 
@@ -930,34 +812,32 @@ def photo_credits_line() -> str:
     return " · ".join(parts)
 
 
-def parish_card(p) -> str:
-    featured_cls = ' parish-card-featured' if p['slug'] == 'holy-trinity' else ''
-    blurb = p.get('portal_blurb_override', p['portal_blurb'])
-    city_line = p.get('city_line', p['city'])
-    founded_line = p.get('founded_line')
-    if not founded_line:
-        if not p['founded']:
-            founded_line = p['diocese']
-        elif p['lang'] == 'fr-CA':
-            founded_line = f"Fondée {p['founded']} · {p['diocese']}"
-        elif p['lang'] == 'es-MX':
-            founded_line = f"Fundada {p['founded']} · {p['diocese']}"
-        elif p['lang'] == 'el-GR':
-            founded_line = f"\u0388\u03c4\u03bf\u03c2 {p['founded']} · {p['diocese']}"
-        else:
-            founded_line = f"Founded {p['founded']} · {p['diocese']}"
+def parish_href(p, lang, prefix) -> str:
+    """Link from a portal in `lang` to that parish. Native language keeps the
+    bare URL so no existing link ever breaks."""
+    if lang == NATIVE_OF.get(p['lang'], DEFAULT):
+        return f'{prefix}parishes/{p["slug"]}/index.html'
+    return f'{prefix}parishes/{p["slug"]}/{lang}/index.html'
+
+
+def parish_card(p, t, prefix) -> str:
+    slug = p['slug']
+    featured_cls = ' parish-card-featured' if slug == 'holy-trinity' else ''
+    blurb = t(f"parish.{slug}.portal_blurb")
+    city_line = t(f"parish.{slug}.city_line")
+    founded_line = t(f"parish.{slug}.founded_line")
 
     if p.get('photo_status') == 'pending':
         photo = (f'          <div class="parish-card-nophoto">\n'
-                 f'            <img src="parishes/{p["slug"]}/assets/crest.svg" alt="" aria-hidden="true">\n'
-                 f'            <span>{html.escape(PHOTO_PENDING[p["lang"]])}</span>\n'
+                 f'            <img src="{prefix}parishes/{slug}/assets/crest.svg" alt="" aria-hidden="true">\n'
+                 f'            <span>{html.escape(t("ui.photo_pending"))}</span>\n'
                  f'          </div>')
     else:
         alt = p.get('photo_alt', p['name'])
-        photo = (f'          <img src="parishes/{p["slug"]}/assets/thumb.jpg" alt="{html.escape(alt)}" loading="lazy">\n'
-                 f'          <div class="parish-card-crest-overlay"><img src="parishes/{p["slug"]}/assets/crest.svg" alt=""></div>')
+        photo = (f'          <img src="{prefix}parishes/{slug}/assets/thumb.jpg" alt="{html.escape(alt)}" loading="lazy">\n'
+                 f'          <div class="parish-card-crest-overlay"><img src="{prefix}parishes/{slug}/assets/crest.svg" alt=""></div>')
 
-    return (f'      <a class="parish-card{featured_cls}" href="parishes/{p["slug"]}/index.html">\n'
+    return (f'      <a class="parish-card{featured_cls}" href="{parish_href(p, t.code, prefix)}">\n'
             f'        <div class="parish-card-photo">\n'
             f'{photo}\n'
             f'        </div>\n'
@@ -970,18 +850,18 @@ def parish_card(p) -> str:
             f'      </a>')
 
 
-def region_blocks() -> str:
+def region_blocks(t, prefix) -> str:
     out = []
-    for key, label, sub in REGIONS:
+    for key in REGION_ORDER:
         members = [p for p in PARISHES if p.get('region') == key]
         if not members:
             continue
-        cards = chr(10).join(parish_card(p) for p in members)
+        cards = chr(10).join(parish_card(p, t, prefix) for p in members)
         out.append(
             f'  <div class="container region-block" id="region-{key}">\n'
             f'    <div class="region-head">\n'
-            f'      <h2>{html.escape(label)}</h2>\n'
-            f'      <p>{html.escape(sub)}</p>\n'
+            f'      <h2>{html.escape(t("region." + key + ".name"))}</h2>\n'
+            f'      <p>{html.escape(t("region." + key + ".sub"))}</p>\n'
             f'    </div>\n'
             f'    <div class="parish-grid">\n'
             f'{cards}\n'
@@ -990,219 +870,209 @@ def region_blocks() -> str:
     return chr(10).join(out)
 
 
-def footnote_1613() -> str:
+def footnote_1613(t) -> str:
     """The bottom-of-page footnote. Deliberately light. Not a lineage claim."""
+    ps = "\n\n".join(f'    <p>{html.escape(t("footnote.p" + str(i)))}</p>'
+                      for i in range(1, 7))
     return (
         '  <div class="container portal-section footnote-block" id="footnote">\n'
         '    <div class="footnote-rule"></div>\n'
-        '    <h2>Footnote — and who were the Acadians, anyway?</h2>\n'
-        '    <p class="footnote-aside">Down here at the bottom, because it is a footnote and not a sales pitch.</p>\n'
+        f'    <h2>{html.escape(t("footnote.h2"))}</h2>\n'
+        f'    <p class="footnote-aside">{html.escape(t("footnote.aside"))}</p>\n'
         '\n'
-        '    <p>Long before any of the parishes above, there was one at Port-Royal, in what is now Nova Scotia:\n'
-        '    <strong>Saint-Jean-Baptiste, founded 1613</strong>. Capuchin friars ran the mission from 1632.\n'
-        '    First Catholic parish in what eventually became Canada.</p>\n'
+        f'{ps}\n'
         '\n'
-        '    <p>Then most of the paperwork stopped existing. In 1654 a New England force under Robert Sedgwick\n'
-        '    took Port-Royal, killed the Capuchin superior Léonard de Chartres and shipped his confrères out —\n'
-        '    against the terms of the capitulation they had just signed. Two registers survive:\n'
-        '    <strong>1702–1728 and 1727–1755</strong>, now at the Centre acadien of Université Sainte-Anne.\n'
-        '    Everything before 1702 is gone.</p>\n'
-        '\n'
-        '    <p>The Greek card above is the other half of the same idea. In Nafplio, a wooden arch put up in 1841\n'
-        '    carries the names of roughly 280 foreigners who died for somebody else\u2019s country, each one with the\n'
-        '    place he fell written beside it. Somebody decided those names were worth keeping. In Port-Royal,\n'
-        '    somebody decided ours were not.</p>\n'
-        '\n'
-        '    <p>People ask whether Rome kept a copy. Rome does governance, not sacraments — there is no central\n'
-        '    baptismal register in the Vatican. Baptisms are written down in the parish, full stop.\n'
-        '    When the parish burns, that is the end of it.</p>\n'
-        '\n'
-        '    <p>One set did travel. The Saint-Charles-des-Mines registers from Grand-Pré went with the deported\n'
-        '    Acadians to Maryland, then to Louisiana, and were handed to the priest at Fort San Gabriel in 1767.\n'
-        '    They sit in the Diocese of Baton Rouge vaults today.</p>\n'
-        '\n'
-        '    <p>And no, this is not a claim to being the oldest Catholic anything in North America.\n'
-        '    St. Augustine, Florida has 1565 — it is the second card at the top of this page.\n'
-        '    San Miguel Chapel in Santa Fe is around 1610. Port-Royal is just the first one that is ours,\n'
-        '    and the one whose paperwork got burned.</p>\n'
-        '\n'
-        '    <p class="footnote-more"><a href="https://github.com/EVEglyphDesign/paix-parish-platform/blob/main/heritage/LIGNEE-ACADIENNE.md">Full write-up — the Acadian lineage page →</a></p>\n'
+        '    <p class="footnote-more"><a href="https://github.com/EVEglyphDesign/paix-parish-platform/blob/main/heritage/LIGNEE-ACADIENNE.md">'
+        f'{html.escape(t("footnote.more"))} →</a></p>\n'
         '  </div>\n')
 
 
-def portal() -> str:
+def portal(t, prefix="", url_of=None) -> str:
+    """`prefix` is the path back to the repository root from this page."""
     parish_links = "<br>".join(
-        f'<a href="parishes/{p["slug"]}/index.html">{html.escape(p["short"])}</a>' for p in PARISHES)
+        f'<a href="{parish_href(p, t.code, prefix)}">{html.escape(p["short"])}</a>'
+        for p in PARISHES)
+    n = str(len(PARISHES))
     return f'''<!DOCTYPE html>
-<html lang="en">
+<html lang="{t.html_lang}">
 <head>
 <meta charset="utf-8">
-<title>PAIX Parish Platform — Parish Sovereign Gateway</title>
+<title>{html.escape(t("portal.title"))}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A parish-owned platform template. Locally hosted, no tracking, no ads. Under the EVE Glyph Design doctrine.">
+<meta name="description" content="{html.escape(t("portal.meta_desc"))}">
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
-<link rel="stylesheet" href="assets/portal.css">
-<link rel="icon" type="image/svg+xml" href="assets/portal-crest.svg">
+<link rel="stylesheet" href="{prefix}assets/style.css">
+<link rel="stylesheet" href="{prefix}assets/portal.css">
+<link rel="icon" type="image/svg+xml" href="{prefix}assets/portal-crest.svg">
+{hreflang_links(url_of)}
 </head>
 <body class="portal-body">
 
 <header class="site-header portal-header">
   <div class="container">
-    <img src="assets/portal-crest.svg" alt="" class="crest" aria-hidden="true">
+    <img src="{prefix}assets/portal-crest.svg" alt="" class="crest" aria-hidden="true">
     <div class="site-title">
       <h1>PAIX Parish Platform</h1>
-      <div class="sub">Parish Sovereign Gateway — a community-first alternative to predatory hosting</div>
+      <div class="sub">{html.escape(t("portal.subtitle"))}</div>
     </div>
   </div>
 </header>
 
 <nav class="site-nav">
   <div class="container">
-    <a href="index.html" class="active">Parishes</a>
-    <a href="#ledger">Charitable Ledger</a>
-    <a href="#about">About the platform</a>
-    <a href="#kofc">For the Knights</a>
-    <a href="#doctrine">Doctrine</a>
+    <a href="index.html" class="active">{html.escape(t("portal.nav_parishes"))}</a>
+    <a href="#ledger">{html.escape(t("portal.nav_ledger"))}</a>
+    <a href="#about">{html.escape(t("portal.nav_about"))}</a>
+    <a href="#kofc">{html.escape(t("portal.nav_kofc"))}</a>
+    <a href="#doctrine">{html.escape(t("portal.nav_doctrine"))}</a>
   </div>
 </nav>
 
+{lang_switcher(t, url_of)}
 <main>
   <div class="container portal-hero">
-    <h1>A parish website belongs to the parish.</h1>
-    <p class="lead">{num_word()} parishes across three countries, one design canon. Locally hosted. No tracking. No ads. No third-party predators. Every dollar stays in the community.</p>
-    <p>Select a parish to enter its site. Every parish site shares the same EVE Glyph Design canon, so navigation and typography stay familiar. Each parish's official site remains the source of truth — this is a mirror prepared with care, ready to be handed over to the parish's existing IT volunteer whenever they want it.</p>
+    <h1>{html.escape(t("portal.hero_h1"))}</h1>
+    <p class="lead">{html.escape(t("portal.hero_lead", count=n))}</p>
+    <p>{html.escape(t("portal.hero_p"))}</p>
   </div>
 
-{region_blocks()}
+{region_blocks(t, prefix)}
 
   <div class="container" id="ledger">
     <div class="caisse-hero">
-      <div class="caisse-hero-badge">Paired with the parish sites</div>
-      <h2>The Charitable Ledger</h2>
-      <p class="caisse-hero-lead">A running tally of what the men already do around here — the shopping, the hour of help, the favour from a guy with a trade — so it adds up somewhere and the parish can see it.</p>
+      <div class="caisse-hero-badge">{html.escape(t("portal.ledger_badge"))}</div>
+      <h2>{html.escape(t("portal.ledger_h2"))}</h2>
+      <p class="caisse-hero-lead">{html.escape(t("portal.ledger_lead"))}</p>
       <div class="caisse-hero-plain">
         <ul>
-          <li>Shop through the parish code, the savings go to the parish.</li>
-          <li>An hour of help, one Brother signs off, it goes on the ledger.</li>
-          <li>A guy with a trade — plumber, accountant, nurse — can put an hour in at his real rate.</li>
-          <li>One page, the whole parish can read it.</li>
+          <li>{html.escape(t("portal.ledger_li1"))}</li>
+          <li>{html.escape(t("portal.ledger_li2"))}</li>
+          <li>{html.escape(t("portal.ledger_li3"))}</li>
+          <li>{html.escape(t("portal.ledger_li4"))}</li>
         </ul>
       </div>
       <div class="caisse-hero-cta">
-        <a class="btn-primary" href="https://eveglyphdesign.github.io/holy-trinity-caisse/">See how it works →</a>
-        <a class="btn-secondary" href="https://eveglyphdesign.github.io/holy-trinity-caisse/knights-letter.html">Letter to the Knights</a>
+        <a class="btn-primary" href="https://eveglyphdesign.github.io/holy-trinity-caisse/">{html.escape(t("portal.ledger_cta1"))} →</a>
+        <a class="btn-secondary" href="https://eveglyphdesign.github.io/holy-trinity-caisse/knights-letter.html">{html.escape(t("portal.ledger_cta2"))}</a>
       </div>
     </div>
   </div>
 
   <div class="container portal-section" id="about">
-    <h2>What this is</h2>
-    <p>{num_word()} Catholic parishes, each with a mirrored site under a shared editorial template. Same header, same footer, same navigation — but each parish keeps its own crest, mass times, contact information and diocesan link. If a parish already has an IT volunteer, this is not a replacement; it is an option they can inspect, fork, or ignore.</p>
+    <h2>{html.escape(t("portal.about_h2"))}</h2>
+    <p>{html.escape(t("portal.about_p", count=n))}</p>
     <div class="pillars">
       <div class="pillar">
-        <h4>Locally hosted</h4>
-        <p>Static site on GitHub Pages or the parish's own hosting. No third-party dashboards, no vendor lock-in.</p>
+        <h4>{html.escape(t("portal.pillar1_h"))}</h4>
+        <p>{html.escape(t("portal.pillar1_p"))}</p>
       </div>
       <div class="pillar">
-        <h4>Zero surveillance</h4>
-        <p>No cookies. No analytics. No third-party scripts other than Google Fonts. <em>noindex, nofollow</em> until the parish approves publication.</p>
+        <h4>{html.escape(t("portal.pillar2_h"))}</h4>
+        <p>{html.escape(t("portal.pillar2_p"))}</p>
       </div>
       <div class="pillar">
-        <h4>Full parish ownership</h4>
-        <p>The parish owns its content, its domain, and its exit. Fork the repository, take it home, keep going.</p>
+        <h4>{html.escape(t("portal.pillar3_h"))}</h4>
+        <p>{html.escape(t("portal.pillar3_p"))}</p>
       </div>
       <div class="pillar">
-        <h4>Consistent design</h4>
-        <p>Shared EVE Glyph Design canon so parishioners moving between parish sites feel at home.</p>
+        <h4>{html.escape(t("portal.pillar4_h"))}</h4>
+        <p>{html.escape(t("portal.pillar4_p"))}</p>
       </div>
     </div>
   </div>
 
-  <div class="container portal-section" id="kofc">
-    <h2>For the Knights of Columbus</h2>
-    <p class="lead">This is what "scale in a week" looks like — with no hurt feelings.</p>
-    <p>If the Knights want to standardize parish web presence across a diocese, this template can spin up a new parish site in about an hour. But that is not the offer. The offer is a <em>choice</em>:</p>
-    <ul class="kofc-list">
-      <li><strong>Existing IT volunteer stays put.</strong> If a Brother Knight or parishioner is already running the parish site, nothing is disrupted. This platform is available if they want to switch or fork; otherwise it sits alongside their existing work as a reference.</li>
-      <li><strong>Money stays in the parish.</strong> No annual GoDaddy invoices, no Squarespace subscriptions, no Facebook advertising credits. Static hosting on GitHub Pages is free, and every dollar the parish saves stays in the community.</li>
-      <li><strong>Parishioners stay safe.</strong> No surveillance, no engagement-optimized feeds, no algorithmic exposure of children, women, or vulnerable people. The parish site is a parish site — not a data-extraction surface for a platform in California.</li>
-      <li><strong>The Knights stay in charge.</strong> Ownership, doctrine and exit rights belong to the parish and its Council. The design canon is a shared reference, not a vendor contract.</li>
-    </ul>
-    <p class="kofc-note">Council of Palms #6673 (Holy Trinity, Lenexa) is the reference council for this build.</p>
+  <div class="container portal-section" id="languages">
+    <h2>{html.escape(t("portal.lang_h2"))}</h2>
+    <p class="lead">{html.escape(t("portal.lang_p1"))}</p>
+    <p>{html.escape(t("portal.lang_p2"))}</p>
+    <p>{html.escape(t("portal.lang_p3"))}</p>
+    <div class="lang-grid">
+{chr(10).join(f'      <a href="{url_of(c)}" hreflang="{c}" lang="{c}"><span>{html.escape(e)}</span></a>' for c, e, _, _ in LANGS)}
+    </div>
+  </div>
 
-    <p class="caisse-crossref">The <a href="#ledger">Charitable Ledger</a> above pairs with the parish sites — that is the other half of what is on offer.</p>
+  <div class="container portal-section" id="kofc">
+    <h2>{html.escape(t("portal.kofc_h2"))}</h2>
+    <p class="lead">{html.escape(t("portal.kofc_lead"))}</p>
+    <p>{html.escape(t("portal.kofc_p"))}</p>
+    <ul class="kofc-list">
+      <li><strong>{html.escape(t("portal.kofc_li1_b"))}</strong> {html.escape(t("portal.kofc_li1"))}</li>
+      <li><strong>{html.escape(t("portal.kofc_li2_b"))}</strong> {html.escape(t("portal.kofc_li2"))}</li>
+      <li><strong>{html.escape(t("portal.kofc_li3_b"))}</strong> {html.escape(t("portal.kofc_li3"))}</li>
+      <li><strong>{html.escape(t("portal.kofc_li4_b"))}</strong> {html.escape(t("portal.kofc_li4"))}</li>
+    </ul>
+    <p class="kofc-note">{html.escape(t("portal.kofc_note"))}</p>
+
+    <p class="caisse-crossref"><a href="#ledger">{html.escape(t("portal.kofc_xref"))}</a></p>
   </div>
 
   <div class="container portal-section" id="doctrine">
-    <h2>Doctrine</h2>
+    <h2>{html.escape(t("portal.doctrine_h2"))}</h2>
     <div class="doctrine-grid">
       <div>
-        <h4>No profiling</h4>
-        <p>No parishioner is scored, categorized or targeted by this platform. Ever.</p>
+        <h4>{html.escape(t("portal.doc1_h"))}</h4>
+        <p>{html.escape(t("portal.doc1_p"))}</p>
       </div>
       <div>
-        <h4>Safety first, betterment second</h4>
-        <p>Content and identity safety comes before growth, engagement, or monetization.</p>
+        <h4>{html.escape(t("portal.doc2_h"))}</h4>
+        <p>{html.escape(t("portal.doc2_p"))}</p>
       </div>
       <div>
-        <h4>Founder credit</h4>
-        <p>Design founder: <strong>{FOUNDER}</strong>, EVE Glyph Design. This credit is irrevocable.</p>
+        <h4>{html.escape(t("portal.doc3_h"))}</h4>
+        <p>{html.escape(t("portal.doc3_p", founder=FOUNDER))}</p>
       </div>
       <div>
-        <h4>Parish sovereignty</h4>
-        <p>The parish binds the platform, receives a governance receipt, and may exit with full content export at any time.</p>
+        <h4>{html.escape(t("portal.doc4_h"))}</h4>
+        <p>{html.escape(t("portal.doc4_p"))}</p>
       </div>
     </div>
   </div>
 
   <div class="container portal-section" id="related">
-    <h2>Related surface</h2>
+    <h2>{html.escape(t("portal.related_h2"))}</h2>
     <div class="doctrine-grid">
       <div>
-        <h4><a href="https://eveglyphdesign.github.io/paix-educational-game/">PAIX Educational Game</a></h4>
-        <p>The parishioner-facing educational video game — the game surface of the EVE Glyph Design education program, distributed through the parish and Church portal. Education first; catechetical outputs stay disabled until Church review is complete. Safety first, betterment second.</p>
+        <h4><a href="https://eveglyphdesign.github.io/paix-educational-game/">{html.escape(t("portal.rel1_h"))}</a></h4>
+        <p>{html.escape(t("portal.rel1_p"))}</p>
       </div>
       <div>
-        <h4><a href="https://eveglyphdesign.github.io/holy-trinity-caisse/">Holy Trinity Charitable Ledger (Lenexa pilot)</a></h4>
-        <p>The Holy Trinity Lenexa mutual-aid economy pilot. One good deed. One witness. One hour. One token.</p>
+        <h4><a href="https://eveglyphdesign.github.io/holy-trinity-caisse/">{html.escape(t("portal.rel2_h"))}</a></h4>
+        <p>{html.escape(t("portal.rel2_p"))}</p>
       </div>
     </div>
   </div>
 
-{footnote_1613()}
+{footnote_1613(t)}
 </main>
 
 <footer class="site-footer">
   <div class="container">
     <div class="footer-cols">
       <div>
-        <h4>PAIX Parish Platform</h4>
-        <p>A Parish Sovereign Gateway reference build.<br>
-        Under the EVE Glyph Design doctrine.<br>
-        Contact the parish directly — see each parish page for details.</p>
+        <h4>{html.escape(t("portal.foot_col1_h"))}</h4>
+        <p>{html.escape(t("portal.foot_col1_p"))}</p>
       </div>
       <div>
-        <h4>Parishes</h4>
+        <h4>{html.escape(t("portal.foot_col2_h"))}</h4>
         <p>{parish_links}</p>
       </div>
       <div>
-        <h4>Reference</h4>
-        <p><a href="https://github.com/EVEglyphDesign/paroisse-sainte-anne-des-pays-bas">Sainte-Anne source repo</a><br>
-        <a href="https://github.com/EVEglyphDesign/kofc-6673-outreach">KofC #6673 outreach</a><br>
-        <a href="https://github.com/EVEglyphDesign/godaddy-killer">GoDaddy-Killer migration kit</a></p>
+        <h4>{html.escape(t("portal.foot_col3_h"))}</h4>
+        <p><a href="https://github.com/EVEglyphDesign/paroisse-sainte-anne-des-pays-bas">{html.escape(t("portal.foot_ref1"))}</a><br>
+        <a href="https://github.com/EVEglyphDesign/kofc-6673-outreach">{html.escape(t("portal.foot_ref2"))}</a><br>
+        <a href="https://github.com/EVEglyphDesign/godaddy-killer">{html.escape(t("portal.foot_ref3"))}</a></p>
       </div>
     </div>
     <div class="tribute">
-      <p>Platform designed under the doctrine <em>EVE Glyph Design</em>. Design founder: <span class="name">{FOUNDER}</span>.</p>
-      <p>Every parish retains full ownership of its own content, domain and exit path. This is a mirror prepared with care, not a takeover.</p>
-      <p style="margin-top:0.8rem; font-size:0.78rem;">No tracking. No cookies. No analytics. No third-party scripts other than Google Fonts. <em>For the good of the people. Pour le bien-être du peuple.</em></p>
+      <p>{html.escape(t("portal.foot_tribute1"))} <span class="name">{html.escape(FOUNDER)}</span>.</p>
+      <p>{html.escape(t("portal.foot_tribute2"))}</p>
+      <p style="margin-top:0.8rem; font-size:0.78rem;">{html.escape(t("ui.no_tracking"))} <em>{html.escape(t("ui.for_people"))}</em></p>
     </div>
     <div class="photo-credit">
-      <p>Church photographs: {photo_credits_line()}</p>
+      <p>{html.escape(t("portal.foot_photos"))} {photo_credits_line()}</p>
     </div>
     <div class="ark-footer">
       <p>{html.escape(ARK_FOOTER)}</p>
@@ -1789,28 +1659,78 @@ PORTAL_CREST = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" 
 # ---------------------------------------------------------------------------
 
 def build():
-    # Portal assets
+    """Emit the portal and every parish site in all nine languages.
+
+    Back-compatibility rule: the bare URL of every page keeps the language the
+    parish's own community speaks, so no link that already exists anywhere in
+    the world breaks. The other eight sit underneath it in /<lang>/.
+    """
     (ROOT / "assets" / "portal.css").write_text(PORTAL_CSS)
     (ROOT / "assets" / "portal-crest.svg").write_text(PORTAL_CREST)
 
-    # Portal front page
-    (ROOT / "index.html").write_text(portal())
+    translators = {code: translator(code) for code in LANG_CODES}
 
-    # Per-parish sites
+    # ---- Portal: / (English, back-compatible) and /<lang>/ ----------------
+    def portal_url(from_prefix):
+        def url_of(code):
+            return f"{from_prefix}{code}/index.html"
+        return url_of
+
+    (ROOT / "index.html").write_text(
+        portal(translators[DEFAULT], prefix="", url_of=portal_url("")))
+    for code in LANG_CODES:
+        d = ROOT / code
+        d.mkdir(exist_ok=True)
+        (d / "index.html").write_text(
+            portal(translators[code], prefix="../", url_of=portal_url("../")))
+
+    # ---- Parish sites -----------------------------------------------------
+    pages = [("index.html", page_index), ("about.html", page_about),
+             ("mass.html", page_mass), ("life.html", page_life),
+             ("contact.html", page_contact)]
+
     for p in PARISHES:
+        native = NATIVE_OF.get(p["lang"], DEFAULT)
         pdir = PARISHES_DIR / p["slug"]
         adir = pdir / "assets"
         adir.mkdir(parents=True, exist_ok=True)
         shutil.copy(ROOT / "assets" / "style.css", adir / "style.css")
         (adir / "crest.svg").write_text(crest_svg(p["crest_style"]))
-        (pdir / "index.html").write_text(page_index(p))
-        (pdir / "about.html").write_text(page_about(p))
-        (pdir / "mass.html").write_text(page_mass(p))
-        (pdir / "life.html").write_text(page_life(p))
-        (pdir / "contact.html").write_text(page_contact(p))
-        print(f"  ✓ {p['slug']} ({p['name']})")
 
-    print(f"\nBuilt {len(PARISHES)} parishes + portal at {ROOT}")
+        for fname, fn in pages:
+            # native copy at the bare URL
+            def url_of(code, _f=fname, _n=native):
+                return _f if code == _n else f"{code}/{_f}"
+            (pdir / fname).write_text(
+                fn(p, translators[native], url_of, "../../index.html", "assets/"))
+
+            # one subdirectory per language
+            for code in LANG_CODES:
+                sub = pdir / code
+                sub.mkdir(exist_ok=True)
+                def url_of_sub(c, _f=fname, _n=native):
+                    return f"../{_f}" if c == _n else f"../{c}/{_f}"
+                (sub / fname).write_text(
+                    fn(p, translators[code], url_of_sub,
+                       f"../../../{code}/index.html", "../assets/"))
+
+            # each language subdirectory needs the stylesheet one level up
+        for code in LANG_CODES:
+            sub_assets = pdir / code / "assets"
+            if sub_assets.exists():
+                shutil.rmtree(sub_assets)
+
+        print(f"  \u2713 {p['slug']} ({p['name']}) \u2014 {len(LANG_CODES)} languages")
+
+    # ---- Translation coverage report -------------------------------------
+    print("\nTranslation coverage (against the source manifest):")
+    for code, (done, total) in coverage().items():
+        bar = "\u2588" * round(20 * done / total) if total else ""
+        print(f"  {code}  {done:>3}/{total}  {bar}")
+
+    print(f"\nBuilt {len(PARISHES)} parishes \u00d7 {len(LANG_CODES)} languages "
+          f"+ portal at {ROOT}")
+
 
 if __name__ == "__main__":
     build()
