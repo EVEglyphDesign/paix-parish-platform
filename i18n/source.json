@@ -797,8 +797,8 @@
   "note": "source language: el-GR"
  },
  "parish.metamorphosis-nafplio.city_line": {
-  "text": "Ναύπλιο, Αργολίδα · οδός Φωτομάρα, στα σκαλοπάτια της οδού Ποταμιάνου",
-  "note": "source language: el-GR"
+  "text": "Ναύπλιο, Αργολίδα · Οδός Φωτομάρα, στα σκαλοπάτια της οδού Ποταμιάνου",
+  "note": "place name and street only; never translated"
  },
  "parish.metamorphosis-nafplio.status_note": {
   "text": "Διατηρητέο μνημείο — εντός του κηρυγμένου ιστορικού τόπου της Παλιάς Πόλης Ναυπλίου.",
@@ -921,5 +921,69 @@
  },
  "nafplio.card_body": {
   "text": "Faith lives where it stands, with a community that prays, celebrates and looks after one another."
+ },
+ "parish.holy-trinity.city_line": {
+  "text": "Lenexa, Kansas · 13615 West 92nd Street",
+  "note": "place name and street only; never translated"
+ },
+ "parish.saint-joseph-oratory.city_line": {
+  "text": "Montréal, Québec · 3800, chemin Queen Mary",
+  "note": "place name and street only; never translated"
+ },
+ "parish.saint-augustine.city_line": {
+  "text": "Paquetville, Nouveau-Brunswick · 3585, rue Principale",
+  "note": "place name and street only; never translated"
+ },
+ "parish.saint-catherine.city_line": {
+  "text": "Halifax, Nova Scotia · 6476 Bayers Road",
+  "note": "place name and street only; never translated"
+ },
+ "parish.saint-mary-basilica.city_line": {
+  "text": "Halifax, Nova Scotia · 5221 Spring Garden Road",
+  "note": "place name and street only; never translated"
+ },
+ "parish.sagrada-familia-nuevo-vallarta.city_line": {
+  "text": "Las Jarretaderas, Nayarit · J. María Morelos e Independencia",
+  "note": "place name and street only; never translated"
+ },
+ "parish.paradise-village-mass-nuevo-vallarta.city_line": {
+  "text": "Nuevo Vallarta, Nayarit · Paradise Plaza, Paseo de los Cocoteros",
+  "note": "place name and street only; never translated"
+ },
+ "parish.santa-cruz-huanacaxtle.city_line": {
+  "text": "La Cruz de Huanacaxtle, Nayarit · Calle Marlín 38",
+  "note": "place name and street only; never translated"
+ },
+ "parish.paradise-village-mass-nuevo-vallarta.tagline": {
+  "text": "The English Sunday Mass by the marina at Nuevo Vallarta",
+  "note": "source language: en-US"
+ },
+ "parish.paradise-village-mass-nuevo-vallarta.portal_blurb": {
+  "text": "The English-language Sunday Mass held inside Paradise Plaza at Nuevo Vallarta, for the people of the marina corridor.",
+  "note": "source language: en-US"
+ },
+ "parish.paradise-village-mass-nuevo-vallarta.founded_line": {
+  "text": "A standing Sunday Mass, not a canonically erected parish · Diócesis de Tepic · Decanato Bahía de Banderas",
+  "note": "source language: en-US"
+ },
+ "parish.paradise-village-mass-nuevo-vallarta.diocese": {
+  "text": "Diócesis de Tepic · Decanato Bahía de Banderas",
+  "note": "source language: en-US"
+ },
+ "parish.paradise-village-mass-nuevo-vallarta.status_note": {
+  "text": "State this plainly: this is a standing Sunday Mass, not a parish. The Diócesis de Tepic, which holds jurisdiction over Bahía de Banderas, does not list it among its parishes or quasi-parishes, and no source names the priest or the parish that supplies the celebrant. It is a long-running pastoral accommodation for English-speaking residents, condominium owners and visitors along the marina corridor, meeting inside the Paradise Plaza mall at the Paradise Village complex. The nearest canonical parishes are the Cuasiparroquia de la Sagrada Familia at Las Jarretaderas and Nuestra Señora Reina de la Paz at Bucerías. The Vallarta Yacht Club stands about a kilometre north on the same Paseo de los Cocoteros; no source ties the club to this Mass, and this card does not claim one. No founding date exists to give, because nothing was ever founded — the listing is traceable in worship directories from the mid-2000s onward. No free-licensed photograph of the Mass, of the Paradise Plaza interior, or of any chapel on the site could be found. The only free image of the complex is a 2005 photograph of the resort's gated-community entrance — a gate, not a church — and a gate on a church card would be a lie of composition. The card stays without a photograph until someone on the ground sends one.",
+  "note": "source language: en-US"
+ },
+ "parish.paradise-village-mass-nuevo-vallarta.schedule_note": {
+  "text": "Sunday 10:00 AM in English is corroborated by the PVAngels worship directory, the Villa Encantada visitor pages and repeated first-hand guest reports, but no diocesan source publishes it. There is no parish office and no published telephone number. A separate interdenominational Christian service meets at 10:30 AM in the resort's Salón del Sol — it is not this Mass.",
+  "note": "source language: en-US"
+ },
+ "parish.paradise-village-mass-nuevo-vallarta.sched.0": {
+  "text": "Sunday — Mass in English",
+  "note": "day/occasion label only; the clock time is never translated (source: en-US)"
+ },
+ "parish.santa-cruz-huanacaxtle.status_note": {
+  "text": "Párroco: Pbro. Luis Alberto Moreno Martínez, según el directorio del clero de la Diócesis de Tepic. Fiesta patronal: el 3 de mayo, Día de la Santa Cruz. No se publicó en ninguna fuente primaria el año de fundación de la parroquia; se deja el hueco abierto en lugar de inventarlo. El código postal es C.P. 63732 según la diócesis, aunque varios directorios turísticos publican 63734. No existe ninguna fotografía de la iglesia con licencia libre: se revisaron Wikimedia Commons, Wikidata, Flickr y las imágenes de calle de KartaView a menos de trescientos metros, y ninguna muestra la fachada. La tarjeta se queda sin fotografía hasta que alguien del pueblo mande una.",
+  "note": "source language: es-MX"
  }
 }

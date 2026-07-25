@@ -51,6 +51,7 @@ PARISHES = [
         ],
         "crest_style": "trinity",
         "portal_blurb": "Home parish of Knights of Columbus Council of Palms #6673.",
+        "city_line": "Lenexa, Kansas · 13615 West 92nd Street",
         "region": "united-states",
         "founded_line": "Founded 1979 · Archdiocese of Kansas City in Kansas · Knights of Columbus Council of Palms #6673",
         "photo_credit": None,
@@ -94,6 +95,7 @@ PARISHES = [
         "city": "Montr\u00e9al, Qu\u00e9bec",
         "founded": "1904",
         "lang": "fr-CA",
+        "city_line": "Montr\u00e9al, Qu\u00e9bec \u00b7 3800, chemin Queen Mary",
         "region": "montreal",
         "official_url": "https://saint-joseph.org",
         "address": "3800, chemin Queen Mary, Montr\u00e9al (Qu\u00e9bec) H3V 1H6",
@@ -230,6 +232,7 @@ PARISHES = [
         ],
         "crest_style": "shield",
         "portal_blurb": "Paroisse acadienne du village de Paquetville, patrimoine familial des Thériault.",
+        "city_line": "Paquetville, Nouveau-Brunswick \u00b7 3585, rue Principale",
         "region": "atlantic-canada",
     },
     {
@@ -298,6 +301,7 @@ PARISHES = [
         ],
         "crest_style": "franciscan",
         "portal_blurb": "Home of the Franciscans of Halifax. West End Halifax since 1948.",
+        "city_line": "Halifax, Nova Scotia · 6476 Bayers Road",
         "region": "atlantic-canada",
     },
     {
@@ -321,6 +325,7 @@ PARISHES = [
         ],
         "crest_style": "cathedral",
         "portal_blurb": "Mother church of the Archdiocese of Halifax-Yarmouth. Gothic Revival, National Historic Site of Canada.",
+        "city_line": "Halifax, Nova Scotia · 5221 Spring Garden Road",
         "region": "atlantic-canada",
     },
     {
@@ -330,6 +335,7 @@ PARISHES = [
         "city": "Las Jarretaderas, Nayarit",
         "founded": "",
         "lang": "es-MX",
+        "city_line": "Las Jarretaderas, Nayarit · J. María Morelos e Independencia",
         "region": "mexico",
         "official_url": "http://diocesisdetepic.mx/decanato-bahia-de-banderas/",
         "address": "J. Mar\u00eda Morelos e Independencia, Las Jarretaderas, C.P. 63735, Bah\u00eda de Banderas, Nayarit",
@@ -351,12 +357,65 @@ PARISHES = [
         "schedule_note": "Horario seg\u00fan el directorio diocesano de Tepic. Conviene confirmar por tel\u00e9fono antes de asistir.",
     },
     {
+        "slug": "paradise-village-mass-nuevo-vallarta",
+        "name": "Paradise Village Catholic Mass",
+        "short": "Paradise Village \u2014 Nuevo Vallarta",
+        "city": "Nuevo Vallarta, Nayarit",
+        "founded": "",
+        "lang": "en-US",
+        "region": "mexico",
+        "official_url": "https://pvangels.com/charities/132/worship-services",
+        "address": (
+            "Paradise Plaza, Av. Paseo de los Cocoteros, Nuevo Vallarta, "
+            "Bah\u00eda de Banderas, Nayarit, C.P. 63735, M\u00e9xico"
+        ),
+        "phone": "",
+        "email": "",
+        "tagline": "The English Sunday Mass by the marina at Nuevo Vallarta",
+        "diocese": "Di\u00f3cesis de Tepic \u00b7 Decanato Bah\u00eda de Banderas",
+        "schedule": [
+            ("Sunday \u2014 Mass in English", "10:00 AM"),
+        ],
+        "crest_style": "anchor",
+        "portal_blurb": (
+            "The English-language Sunday Mass held inside Paradise Plaza at Nuevo Vallarta, "
+            "for the people of the marina corridor."
+        ),
+        "founded_line": (
+            "A standing Sunday Mass, not a canonically erected parish \u00b7 "
+            "Di\u00f3cesis de Tepic \u00b7 Decanato Bah\u00eda de Banderas"
+        ),
+        "city_line": "Nuevo Vallarta, Nayarit \u00b7 Paradise Plaza, Paseo de los Cocoteros",
+        "photo_status": "pending",
+        "schedule_note": (
+            "Sunday 10:00 AM in English is corroborated by the PVAngels worship directory, the "
+            "Villa Encantada visitor pages and repeated first-hand guest reports, but no diocesan "
+            "source publishes it. There is no parish office and no published telephone number. "
+            "A separate interdenominational Christian service meets at 10:30 AM in the resort's "
+            "Sal\u00f3n del Sol \u2014 it is not this Mass."
+        ),
+        "status_note": (
+            "State this plainly: this is a standing Sunday Mass, not a parish. The Di\u00f3cesis de "
+            "Tepic, which holds jurisdiction over Bah\u00eda de Banderas, does not list it among its "
+            "parishes or quasi-parishes, and no source names the priest or the parish that supplies "
+            "the celebrant. It is a long-running pastoral accommodation for English-speaking "
+            "residents, condominium owners and visitors along the marina corridor, meeting inside "
+            "the Paradise Plaza mall at the Paradise Village complex. The nearest canonical parishes "
+            "are the Cuasiparroquia de la Sagrada Familia at Las Jarretaderas and Nuestra Se\u00f1ora "
+            "Reina de la Paz at Bucer\u00edas. The Vallarta Yacht Club stands about a kilometre north "
+            "on the same Paseo de los Cocoteros; no source ties the club to this Mass, and this card "
+            "does not claim one. No founding date exists to give, because nothing was ever founded \u2014 "
+            "the listing is traceable in worship directories from the mid-2000s onward. No free-licensed photograph of the Mass, of the Paradise Plaza interior, or of any chapel on the site could be found. The only free image of the complex is a 2005 photograph of the resort's gated-community entrance \u2014 a gate, not a church \u2014 and a gate on a church card would be a lie of composition. The card stays without a photograph until someone on the ground sends one."
+        ),
+    },
+    {
         "slug": "santa-cruz-huanacaxtle",
         "name": "Parroquia de La Santa Cruz",
         "short": "La Santa Cruz \u2014 La Cruz de Huanacaxtle",
         "city": "La Cruz de Huanacaxtle, Nayarit",
         "founded": "",
         "lang": "es-MX",
+        "city_line": "La Cruz de Huanacaxtle, Nayarit · Calle Marlín 38",
         "region": "mexico",
         "official_url": "https://www.facebook.com/p/Parroquia-de-La-Santa-Cruz-de-Huanacaxtle-Oficial-61570443480543/",
         "address": "Calle Marl\u00edn 38, La Cruz de Huanacaxtle, C.P. 63732, Bah\u00eda de Banderas, Nayarit",
@@ -372,6 +431,9 @@ PARISHES = [
         "crest_style": "cross",
         "portal_blurb": "Parroquia de un pueblo pesquero de Nayarit convertido en puerto n\u00e1utico, junto a la Marina Riviera Nayarit.",
         "founded_line": "Di\u00f3cesis de Tepic \u00b7 Decanato Bah\u00eda de Banderas",
+        "status_note": (
+            "P\u00e1rroco: Pbro. Luis Alberto Moreno Mart\u00ednez, seg\u00fan el directorio del clero de la Di\u00f3cesis de Tepic. Fiesta patronal: el 3 de mayo, D\u00eda de la Santa Cruz. No se public\u00f3 en ninguna fuente primaria el a\u00f1o de fundaci\u00f3n de la parroquia; se deja el hueco abierto en lugar de inventarlo. El c\u00f3digo postal es C.P. 63732 seg\u00fan la di\u00f3cesis, aunque varios directorios tur\u00edsticos publican 63734. No existe ninguna fotograf\u00eda de la iglesia con licencia libre: se revisaron Wikimedia Commons, Wikidata, Flickr y las im\u00e1genes de calle de KartaView a menos de trescientos metros, y ninguna muestra la fachada. La tarjeta se queda sin fotograf\u00eda hasta que alguien del pueblo mande una."
+        ),
         "photo_status": "pending",
         "schedule_note": "Horario reportado por feligreses; algunos directorios lo publican mal. Conviene confirmar por tel\u00e9fono.",
     },
@@ -475,6 +537,11 @@ def crest_svg(style: str) -> str:
         # The standing cross the town is named for — La Cruz de Huanacaxtle
         motif = '''<path d="M50 58 L 50 84 M 40 66 L 60 66" stroke="#f5efe1" stroke-width="3" stroke-linecap="round"/>
   <circle cx="50" cy="66" r="3" fill="#d4a94a"/>'''
+    elif style == "anchor":
+        # A cross whose foot becomes an anchor - the Sunday Mass by the marina at Nuevo Vallarta
+        motif = '''<path d="M50 56 L 50 82 M 41 64 L 59 64" stroke="#f5efe1" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M38 74 Q 50 90, 62 74" fill="none" stroke="#f5efe1" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="50" cy="64" r="3" fill="#d4a94a"/>'''
     elif style == "spire":
         # A single tall spire topped with a cross — St. Dunstan's, Fredericton (1965)
         motif = '''<path d="M50 54 L 60 78 L 40 78 Z" fill="#f5efe1" opacity="0.92"/>
@@ -578,13 +645,14 @@ def footer(parish, t) -> str:
     slug = parish['slug']
     email_line = (f'<br>\n        <a href="mailto:{parish["email"]}">{parish["email"]}</a>'
                   if parish.get('email') else '')
+    tel_line = (f'<br>\n        {html.escape(t("page.tel_abbrev"))} : {html.escape(parish["phone"])}'
+                if parish.get('phone') else '')
     return f'''<footer class="site-footer">
   <div class="container">
     <div class="footer-cols">
       <div>
         <h4>{html.escape(t("ui.reach_us"))}</h4>
-        <p>{html.escape(parish['address'])}<br>
-        {html.escape(t("page.tel_abbrev"))} : {html.escape(parish['phone'])}{email_line}</p>
+        <p>{html.escape(parish['address'])}{tel_line}{email_line}</p>
       </div>
       <div>
         <h4>{html.escape(t("ui.on_this_site"))}</h4>
@@ -774,12 +842,14 @@ def page_contact(parish, t, url_of, portal_back, ap="assets/") -> str:
     email_row = (f'<dt>{html.escape(t("page.dt_email"))}</dt>'
                  f'<dd><a href="mailto:{parish["email"]}">{parish["email"]}</a></dd>'
                  if parish.get('email') else '')
+    phone_row = (f'<dt>{html.escape(t("page.dt_phone"))}</dt><dd>{html.escape(parish["phone"])}</dd>'
+                 if parish.get('phone') else '')
     body = f'''<main><div class="container">
 <h1>{html.escape(t("ui.contact_h1"))}</h1>
 <div class="contact-block">
   <dl>
     <dt>{html.escape(t("page.dt_address"))}</dt><dd>{html.escape(parish['address'])}</dd>
-    <dt>{html.escape(t("page.dt_phone"))}</dt><dd>{html.escape(parish['phone'])}</dd>
+    {phone_row}
     {email_row}
     <dt>{html.escape(t("page.dt_diocese"))}</dt><dd>{html.escape(t("parish." + slug + ".diocese"))}</dd>
   </dl>
