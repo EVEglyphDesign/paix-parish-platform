@@ -369,3 +369,169 @@
   .caisse-hero-cta .btn-primary,
   .caisse-hero-cta .btn-secondary { text-align: center; }
 }
+
+/* --------------------------------------------------------------------------
+   v3 — regional grouping, photo-pending state, credits, rights footer, footnote
+   -------------------------------------------------------------------------- */
+
+.region-block { margin-top: 2.6rem; }
+.region-block:first-of-type { margin-top: 1.4rem; }
+
+.region-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.15rem 1rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid #d9c99d;
+}
+.region-head h2 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: #0b3b5c;
+  letter-spacing: 0.01em;
+}
+.region-head p {
+  margin: 0;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.86rem;
+  color: #6a6154;
+}
+
+/* Card state when no freely-licensed photograph of the church exists yet */
+.parish-card-nophoto {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.1rem 1.4rem;
+  text-align: center;
+  background: linear-gradient(160deg, #12496c 0%, #0b3b5c 100%);
+}
+.parish-card-nophoto img {
+  width: 56px;
+  height: 56px;
+  opacity: 0.95;
+  position: static;
+  transform: none;
+}
+.parish-card-nophoto span {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.74rem;
+  line-height: 1.4;
+  color: #e8ddc4;
+  max-width: 22rem;
+}
+.parish-card:hover .parish-card-nophoto img { transform: none; }
+
+/* Photograph attribution */
+.photo-credit {
+  margin-top: 1.1rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid rgba(216, 201, 157, 0.35);
+}
+.photo-credit p {
+  margin: 0;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  color: #9aa7b2;
+}
+.photo-credit a { color: #c9b98c; text-decoration: none; }
+.photo-credit a:hover { text-decoration: underline; }
+
+/* Mandatory rights footer — EVE Glyph Index L0 canon, Gate 2 */
+.ark-footer {
+  margin-top: 1.1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(216, 201, 157, 0.35);
+}
+.ark-footer p {
+  margin: 0;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.71rem;
+  line-height: 1.6;
+  color: #8f9aa5;
+  max-width: 74ch;
+}
+
+/* The 1613 footnote at the very bottom — deliberately quiet */
+.footnote-block { margin-top: 1rem; }
+.footnote-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #d9c99d 0%, rgba(217, 201, 157, 0) 70%);
+  margin-bottom: 1.6rem;
+}
+.footnote-block h2 {
+  font-size: 1.35rem;
+  color: #5a5142;
+  font-weight: 500;
+}
+.footnote-block p {
+  font-size: 0.93rem;
+  line-height: 1.66;
+  color: #5f5749;
+  max-width: 68ch;
+}
+.footnote-aside {
+  font-style: italic;
+  color: #8a8172;
+  margin-top: -0.4rem;
+}
+.footnote-block strong { color: #4a4234; font-weight: 600; }
+.footnote-more { margin-top: 1.3rem; }
+.footnote-more a {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: #1a5578;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 85, 120, 0.35);
+}
+.footnote-more a:hover { border-bottom-color: #1a5578; }
+
+/* Hero placeholder on a parish page with no licensed photograph */
+.hero-photo-pending {
+  background: linear-gradient(160deg, #12496c 0%, #0b3b5c 100%);
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-photo-pending::after { display: none; }
+.hero-photo-pending-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 2.6rem 1.5rem;
+  text-align: center;
+}
+.hero-photo-pending-inner img { width: 74px; height: 74px; }
+.hero-photo-pending-inner p {
+  margin: 0;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.83rem;
+  color: #e8ddc4;
+  max-width: 34rem;
+}
+
+/* Schedule caveat where the published times could not be confirmed officially */
+.schedule-note {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.83rem;
+  line-height: 1.55;
+  color: #6a6154;
+  font-style: italic;
+  margin-top: -0.4rem;
+}
+
+@media (max-width: 640px) {
+  .region-head h2 { font-size: 1.3rem; }
+  .hero-photo-pending { min-height: 190px; }
+}
