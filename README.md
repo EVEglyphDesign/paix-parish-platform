@@ -8,7 +8,7 @@
 
 A Parish Sovereign Gateway reference build under the **EVE Glyph Design** doctrine.
 
-Front-page portal + **ten mirrored parish sites across four regions**, all in one editorial canon:
+Front-page portal + **eleven mirrored parish sites across five regions**, all in one editorial canon:
 
 **United States**
 - **Holy Trinity Catholic Parish** — Lenexa, Kansas
@@ -27,6 +27,9 @@ Front-page portal + **ten mirrored parish sites across four regions**, all in on
 **México**
 - **Cuasiparroquia de la Sagrada Familia** — Las Jarretaderas, Nayarit
 - **Parroquia de La Santa Cruz** — La Cruz de Huanacaxtle, Nayarit
+
+**Ελλάδα · Greece**
+- **Ιερός Καθολικός Ναός Μεταμορφώσεως του Σωτήρος** — Ναύπλιο, Αργολίδα. The «Frankoklisia» of the Old Town: a mosque ceded to the Catholic Church in 1839 and consecrated in 1840, holding the 1841 Touret Arch — the oldest Philhellene monument in Greece, inscribed with the names of some 280 foreign volunteers who died for Greek independence.
 
 ## Heritage
 
