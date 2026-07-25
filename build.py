@@ -156,8 +156,12 @@ PARISHES = [
             "before going out on its own in 1981."
         ),
         "region": "atlantic-canada",
-        "photo_status": "pending",
-        "photo_alt": "St. Dunstan's Church, 120 Regent Street, Fredericton, New Brunswick",
+        "photo_alt": (
+            "St. Dunstan's Church, Fredericton \u2014 the parish sign and the stone-and-brick "
+            "colonnade of the 1965 church at the corner of Regent and Brunswick Streets"
+        ),
+        "photo_credit": "Photograph: KartaView contributor, CC BY-SA 4.0, via KartaView (OpenStreetCam)",
+        "photo_credit_url": "https://kartaview.org/details/165588/26",
         "city_line": "Fredericton, New Brunswick \u00b7 120 Regent Street",
         "status_note": (
             "St. Dunstan's is today the principal church of St. Mary Magdalene Parish, an amalgamated "
