@@ -565,25 +565,38 @@ def crest_svg(style: str) -> str:
 # ---------------------------------------------------------------------------
 
 def lang_switcher(t, url_of) -> str:
-    """Language rail. Sits in the right margin, read top to bottom, in
-    DISPLAY_ORDER: the living Romance languages, then Latin as their root,
-    then Greek, then the rest. `url_of(code)` returns the href for a language."""
+    """Language menu. A globe sits in the top-right corner and costs the page
+    nothing; hovering it — or clicking, for keyboard and touch — drops a
+    single column of languages beneath it, read top to bottom in DISPLAY_ORDER:
+    English, the living Romance languages, Latin as their common root, Greek,
+    then the rest. `url_of(code)` returns the href for a language."""
+    label = html.escape(t("ui.lang_label"))
     links = []
     current = t.code
     for code, endonym, _html_lang, _dir in LANGS_DISPLAY:
         cls = ' class="active"' if code == current else ''
         pivot = ' data-pivot="1"' if code == PIVOT else ''
         links.append(
-            f'      <a href="{url_of(code)}" hreflang="{code}" lang="{code}"'
+            f'        <a href="{url_of(code)}" hreflang="{code}" lang="{code}"'
             f'{cls}{pivot}>{html.escape(endonym)}</a>')
-    return ('  <nav class="lang-bar" aria-label="'
-            + html.escape(t("ui.lang_label")) + '">\n'
-            '    <div class="container">\n'
-            f'      <span class="lang-bar-label">{html.escape(t("ui.lang_label"))}</span>\n'
+    globe = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+             'stroke-width="1.7" aria-hidden="true" focusable="false">'
+             '<circle cx="12" cy="12" r="9.2"/>'
+             '<path d="M2.8 12h18.4M12 2.8c2.6 2.7 3.9 6 3.9 9.2s-1.3 6.5-3.9 '
+             '9.2c-2.6-2.7-3.9-6-3.9-9.2S9.4 5.5 12 2.8z"/></svg>')
+    return (f'  <nav class="lang-bar" aria-label="{label}">\n'
+            '    <input type="checkbox" id="lang-open" class="lang-toggle">\n'
+            f'    <label for="lang-open" class="lang-globe" title="{label}" '
+            f'role="button" tabindex="0" aria-label="{label}">{globe}'
+            f'<span class="lang-globe-code">{html.escape(current.upper())}</span>'
+            '</label>\n'
+            '    <div class="lang-panel">\n'
+            f'      <span class="lang-bar-label">{label}</span>\n'
+            '      <div class="lang-list">\n'
             + '\n'.join(links) + '\n'
+            '      </div>\n'
             '    </div>\n'
-            '  </nav>\n')
-
+            '  </nav>\n\n')
 
 def hreflang_links(url_of) -> str:
     out = [f'<link rel="alternate" hreflang="{c}" href="{url_of(c)}">'
