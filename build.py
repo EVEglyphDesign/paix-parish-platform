@@ -14,8 +14,8 @@ import os, shutil, html
 from pathlib import Path
 from textwrap import dedent
 
-from i18n_runtime import (LANGS, LANG_CODES, PIVOT, DEFAULT, NATIVE_OF,
-                          translator, coverage)
+from i18n_runtime import (LANGS, LANGS_DISPLAY, LANG_CODES, PIVOT, DEFAULT,
+                          NATIVE_OF, translator, coverage)
 
 ROOT = Path(__file__).parent
 PARISHES_DIR = ROOT / "parishes"
@@ -565,21 +565,24 @@ def crest_svg(style: str) -> str:
 # ---------------------------------------------------------------------------
 
 def lang_switcher(t, url_of) -> str:
-    """Language toggle. `url_of(code)` returns the href for that language."""
+    """Language rail. Sits in the right margin, read top to bottom, in
+    DISPLAY_ORDER: the living Romance languages, then Latin as their root,
+    then Greek, then the rest. `url_of(code)` returns the href for a language."""
     links = []
     current = t.code
-    for code, endonym, _html_lang, _dir in LANGS:
+    for code, endonym, _html_lang, _dir in LANGS_DISPLAY:
         cls = ' class="active"' if code == current else ''
         pivot = ' data-pivot="1"' if code == PIVOT else ''
         links.append(
             f'      <a href="{url_of(code)}" hreflang="{code}" lang="{code}"'
             f'{cls}{pivot}>{html.escape(endonym)}</a>')
-    return ('  <div class="lang-bar">\n'
+    return ('  <nav class="lang-bar" aria-label="'
+            + html.escape(t("ui.lang_label")) + '">\n'
             '    <div class="container">\n'
             f'      <span class="lang-bar-label">{html.escape(t("ui.lang_label"))}</span>\n'
             + '\n'.join(links) + '\n'
             '    </div>\n'
-            '  </div>\n')
+            '  </nav>\n')
 
 
 def hreflang_links(url_of) -> str:
@@ -1069,7 +1072,7 @@ def portal(t, prefix="", url_of=None) -> str:
     <p>{html.escape(t("portal.lang_p2"))}</p>
     <p>{html.escape(t("portal.lang_p3"))}</p>
     <div class="lang-grid">
-{chr(10).join(f'      <a href="{url_of(c)}" hreflang="{c}" lang="{c}"><span>{html.escape(e)}</span></a>' for c, e, _, _ in LANGS)}
+{chr(10).join(f'      <a href="{url_of(c)}" hreflang="{c}" lang="{c}"><span>{html.escape(e)}</span></a>' for c, e, _, _ in LANGS_DISPLAY)}
     </div>
   </div>
 

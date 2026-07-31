@@ -43,6 +43,14 @@ LANG_CODES = [c for c, _, _, _ in LANGS]
 PIVOT = "la"
 DEFAULT = "en"
 
+# Reading order for the language rail. Latin remains the pivot in the runtime,
+# but a reader arriving at the rail should descend through the living Romance
+# languages first, reach Latin as their common root, then Greek, then the rest.
+# This is presentation order only; it never changes resolution or fallback.
+DISPLAY_ORDER = ["en", "fr", "es", "it", "pt", "ro", "la", "el", "sw"]
+LANGS_DISPLAY = sorted(LANGS, key=lambda r: DISPLAY_ORDER.index(r[0])
+                       if r[0] in DISPLAY_ORDER else len(DISPLAY_ORDER))
+
 # Which of the nine each parish's own community actually speaks. The native
 # copy is what lives at the parish's bare URL, so an existing link never breaks.
 NATIVE_OF = {
