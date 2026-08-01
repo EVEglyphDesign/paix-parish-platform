@@ -993,5 +993,65 @@
  "footnote.cma_link": {
   "text": "Société Nationale de l'Acadie — Congrès mondial acadien",
   "note": "source language: en; institution and event names are never translated"
+ },
+ "cover.kicker": {
+  "text": "EVEglyph Design · Position"
+ },
+ "cover.h1": {
+  "text": "Two doors. One platform."
+ },
+ "cover.lead": {
+  "text": "This technology is handed to the people who already hold the values it was built from: a parish that wants to own its own front door, and a child who deserves to build something rather than be fed something. Both doors open onto the same ground — your data, your record, and your way out."
+ },
+ "cover.left_eyebrow": {
+  "text": "One side"
+ },
+ "cover.left_h2": {
+  "text": "The Churches"
+ },
+ "cover.left_lead": {
+  "text": "Thirteen parishes, four countries, nine languages. The parish owns the site, the content, the domain name and the exit."
+ },
+ "cover.left_b1": {
+  "text": "Locally hosted, no tracking, no advertising. Every dollar the parish saves stays in the community."
+ },
+ "cover.left_b2": {
+  "text": "The Charitable Ledger records what people already do for one another — one deed, one witness, one hour."
+ },
+ "cover.left_b3": {
+  "text": "Fork it and walk away at any time. Where a parish already has an IT volunteer, that volunteer keeps their place."
+ },
+ "cover.left_cta": {
+  "text": "Enter the parishes"
+ },
+ "cover.right_eyebrow": {
+  "text": "The other side"
+ },
+ "cover.right_h2": {
+  "text": "The Children"
+ },
+ "cover.right_lead": {
+  "text": "Integration and education inside a structured environment — bounded to the parish, the school and the village, never opened onto a feed."
+ },
+ "cover.right_b1": {
+  "text": "The child structures the material herself. Sorting, naming and relating is the lesson, and she keeps what she builds at the end of it."
+ },
+ "cover.right_b2": {
+  "text": "Standing is earned through evidenced service to other people. No followers, no streaks, no engagement machinery pointed at a developing mind."
+ },
+ "cover.right_b3": {
+  "text": "The household decides what its family meets. Safety first, betterment second, and everything else third."
+ },
+ "cover.right_cta": {
+  "text": "Enter the education stream"
+ },
+ "cover.foot": {
+  "text": "Additive, never disruptive. We do not break a working system to prove that a better one exists, and we intend to hold the ladder for the people this moves."
+ },
+ "cover.foot_link": {
+  "text": "Read the full position — The Additive Position"
+ },
+ "cover.scroll": {
+  "text": "Enter the platform"
  }
 }

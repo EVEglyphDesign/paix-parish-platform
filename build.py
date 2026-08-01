@@ -982,6 +982,63 @@ def footnote_1613(t) -> str:
         '  </div>\n')
 
 
+POSITION_URL = "https://eveglyphdesign.github.io/eve-glyph-boot-contract/position/"
+EDUCATION_URL = "https://eveglyphdesign.github.io/paix-educational-game/"
+
+
+def cover(t) -> str:
+    """Cover page. Churches on one side, children on the other. EgD-POS-001.
+
+    Two panels, three points each, one shared foot. The reader chooses a side
+    before the platform asks anything of them.
+    """
+    e = html.escape
+
+    def side(cls, eyebrow, h2, lead, bullets, cta, href, external=False):
+        items = "\n".join(
+            f"          <li>{e(t(b))}</li>" for b in bullets)
+        rel = ' rel="noopener"' if external else ""
+        return f'''      <section class="cover-side {cls}">
+        <p class="cover-eyebrow">{e(t(eyebrow))}</p>
+        <h2>{e(t(h2))}</h2>
+        <p class="cover-side-lead">{e(t(lead))}</p>
+        <ul class="cover-points">
+{items}
+        </ul>
+        <a class="cover-cta" href="{href}"{rel}>{e(t(cta))} <span aria-hidden="true">&#8594;</span></a>
+      </section>'''
+
+    left = side("cover-side-churches", "cover.left_eyebrow", "cover.left_h2",
+                "cover.left_lead",
+                ["cover.left_b1", "cover.left_b2", "cover.left_b3"],
+                "cover.left_cta", "#region-united-states")
+    right = side("cover-side-children", "cover.right_eyebrow", "cover.right_h2",
+                 "cover.right_lead",
+                 ["cover.right_b1", "cover.right_b2", "cover.right_b3"],
+                 "cover.right_cta", EDUCATION_URL, external=True)
+
+    return f'''  <div class="cover" id="cover">
+    <div class="container cover-head">
+      <p class="cover-kicker">{e(t("cover.kicker"))}</p>
+      <h1>{e(t("cover.h1"))}</h1>
+      <p class="cover-lead">{e(t("cover.lead"))}</p>
+    </div>
+    <div class="container cover-split">
+{left}
+      <div class="cover-spine" aria-hidden="true"><span>&#10011;</span></div>
+{right}
+    </div>
+    <div class="container cover-foot">
+      <p>{e(t("cover.foot"))}</p>
+      <p class="cover-foot-links">
+        <a href="{POSITION_URL}" rel="noopener">{e(t("cover.foot_link"))} &#8594;</a>
+        <a href="#about" class="cover-foot-scroll">{e(t("cover.scroll"))} &#8595;</a>
+      </p>
+    </div>
+  </div>
+'''
+
+
 def portal(t, prefix="", url_of=None) -> str:
     """`prefix` is the path back to the repository root from this page."""
     parish_links = "<br>".join(
@@ -1028,6 +1085,7 @@ def portal(t, prefix="", url_of=None) -> str:
 </nav>
 
 <main>
+{cover(t)}
   <div class="container portal-hero">
     <h1>{html.escape(t("portal.hero_h1"))}</h1>
     <p class="lead">{html.escape(t("portal.hero_lead", count=n))}</p>
@@ -1742,6 +1800,110 @@ PORTAL_CSS = '''/* Portal-specific extensions to the EVE Glyph canon */
 @media (max-width: 640px) {
   .region-head h2 { font-size: 1.3rem; }
   .hero-photo-pending { min-height: 190px; }
+}
+
+/* ---- Cover page — EgD-POS-001. Churches one side, children the other ---- */
+.cover {
+  background: linear-gradient(180deg, var(--marine-deep) 0%, var(--marine) 62%, var(--marine-light) 100%);
+  color: #f3ede0;
+  margin: -2.5rem 0 3.2rem;
+  padding: 3.4rem 0 2.6rem;
+  border-bottom: 3px solid var(--stella-gold);
+}
+.cover .container { max-width: 960px; }
+.cover-head { max-width: 860px; }
+.cover-kicker {
+  font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+  font-weight: 600; color: var(--stella-gold-light); margin: 0 0 0.7rem;
+}
+.cover-head h1 {
+  font-size: clamp(2.1rem, 5.2vw, 3.3rem); line-height: 1.08;
+  color: #fffdf7; margin: 0 0 0.85rem;
+}
+.cover-lead {
+  font-size: clamp(1.02rem, 2.1vw, 1.2rem); line-height: 1.6;
+  color: #e6dcc6; margin: 0; max-width: 46rem;
+}
+.cover-split {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0 2.4rem;
+  align-items: stretch;
+  margin-top: 2.9rem;
+}
+.cover-side {
+  display: flex; flex-direction: column;
+  background: rgba(255, 253, 247, 0.055);
+  border: 1px solid rgba(216, 199, 160, 0.28);
+  border-top: 3px solid var(--stella-gold);
+  padding: 1.7rem 1.7rem 1.5rem;
+}
+.cover-eyebrow {
+  font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase;
+  font-weight: 600; color: var(--stella-gold-light); margin: 0 0 0.45rem;
+}
+.cover-side h2 {
+  font-size: clamp(1.7rem, 3.4vw, 2.15rem); line-height: 1.12;
+  color: #fffdf7; margin: 0 0 0.55rem;
+}
+.cover-side-lead {
+  font-size: 1.02rem; line-height: 1.58; color: #e6dcc6; margin: 0 0 1.15rem;
+}
+.cover-points { list-style: none; margin: 0 0 1.5rem; padding: 0; }
+.cover-points li {
+  position: relative; padding-left: 1.15rem; margin-bottom: 0.8rem;
+  font-size: 0.94rem; line-height: 1.58; color: #ddd3bd;
+}
+.cover-points li::before {
+  content: ""; position: absolute; left: 0; top: 0.62em;
+  width: 6px; height: 6px; background: var(--stella-gold); border-radius: 50%;
+}
+.cover-cta {
+  margin-top: auto; align-self: flex-start;
+  font-size: 0.86rem; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; text-decoration: none;
+  color: #08283f; background: var(--stella-gold-light);
+  padding: 0.68rem 1.25rem; border: 1px solid var(--stella-gold-light);
+  white-space: nowrap; text-align: center;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.cover-cta:hover, .cover-cta:focus {
+  background: transparent; color: var(--stella-gold-light);
+}
+.cover-spine {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; width: 1px; background: rgba(216, 199, 160, 0.3);
+}
+.cover-spine span {
+  font-size: 1.45rem; color: var(--stella-gold);
+  background: #0e4468; padding: 0.75rem 0.1rem;
+  line-height: 1;
+}
+.cover-foot {
+  margin-top: 2.6rem; padding-top: 1.4rem;
+  border-top: 1px solid rgba(216, 199, 160, 0.28);
+  max-width: 880px;
+}
+.cover-foot p {
+  margin: 0 0 0.9rem; font-size: 0.97rem; line-height: 1.62; color: #d8cdb5;
+  max-width: 52rem;
+}
+.cover-foot-links {
+  display: flex; flex-wrap: wrap; gap: 0.6rem 1.9rem; margin: 0 !important;
+}
+.cover-foot-links a {
+  color: var(--stella-gold-light); text-decoration: none;
+  font-size: 0.9rem; font-weight: 600;
+  border-bottom: 1px solid rgba(212, 169, 74, 0.45); padding-bottom: 1px;
+}
+.cover-foot-links a:hover, .cover-foot-links a:focus { border-bottom-color: var(--stella-gold-light); }
+
+@media (max-width: 820px) {
+  .cover { padding: 2.5rem 0 2rem; margin-bottom: 2.4rem; }
+  .cover-split { grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2.1rem; }
+  .cover-spine { width: auto; height: 1px; background: rgba(216, 199, 160, 0.3); }
+  .cover-spine span { padding: 0 0.7rem; }
+  .cover-cta { white-space: normal; }
 }
 '''
 
